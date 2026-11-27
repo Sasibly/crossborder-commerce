@@ -1,0 +1,29 @@
+{
+  "dataset_name": "pet_fountain_holdout_adversarial_demo",
+  "synthetic": true,
+  "annotator_type": "simulated",
+  "split": "holdout_adversarial",
+  "usage_note": "独立模拟反例，不参与规则调参，仅用于否定句/同义词规则回归测试。",
+  "cases": [
+    {"id":"adv-001","text":"水泵不是不出水，是出水断断续续。","trap_type":"双重否定/纠正","expected_annotations":[{"canonical_issue":"水泵/出水异常","sentiment":"负面","evidence":"出水断断续续"}],"expected_comment_label":"负面"},
+    {"id":"adv-002","text":"不是不好用，是根本不能用。","trap_type":"递进否定","expected_annotations":[{"canonical_issue":"整体体验","sentiment":"负面","evidence":"根本不能用"}],"expected_comment_label":"负面"},
+    {"id":"adv-003","text":"没觉得漏水，但水箱很难装回去。","trap_type":"否定+转折","expected_annotations":[{"canonical_issue":"清洁与维护困难","sentiment":"负面","evidence":"水箱很难装回去"}],"expected_comment_label":"负面"},
+    {"id":"adv-004","text":"猫不是不喝，只是喝得少。","trap_type":"否定+程度","expected_annotations":[{"canonical_issue":"宠物适口性","sentiment":"负面","evidence":"喝得少"}],"expected_comment_label":"负面"},
+    {"id":"adv-005","text":"用了半年没坏，就是滤芯换得勤。","trap_type":"否定+正面保留","expected_annotations":[{"canonical_issue":"核心部件","sentiment":"正面","evidence":"半年没坏"},{"canonical_issue":"滤芯/耗材","sentiment":"负面","evidence":"滤芯换得勤"}],"expected_comment_label":"混合"},
+    {"id":"adv-006","text":"不能说安静，晚上还是能听到水泵声。","trap_type":"否定评价词","expected_annotations":[{"canonical_issue":"噪音","sentiment":"负面","evidence":"晚上还是能听到水泵声"}],"expected_comment_label":"负面"},
+    {"id":"adv-007","text":"不吵是不吵，就是出水太小。","trap_type":"否定+让步","expected_annotations":[{"canonical_issue":"水泵/出水异常","sentiment":"负面","evidence":"出水太小"}],"expected_comment_label":"负面"},
+    {"id":"adv-008","text":"客服没有不回复，只是回复很慢。","trap_type":"双重否定","expected_annotations":[{"canonical_issue":"客服售后","sentiment":"负面","evidence":"回复很慢"}],"expected_comment_label":"负面"},
+    {"id":"adv-009","text":"没有异味，清洗也方便。","trap_type":"否定+正面","expected_annotations":[{"canonical_issue":"清洁与维护困难","sentiment":"正面","evidence":"清洗也方便"}],"expected_comment_label":"正面"},
+    {"id":"adv-010","text":"不是猫毛堵的，是滤芯该换了。","trap_type":"归因纠正","expected_annotations":[{"canonical_issue":"滤芯/耗材","sentiment":"负面","evidence":"滤芯该换了"}],"expected_comment_label":"负面"},
+    {"id":"adv-011","text":"差点以为漏水了，结果是猫把水拨出来。","trap_type":"误报纠正","expected_annotations":[{"canonical_issue":"漏水与安全","sentiment":"中性","evidence":"结果是猫把水拨出来"}],"expected_comment_label":"中性"},
+    {"id":"adv-012","text":"没几天泵就坏了。","trap_type":"时间否定误判","expected_annotations":[{"canonical_issue":"水泵/出水异常","sentiment":"负面","evidence":"泵就坏了"}],"expected_comment_label":"负面"},
+    {"id":"adv-013","text":"不得不拆开洗，太麻烦了。","trap_type":"不得不非否定","expected_annotations":[{"canonical_issue":"清洁与维护困难","sentiment":"负面","evidence":"太麻烦了"}],"expected_comment_label":"负面"},
+    {"id":"adv-014","text":"幸好没买带APP的，听说连接老断。","trap_type":"引述他人","expected_annotations":[{"canonical_issue":"智能感应/出水控制","sentiment":"中性","evidence":"听说连接老断","note":"转述，低置信，不计本人负面"}],"expected_comment_label":"中性"},
+    {"id":"adv-015","text":"如果水箱再大点就好了。","trap_type":"条件句隐含负面","expected_annotations":[{"canonical_issue":"水箱容量","sentiment":"负面","evidence":"水箱再大点就好了"}],"expected_comment_label":"负面"},
+    {"id":"adv-016","text":"除了贵没毛病。","trap_type":"否定+整体正面","expected_annotations":[{"canonical_issue":"滤芯/耗材","sentiment":"负面","evidence":"贵"},{"canonical_issue":"整体体验","sentiment":"正面","evidence":"没毛病"}],"expected_comment_label":"混合"},
+    {"id":"adv-017","text":"不是一般的好用。","trap_type":"反讽/强调","expected_annotations":[{"canonical_issue":"整体体验","sentiment":"正面","evidence":"不是一般的好用"}],"expected_comment_label":"正面"},
+    {"id":"adv-018","text":"抽水马达没劲，底座还渗水。","trap_type":"同义词变体","expected_annotations":[{"canonical_issue":"水泵/出水异常","sentiment":"负面","evidence":"抽水马达没劲"},{"canonical_issue":"漏水与安全","sentiment":"负面","evidence":"底座还渗水"}],"expected_comment_label":"负面"},
+    {"id":"adv-019","text":"水盘黏糊糊，拆洗要拧好几个螺丝。","trap_type":"口语同义","expected_annotations":[{"canonical_issue":"清洁与维护困难","sentiment":"负面","evidence":"黏糊糊"},{"canonical_issue":"清洁与维护困难","sentiment":"负面","evidence":"要拧好几个螺丝"}],"expected_comment_label":"负面"},
+    {"id":"adv-020","text":"主子不爱凑过去，滤芯提醒灯也不亮。","trap_type":"同义+否定","expected_annotations":[{"canonical_issue":"宠物适口性","sentiment":"负面","evidence":"不爱凑过去"},{"canonical_issue":"滤芯/耗材","sentiment":"负面","evidence":"提醒灯也不亮"}],"expected_comment_label":"负面"}
+  ]
+}

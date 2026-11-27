@@ -1,0 +1,76 @@
+{
+  "measurement_kind": "offline_rule_baseline_on_synthetic_demo",
+  "reference_kind": "developer_defined_demo_reference_not_human_gold",
+  "status": "passed_local_demo_delivery",
+  "versions": {
+    "source_sha256": "fbd9f57c4adfb8f683b566f2da278ecaafc2baf13e797bc57a3fed72aafbe96e",
+    "rubric_sha256": "3cd18c04eec137c5d32f7202e801507b31437984d85962f1f083eac4e4fff5ab",
+    "taxonomy_version": "tax-1df59a17e23c",
+    "prompt_version": "prompt-c5440992445b",
+    "baseline_source_sha256": "902addd96308344c4dd174d127ca810f850f3e60f96f48518f8b78ae83ce9f07",
+    "evaluator_source_sha256": "fc2686ea5b75835e707995bae32039a9d065016e529983cc91fd0e3408d08574"
+  },
+  "reproducibility_digest": "d9c95d2dbbd485915c133bc2024116da752f3c2891e87333d561a075865c887b",
+  "independent_cli_runs_equal": true,
+  "execution": {
+    "reviews": 10,
+    "parsed": 10,
+    "local_mock_completions": 10,
+    "repair_attempts": 0
+  },
+  "raw_annotations": 30,
+  "annotation_dispositions": {
+    "mapped": 9,
+    "taxonomy_gap": 18,
+    "needs_review": 3
+  },
+  "scored_reference_units": 9,
+  "scoring_scope": "Partial synthetic developer reference; not whole-review precision/recall or human gold",
+  "unit": "(review_id, label, polarity) within explicitly mapped review/label cells only",
+  "partial_demo_metrics": {
+    "tp": 3,
+    "fp": 1,
+    "fn": 6,
+    "precision": 0.75,
+    "recall": 0.3333,
+    "f1": 0.4615
+  },
+  "diagnostic_counts": {
+    "raw_predictions": 7,
+    "tp": 3,
+    "fp": 1,
+    "fn": 6,
+    "unscored_predictions": 3,
+    "invalid_prediction_points": 0,
+    "unparsed_reviews": 0
+  },
+  "external_model_requests": 0,
+  "database_writes": 0,
+  "current_authorization_history": [
+    {
+      "id": "qwen35-pet-fountain-first-trial-20261125",
+      "requests_used": 20,
+      "request_limit": 20
+    },
+    {
+      "id": "qwen35-pet-fountain-performance-20261126",
+      "requests_used": 20,
+      "request_limit": 20
+    }
+  ],
+  "current_saved_analysis_rows": 6,
+  "eligible_for_real_quality_claims": false,
+  "tests": {
+    "targeted_passed": 15,
+    "full_passed": 944,
+    "full_xfailed": 1,
+    "full_warnings": 1,
+    "full_elapsed_seconds": 64.41
+  },
+  "raw_annotation_content_preserved": true,
+  "web_redeployment_required": false,
+  "local_report_paths": [
+    "reports\\review-demo-eval\\20261126T023034Z-325de5bb\\report.json",
+    "reports\\review-demo-eval\\20261126T023141Z-2611c832\\report.json"
+  ]
+}

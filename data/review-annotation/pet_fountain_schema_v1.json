@@ -1,0 +1,245 @@
+{
+  "schema_version": "pet-annotation-catalog-v1",
+  "category": "pet_fountain",
+  "stage": "annotation_draft_not_production_taxonomy",
+  "labels": {
+    "product.pump_durability": {
+      "name": "水泵耐用性",
+      "domain": "product",
+      "include": "明确水泵过早损坏或使用期限内仍完好",
+      "exclude": "泵仅有声音、流量弱或故障部件未指明"
+    },
+    "product.water_flow": {
+      "name": "出水表现",
+      "domain": "product",
+      "include": "流量小、断续、抽水弱等出水表现",
+      "exclude": "不能直接推断水泵寿命失效"
+    },
+    "product.leakage": {
+      "name": "漏水与渗液",
+      "domain": "product",
+      "include": "产品漏水或明确否认、纠正漏水判断",
+      "exclude": "外部泼水不能记录为产品漏水事实"
+    },
+    "product.noise": {
+      "name": "运行声音",
+      "domain": "product",
+      "include": "安静、吵、异响及日夜场景差异",
+      "exclude": "提到水泵不代表泵损坏"
+    },
+    "product.cleaning_effort": {
+      "name": "清洗难度",
+      "domain": "product",
+      "include": "清洗、清理是否费力或方便",
+      "exclude": "仅易脏或仅安装复杂需分开"
+    },
+    "product.assembly_maintenance": {
+      "name": "拆装与维护步骤",
+      "domain": "product",
+      "include": "装回水箱、螺丝拆装、维护步骤繁琐",
+      "exclude": "不自动认定清洗本身困难"
+    },
+    "product.residue_hygiene": {
+      "name": "污垢与残留感知",
+      "domain": "product",
+      "include": "滑腻、毛发堵塞、易积污等观察",
+      "exclude": "不推断细菌、毒性或健康危害"
+    },
+    "product.control_connectivity": {
+      "name": "感应、控制与连接",
+      "domain": "product",
+      "include": "感应、APP连接和出水控制表现",
+      "exclude": "转述须reported，不能作为本人确认故障"
+    },
+    "product.capacity": {
+      "name": "水箱容量",
+      "domain": "product",
+      "include": "容量及加水频率是否适合使用场景",
+      "exclude": "容量不等于机身外形尺寸"
+    },
+    "product.cable_length": {
+      "name": "电源线长度",
+      "domain": "product",
+      "include": "电源线长短对布置的影响",
+      "exclude": "不推断电气安全"
+    },
+    "product.appearance": {
+      "name": "外观感知",
+      "domain": "product",
+      "include": "外观、造型等主观评价",
+      "exclude": "外观好不证明耐用性好"
+    },
+    "product.pet_acceptance": {
+      "name": "宠物接受意愿",
+      "domain": "product",
+      "include": "愿意接近或愿意饮用",
+      "exclude": "饮水量多少不等于喜欢或拒绝；不宣称口感验证"
+    },
+    "product.drinking_behavior": {
+      "name": "饮水行为观察",
+      "domain": "product",
+      "include": "用户观察到饮水量、频次变化",
+      "exclude": "不推断健康收益、临床效果或适口性原因"
+    },
+    "product.filtration_perception": {
+      "name": "过滤效果感知",
+      "domain": "product",
+      "include": "用户对清澈等可见表现的感知",
+      "exclude": "外观清澈不证明微生物或化学安全"
+    },
+    "product.general_reliability": {
+      "name": "整体运行可靠性感知",
+      "domain": "product",
+      "include": "未指明部件时描述整机运行稳定或未坏",
+      "exclude": "不得指定为水泵或核心部件寿命"
+    },
+    "product.safety_concern": {
+      "name": "潜在安全担忧",
+      "domain": "product",
+      "include": "仅以potential_risk记录潜在风险担忧",
+      "exclude": "不把差点踩水推断为已受伤或电气事故"
+    },
+    "consumable.filter_life": {
+      "name": "滤芯更换频率与寿命",
+      "domain": "consumable",
+      "include": "频繁更换或滤芯很快失效",
+      "exclude": "耗材寿命与整机水泵寿命分开"
+    },
+    "consumable.filter_cost": {
+      "name": "滤芯成本",
+      "domain": "consumable",
+      "include": "明确滤芯或耗材费用高低",
+      "exclude": "未指明对象的贵不能归入滤芯成本"
+    },
+    "consumable.replacement_reminder": {
+      "name": "滤芯更换提醒",
+      "domain": "consumable",
+      "include": "提醒灯、提醒清晰程度",
+      "exclude": "提醒不亮不直接证明滤芯失效"
+    },
+    "service.customer_support": {
+      "name": "客服沟通与处理",
+      "domain": "service",
+      "include": "响应时间、解释与维修沟通",
+      "exclude": "客服慢不等于出水慢"
+    },
+    "service.return_process": {
+      "name": "退换货流程",
+      "domain": "service",
+      "include": "寄回、更换等流程体验",
+      "exclude": "不等同于性价比低或真实退货率"
+    },
+    "service.instructions": {
+      "name": "说明书与操作指导",
+      "domain": "service",
+      "include": "说明清晰程度",
+      "exclude": "说明差不证明产品已损坏"
+    },
+    "experience.overall": {
+      "name": "整体使用感受",
+      "domain": "experience",
+      "include": "明确针对整体产品的好用或不能用",
+      "exclude": "单一声音场景不能扩展到整体"
+    },
+    "experience.price_value": {
+      "name": "价格感知",
+      "domain": "experience",
+      "include": "未指明部件的价格高低或整体价值感受",
+      "exclude": "不自动指定为耗材成本"
+    }
+  },
+  "source_aliases": {
+    "水泵寿命短": "product.pump_durability",
+    "清洁困难": "product.cleaning_effort",
+    "客服处理敷衍": "service.customer_support",
+    "漏水": "product.leakage",
+    "安全隐患": "product.safety_concern",
+    "退换货麻烦": "service.return_process",
+    "噪音偏大": "product.noise",
+    "宠物接受度高": "product.pet_acceptance",
+    "整体可接受": "product.noise",
+    "水箱容量大": "product.capacity",
+    "滤芯提醒清楚": "consumable.replacement_reminder",
+    "电源线短": "product.cable_length",
+    "宠物适口性好": "product.pet_acceptance",
+    "清洁方便": "product.cleaning_effort",
+    "无漏水": "product.leakage",
+    "感应不稳定": "product.control_connectivity",
+    "异常持续出水": "product.control_connectivity",
+    "故障归因不确定": null,
+    "内壁易脏": "product.residue_hygiene",
+    "说明书不清": "service.instructions",
+    "拆装繁琐": "product.assembly_maintenance",
+    "饮水量增加": "product.drinking_behavior",
+    "过滤效果可感知": "product.filtration_perception",
+    "滤芯成本高": "consumable.filter_cost",
+    "外观好": "product.appearance",
+    "水泵安静": "product.noise",
+    "水箱容量小": "product.capacity",
+    "泵噪音变大": "product.noise",
+    "猫毛易堵塞": "product.residue_hygiene",
+    "清理费劲": "product.cleaning_effort",
+    "水泵/出水异常": "product.water_flow",
+    "整体体验": "experience.overall",
+    "清洁与维护困难": "product.cleaning_effort",
+    "宠物适口性": "product.pet_acceptance",
+    "核心部件": "product.general_reliability",
+    "滤芯/耗材": "consumable.filter_life",
+    "噪音": "product.noise",
+    "客服售后": "service.customer_support",
+    "漏水与安全": "product.leakage",
+    "智能感应/出水控制": "product.control_connectivity",
+    "水箱容量": "product.capacity"
+  },
+  "source_overrides": {
+    "pf-syn-pet-002:1": {
+      "assertion": "potential_risk",
+      "review_reason": "证据只有差点踩入积水，需人工限定风险，不能升级为伤害事实"
+    },
+    "pf-syn-pet-003:2": {
+      "review_reason": "原标整体评价应限定为白天声音评价，需审核范围修正"
+    },
+    "pf-syn-pet-006:2": {
+      "annotation_type": "context",
+      "assertion": "uncertain",
+      "review_reason": "归因不确定属于上下文，不作为独立产品故障"
+    },
+    "adv-004:0": {
+      "label": "product.drinking_behavior",
+      "review_reason": "喝得少与拒绝饮用区分，原适口性标签需审核"
+    },
+    "adv-005:0": {
+      "review_reason": "未指明部件，拟议整机运行感知不能冒充核心部件寿命"
+    },
+    "adv-011:0": {
+      "assertion": "corrected"
+    },
+    "adv-012:0": {
+      "label": "product.pump_durability"
+    },
+    "adv-014:0": {
+      "assertion": "reported"
+    },
+    "adv-016:0": {
+      "label": "experience.price_value",
+      "review_reason": "贵的对象未指明，原滤芯成本归因不支持，拟议价格感知需审核"
+    },
+    "adv-019:0": {
+      "label": "product.residue_hygiene"
+    },
+    "adv-019:1": {
+      "label": "product.assembly_maintenance"
+    },
+    "adv-020:1": {
+      "label": "consumable.replacement_reminder"
+    }
+  },
+  "assertion_values": [
+    "observed",
+    "uncertain",
+    "reported",
+    "corrected",
+    "potential_risk"
+  ],
+  "scoring_policy": "No classifier score, no automatic gold promotion. Legacy taxonomy and frozen references remain unchanged."
+}

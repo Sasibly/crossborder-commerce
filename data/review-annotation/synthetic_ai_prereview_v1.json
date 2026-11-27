@@ -1,0 +1,479 @@
+{
+  "schema_version": "annotation-ai-prereview-v1",
+  "reviewer_kind": "ai",
+  "reviewer_id": "Codex assistant semantic pre-review",
+  "reviewed_at": "2026-11-26T03:48:22.335540+00:00",
+  "base_document_hash": "02cb1c2e8db3bd90a71605d7114a8581b7ab28bdd980ea1f2beeeaf603c168c6",
+  "catalog_version": "pet-annotation-2ecd8768ed73b0a7",
+  "items": [
+    {
+      "annotation_id": "demo/pf-syn-pet-001/0",
+      "expected_payload_hash": "767091fbe33ee3dde3013278dfcc466e67beda8ba5c25e228d62dd9231ad921a",
+      "decision": "retain",
+      "rationale": "两个月后水泵不出水支持用户报告的早期泵故障，不进一步推断故障机理。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-001/1",
+      "expected_payload_hash": "1079bfe0700394d8d6834a1f40185bf1739c868bfbe0d72e77648f39b84ec2b3",
+      "decision": "retain",
+      "rationale": "原文直接说明难拆开清洗，属于清洁费力。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-001/2",
+      "expected_payload_hash": "9d9b3dbec1686ec684902753a5b2bd5d2cc8f31eaaca1669bf8231cdcdc6345a",
+      "decision": "needs_human",
+      "rationale": "证据仅说明客服建议自行拆看，没有直接证明态度敷衍；拟议中性沟通记录，留待人工判断评价。",
+      "patch": {
+        "polarity": "neutral",
+        "scope_note": "仅确认客服建议自行拆看，是否敷衍需人工裁定"
+      }
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-002/0",
+      "expected_payload_hash": "268e030aa933a6489834914d99f636a838dfec1666f010bb855d80fb82d61b04",
+      "decision": "retain",
+      "rationale": "明确收到第二天产品漏水，漏水负面维度有原文支持。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-002/1",
+      "expected_payload_hash": "1a08fc432ceb66e4435bdb6f15237d7e34ec2952a21752662d420c9ef5b2e150",
+      "decision": "needs_human",
+      "rationale": "猫接近积水不等于已发生伤害或电气事故，潜在担忧是否应标注仍需人工判断。",
+      "patch": {
+        "scope_note": "仅潜在安全担忧提议，无事故、伤害或电气危险事实"
+      }
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-002/2",
+      "expected_payload_hash": "eb8a36e9ef2e0777e44a540020c8eefe8436e75cc20071b66b389e146064b86b",
+      "decision": "retain",
+      "rationale": "需自行寄回属于退换流程负担，不作为产品故障或实际退货率。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-003/0",
+      "expected_payload_hash": "41df18a49f137fe172c3ce265dccd54e8151cf25019bab0b07596a8fb4b2ee9f",
+      "decision": "revise",
+      "rationale": "夜间卧室附近有点吵是噪音负面评价，补充夜间场景。",
+      "patch": {
+        "scope_note": "夜间卧室附近的运行声音"
+      }
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-003/1",
+      "expected_payload_hash": "1fe2c0c241bb9024179923291f0800ebeb64b20107fc6921c189df23f21cc912",
+      "decision": "retain",
+      "rationale": "愿意饮用支持接受意愿，不推断适口性原因或健康效果。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-003/2",
+      "expected_payload_hash": "741db4b8cc0dd18ee7e819780577922607ee7164ffa464288ad4f4832335eece",
+      "decision": "revise",
+      "rationale": "白天还能接受仅针对出水声音，保留中性并限定白天，不作为整体满意。",
+      "patch": {
+        "scope_note": "白天出水声音可接受，不代表整体满意"
+      }
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-004/0",
+      "expected_payload_hash": "baf8f15ae3fd2b229e0128779027b63e4e2944977127969e309507914f5e4298",
+      "decision": "revise",
+      "rationale": "补充原文直接的容量描述；加水频率只作使用场景，不推算升数。",
+      "patch": {
+        "evidence": {
+          "text": "水箱容量挺大，不用天天加水",
+          "start": 0,
+          "end": 13
+        }
+      }
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-004/1",
+      "expected_payload_hash": "c5378ebea009fa30fc276459428a8d4915476d3224f815f99421eb540d025fb4",
+      "decision": "retain",
+      "rationale": "滤芯提醒清楚属于更换提醒，不证明过滤质量或寿命。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-004/2",
+      "expected_payload_hash": "f5c160e1d72176cb5207bbea53075aef715aa514df95604e8c9c93effbb99f44",
+      "decision": "retain",
+      "rationale": "电源线有点短是长度使用体验，不推断电气安全。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-005/0",
+      "expected_payload_hash": "1fbe71b542bb97212b40c0dddabb087a9393f722db785e68524011349dd89d2a",
+      "decision": "retain",
+      "rationale": "两只猫爱喝反映接受意愿，不把喜欢解释成经测试的水质口感。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-005/1",
+      "expected_payload_hash": "c4166bea0279c405a4a4beb5b93cbce74c99c96744af92775c41a571995d7efc",
+      "decision": "retain",
+      "rationale": "拆洗方便是清洁正面，不能被漏水关键词改成负面。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-005/2",
+      "expected_payload_hash": "b965b4ebe6cd1f61880ff26396f63ec7f2f0f2ac1124cace97299783d24a446e",
+      "decision": "retain",
+      "rationale": "目前没发现漏水是当下无故障观察，不证明永久可靠。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-006/0",
+      "expected_payload_hash": "9d312d093006ea7e5b5028f3722d7940ba6ecbde3bea5c342a0444ea8c3f42b0",
+      "decision": "retain",
+      "rationale": "猫靠近时未响应是控制表现负面，与水泵寿命分开；与持续出水保留两段证据但同维度合并计单位。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-006/1",
+      "expected_payload_hash": "a7f7d1128ae609d00460273794b22e1b4a0d2791f8c0e5fc79f5eb35fde7cf45",
+      "decision": "retain",
+      "rationale": "偶尔持续出水反映控制表现，不自动当作漏水或新增独立维度。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-006/2",
+      "expected_payload_hash": "03bd2d6d0eead3046d406a4fce150fcd1bc43d6760bf6437d542cb1657c626d0",
+      "decision": "context_only",
+      "rationale": "不知道是否个体故障是归因不确定上下文，不作为第三个已确认产品故障。",
+      "patch": {
+        "annotation_type": "context",
+        "label": null,
+        "assertion": "uncertain",
+        "polarity": "neutral",
+        "scope_note": "仅记录归因不确定，不新增产品故障"
+      }
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-007/0",
+      "expected_payload_hash": "42becf53bd5f4e5aef7d781773f637cefa7f9db04dd5a0704261cd1710eeb4ad",
+      "decision": "retain",
+      "rationale": "滑腻残留是卫生感知，不推断细菌、毒性或健康危害。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-007/1",
+      "expected_payload_hash": "e25322fe767c1490537e33f9396cda35d950dfba0e48708dc9f36986cb7f7345",
+      "decision": "retain",
+      "rationale": "说明书不清楚属于指导服务维度，不代替产品失效判断。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-007/2",
+      "expected_payload_hash": "0ba09ecff0171a44cf2e920cf4cbb496972d7312daed10fed74878befb3f827e",
+      "decision": "retain",
+      "rationale": "清洗后装回耗时属于拆装维护，与清洗本身难度分开。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-008/0",
+      "expected_payload_hash": "a3fc7ebe85e774b56bbe06df34271a33ba8a31c9b8a876fbb574da9deb89f040",
+      "decision": "retain",
+      "rationale": "饮水量增加是用户行为观察，不直接推断宠物偏好或医疗收益。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-008/1",
+      "expected_payload_hash": "47172a742d66915ed5abe5b2d0de44bca4e764299caf45c85475b1224995f87e",
+      "decision": "retain",
+      "rationale": "看着干净只是可见过滤感知，不声称通过水质安全检测。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-008/2",
+      "expected_payload_hash": "464b7d29d703361cd5e280f17597e61161a9f9ddf6c3f7d0c5f19718ed8ab4ce",
+      "decision": "retain",
+      "rationale": "明确换滤芯成本高，才归入耗材成本，不泛化为整机价格。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-009/0",
+      "expected_payload_hash": "f8de3f6422f65be2c57cd29e9ca74b6b6b02083624133afb0f311d2e83e935d7",
+      "decision": "retain",
+      "rationale": "外观不错仅是外观主观评价，不外推做工耐用性。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-009/1",
+      "expected_payload_hash": "b978b9d69a93c8cdb0271d7509308d32875f7b18794d0c2a0f96b4d456a15284",
+      "decision": "retain",
+      "rationale": "水泵安静是声音正面，不因为水泵一词标为寿命问题。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-009/2",
+      "expected_payload_hash": "5cfbdaf62431dfd578c27b198ba014ecd6197d10e4aa4e07e9d9d548e5b5866c",
+      "decision": "revise",
+      "rationale": "补充容量偏小及两只狗的使用背景，避免只从频次推定容量。",
+      "patch": {
+        "scope_note": "两只狗的使用场景，不推算实际升数",
+        "evidence": {
+          "text": "水箱容量偏小，家里两只狗一天要加两次水",
+          "start": 12,
+          "end": 31
+        }
+      }
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-010/0",
+      "expected_payload_hash": "5c521287f045cc227423ce3117c9a794d5b12ebc7c12357364103ebcea515ca3",
+      "decision": "retain",
+      "rationale": "泵声逐渐变大支持声音负面，不把声音变化直接归为寿命失效。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-010/1",
+      "expected_payload_hash": "1beb981a302f2a7703004684ffb4b7d5b9ce651d38a521670504d9d5da4ddfb7",
+      "decision": "revise",
+      "rationale": "卡有猫毛支持积毛观察，不能仅据此确认堵塞与噪音的因果关系。",
+      "patch": {
+        "scope_note": "仅积毛观察，不确认堵塞或噪音因果"
+      }
+    },
+    {
+      "annotation_id": "demo/pf-syn-pet-010/2",
+      "expected_payload_hash": "07f2b22599a4037268f360ad531a5949bc82f0fac2316a493bfb4f921e51a59f",
+      "decision": "retain",
+      "rationale": "清理费劲直接支持清洁难度负面。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "fixed-regression/adv-001/0",
+      "expected_payload_hash": "d1923088eac8c58608bc1c20ee32f2130c57ade025862a982272097bbdef8b97",
+      "decision": "retain",
+      "rationale": "纠正的对象是完全不出水，实际仍报告出水断续；保留流量表现负面，不推断泵已损坏。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "fixed-regression/adv-002/0",
+      "expected_payload_hash": "0ce7be30daeb85cddb81337073d83f795f81ad9cf1f9adea1adc1b67ee97a0b9",
+      "decision": "retain",
+      "rationale": "根本不能用表达整体不可用，前半否定不冲淡明确负面。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "fixed-regression/adv-003/0",
+      "expected_payload_hash": "d3d73e5a7cf6b48e7a0775d8b4cbc32ef6549c8922c3ff2b2407a819c3add5ed",
+      "decision": "revise",
+      "rationale": "装回水箱困难是拆装维护，不是清洗费力；修正此前拟议标签。",
+      "patch": {
+        "label": "product.assembly_maintenance",
+        "scope_note": "水箱装回步骤，不推断清洗费力"
+      }
+    },
+    {
+      "annotation_id": "fixed-regression/adv-004/0",
+      "expected_payload_hash": "6141988413739b8a0a8a48306e1ffc222369502bb6c732137174e2b51bc68957",
+      "decision": "revise",
+      "rationale": "少喝不等于拒绝饮用，改按饮水量观察并限定范围。",
+      "patch": {
+        "scope_note": "饮水量少，不推断拒绝饮用或健康问题"
+      }
+    },
+    {
+      "annotation_id": "fixed-regression/adv-005/0",
+      "expected_payload_hash": "44b326a0dd8c0a2e5d393bbd6628cf52c29eb0041a2ec4520672f29d6fb6aba0",
+      "decision": "revise",
+      "rationale": "仅描述使用半年未坏，归为整机运行感知，不能指定核心部件或证明长期可靠。",
+      "patch": {
+        "scope_note": "使用半年期间整机未坏的主观观察，未定位部件",
+        "evidence": {
+          "text": "用了半年没坏",
+          "start": 0,
+          "end": 6
+        }
+      }
+    },
+    {
+      "annotation_id": "fixed-regression/adv-005/1",
+      "expected_payload_hash": "bd50cef00f9113954b25301c82de52989ad639fb616ee6243488e139c92bc505",
+      "decision": "retain",
+      "rationale": "滤芯换得勤明确涉及更换频率，可作耗材更换频率负面，不推算寿命天数。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "fixed-regression/adv-006/0",
+      "expected_payload_hash": "ef0ad6ee0ff7dbd080220900749b6837354ca6858791679786d0614dc45ba133",
+      "decision": "revise",
+      "rationale": "补充不能说安静的评价上下文，仅听得到声音本身不足以证明吵。",
+      "patch": {
+        "scope_note": "含明确负面评价的夜间声音，不仅是可听见的事实",
+        "evidence": {
+          "text": "不能说安静，晚上还是能听到水泵声",
+          "start": 0,
+          "end": 16
+        }
+      }
+    },
+    {
+      "annotation_id": "fixed-regression/adv-007/0",
+      "expected_payload_hash": "b2aa563312a203c5352faa6b03cb3a8c71f46a173bdcb0d34cb3286e6069726d",
+      "decision": "retain",
+      "rationale": "让步中的不吵与出水太小分开，只保留原标注的出水表现负面。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "fixed-regression/adv-008/0",
+      "expected_payload_hash": "0e1f22235fa31ca79d407643408dd6857ae72c59ecc23627182639f767ec0b19",
+      "decision": "retain",
+      "rationale": "不是不回复而是回复慢，保留客服响应时效负面，不能映射为产品速度问题。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "fixed-regression/adv-009/0",
+      "expected_payload_hash": "adc1d387aab771ffd380e9beeb6378de73a255ac9af1a4558d8b52b410e20d50",
+      "decision": "retain",
+      "rationale": "清洗方便为明确正面；异味未被此条标注，不以漏标推定负面。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "fixed-regression/adv-010/0",
+      "expected_payload_hash": "1b643daa8b091d19dbb2c2f494952a191c62fbeaa3329340be944fa3a7fea008",
+      "decision": "context_only",
+      "rationale": "滤芯该换了未说明更换过早或寿命差，改为中性归因纠正上下文，不作为耗材缺陷。",
+      "patch": {
+        "annotation_type": "context",
+        "label": null,
+        "polarity": "neutral",
+        "assertion": "corrected",
+        "scope_note": "保留用户归因纠正，常规更换不等于寿命过短；原因未独立核验",
+        "evidence": {
+          "text": "不是猫毛堵的，是滤芯该换了",
+          "start": 0,
+          "end": 13
+        }
+      }
+    },
+    {
+      "annotation_id": "fixed-regression/adv-011/0",
+      "expected_payload_hash": "fa2881480465ff354351137a9aa5431009cb556157f4bd240072951c6c11e6ce",
+      "decision": "retain",
+      "rationale": "原文撤回漏水猜测，保留中性纠正归因；不计本人产品漏水故障。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "fixed-regression/adv-012/0",
+      "expected_payload_hash": "6ebb42019fc77b14323040b504b67727b96ab3105c8b3f2fe150a6ed78fad264",
+      "decision": "retain",
+      "rationale": "没几天是时间短，不是否认坏；明确泵短期损坏，属于耐用性负面。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "fixed-regression/adv-013/0",
+      "expected_payload_hash": "ed674ded4c224fc5eb46a1c1953c2b142da1e7f9db686650f4ecd2d44cae681a",
+      "decision": "revise",
+      "rationale": "补充拆开洗的上下文，让麻烦的对象明确为清洗过程。",
+      "patch": {
+        "evidence": {
+          "text": "不得不拆开洗，太麻烦了",
+          "start": 0,
+          "end": 11
+        }
+      }
+    },
+    {
+      "annotation_id": "fixed-regression/adv-014/0",
+      "expected_payload_hash": "286e3546332c12f026962e71fe4e2014dbc02a668681958f9d79325403e5f483",
+      "decision": "retain",
+      "rationale": "听说的连接问题属于转述，保留中性reported，不计本人已确认故障。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "fixed-regression/adv-015/0",
+      "expected_payload_hash": "4a37785e18d5475c60dab04ddf521f7925fd87c324f3e4281cb94c7d68ae6bb0",
+      "decision": "revise",
+      "rationale": "容量再大点是用户改进偏好，不当作测量容量或已确认产品故障。",
+      "patch": {
+        "scope_note": "用户容量偏好/改进愿望，未测量容积，不是故障证明"
+      }
+    },
+    {
+      "annotation_id": "fixed-regression/adv-016/0",
+      "expected_payload_hash": "42fe5717c223e41968bbbb5d5b0c2b7341d9ba576b16de90ea0977422dca7200",
+      "decision": "revise",
+      "rationale": "贵未指定滤芯或耗材，限于一般价格感知，不保留不受证据支持的耗材成本归因。",
+      "patch": {
+        "scope_note": "价格对象未指明，仅一般价格感知",
+        "evidence": {
+          "text": "除了贵",
+          "start": 0,
+          "end": 3
+        }
+      }
+    },
+    {
+      "annotation_id": "fixed-regression/adv-016/1",
+      "expected_payload_hash": "61419ff053eb31c7bc49c6d4ef33df8e66d0cfe00923ba6281a7ab770bb07452",
+      "decision": "revise",
+      "rationale": "没毛病是受价格例外限定的整体正面评价，不扩展为客观可靠性证明。",
+      "patch": {
+        "scope_note": "除价格外的整体主观评价，非客观可靠性证明"
+      }
+    },
+    {
+      "annotation_id": "fixed-regression/adv-017/0",
+      "expected_payload_hash": "6f8a625c6c93c36a14575962b90932f26ec35c09ab5776df7afccaa723198899",
+      "decision": "retain",
+      "rationale": "不是一般的好用通常是程度强调，保留好用的正面，不仅因否定词改为负面。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "fixed-regression/adv-018/0",
+      "expected_payload_hash": "d291792ac824ab6c799eb2640702c0e292ecdcb500c6aa9d9d5fa44a5a60f076",
+      "decision": "retain",
+      "rationale": "抽水马达没劲反映出水表现，不能确认马达寿命失效。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "fixed-regression/adv-018/1",
+      "expected_payload_hash": "5e036844f2efec8f156b784f0c53226fdefea36bf23eea2bc13106792be31c54",
+      "decision": "retain",
+      "rationale": "底座渗水是明确漏水负面，与抽水表现分别保留。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "fixed-regression/adv-019/0",
+      "expected_payload_hash": "48ea5afe986101a4808e7c975cce7465dbc444ba35b2631f887b2237831bef12",
+      "decision": "retain",
+      "rationale": "黏糊糊是残留感知，不等于清洗困难或微生物检测结论。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "fixed-regression/adv-019/1",
+      "expected_payload_hash": "dc00fec0ebaf24a7da9fc28650e68472ea275c07e6e5583a79b74372d8b62a0c",
+      "decision": "revise",
+      "rationale": "拧多个螺丝属于拆装步骤负担，补充拆洗语境，不与残留感知重复。",
+      "patch": {
+        "scope_note": "清洗前拆装步骤负担，与污垢感知分开",
+        "evidence": {
+          "text": "拆洗要拧好几个螺丝",
+          "start": 6,
+          "end": 15
+        }
+      }
+    },
+    {
+      "annotation_id": "fixed-regression/adv-020/0",
+      "expected_payload_hash": "c033bd7f3c30a2410c8de1ab8d3f917b3d720d99befdf8c43c6fde06544e9156",
+      "decision": "retain",
+      "rationale": "不爱凑近支持接近意愿低，不把它当作经测量的饮水量减少。",
+      "patch": {}
+    },
+    {
+      "annotation_id": "fixed-regression/adv-020/1",
+      "expected_payload_hash": "0706232a64f040db7bf52835b1186b5c730b56ae7f910e4b0109a1d472a31cb5",
+      "decision": "retain",
+      "rationale": "提醒灯不亮属于更换提醒功能，不自动证明滤芯已失效。",
+      "patch": {}
+    }
+  ]
+}

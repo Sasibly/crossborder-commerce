@@ -1,0 +1,196 @@
+{
+  "status": "passed",
+  "data_kind": "simulation",
+  "fixture_data_kind": "simulation",
+  "measurement_kind": "observed_local_http_timings",
+  "measured_at_utc": "2026-11-25T03:02:25.161250+00:00",
+  "transport": "real HTTP over loopback",
+  "workers": 1,
+  "initial_cancelled_orders_per_level": 1000,
+  "warmup_reads_per_level": 5,
+  "environment": {
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.13.14",
+    "sqlite": "3.53.1",
+    "logical_cpu_count": 16,
+    "packages": {
+      "uvicorn": "0.54.0",
+      "fastapi": "0.165.0",
+      "httpx": "0.28.1"
+    }
+  },
+  "results": [
+    {
+      "workload": "seller_order_page_30",
+      "concurrency": 1,
+      "samples": 120,
+      "elapsed_seconds": 4.503,
+      "operations_per_second": 26.65,
+      "p50_ms": 36.639,
+      "p95_ms": 40.525,
+      "p99_ms": 44.184,
+      "max_ms": 62.885,
+      "percentile_method": "nearest_rank",
+      "http_requests": 120,
+      "http_statuses": {
+        "200": 120
+      },
+      "errors": 0,
+      "error_types": {},
+      "latency_scope": "one HTTP request"
+    },
+    {
+      "workload": "buyer_cart_checkout_seller_cancel",
+      "concurrency": 1,
+      "samples": 120,
+      "elapsed_seconds": 7.095,
+      "operations_per_second": 16.91,
+      "p50_ms": 53.005,
+      "p95_ms": 78.358,
+      "p99_ms": 97.983,
+      "max_ms": 109.056,
+      "percentile_method": "nearest_rank",
+      "http_requests": 360,
+      "http_statuses": {
+        "200": 360
+      },
+      "errors": 0,
+      "error_types": {},
+      "latency_scope": "one buyer cart+checkout+seller cancel journey (3 sequential HTTP requests)"
+    },
+    {
+      "workload": "seller_order_page_30",
+      "concurrency": 4,
+      "samples": 120,
+      "elapsed_seconds": 3.882,
+      "operations_per_second": 30.91,
+      "p50_ms": 128.04,
+      "p95_ms": 136.536,
+      "p99_ms": 157.306,
+      "max_ms": 157.608,
+      "percentile_method": "nearest_rank",
+      "http_requests": 120,
+      "http_statuses": {
+        "200": 120
+      },
+      "errors": 0,
+      "error_types": {},
+      "latency_scope": "one HTTP request"
+    },
+    {
+      "workload": "buyer_cart_checkout_seller_cancel",
+      "concurrency": 4,
+      "samples": 120,
+      "elapsed_seconds": 3.823,
+      "operations_per_second": 31.39,
+      "p50_ms": 99.289,
+      "p95_ms": 283.043,
+      "p99_ms": 486.582,
+      "max_ms": 578.132,
+      "percentile_method": "nearest_rank",
+      "http_requests": 360,
+      "http_statuses": {
+        "200": 360
+      },
+      "errors": 0,
+      "error_types": {},
+      "latency_scope": "one buyer cart+checkout+seller cancel journey (3 sequential HTTP requests)"
+    },
+    {
+      "workload": "seller_order_page_30",
+      "concurrency": 8,
+      "samples": 120,
+      "elapsed_seconds": 4.247,
+      "operations_per_second": 28.25,
+      "p50_ms": 276.755,
+      "p95_ms": 315.676,
+      "p99_ms": 354.422,
+      "max_ms": 355.772,
+      "percentile_method": "nearest_rank",
+      "http_requests": 120,
+      "http_statuses": {
+        "200": 120
+      },
+      "errors": 0,
+      "error_types": {},
+      "latency_scope": "one HTTP request"
+    },
+    {
+      "workload": "buyer_cart_checkout_seller_cancel",
+      "concurrency": 8,
+      "samples": 120,
+      "elapsed_seconds": 3.777,
+      "operations_per_second": 31.77,
+      "p50_ms": 124.424,
+      "p95_ms": 1041.018,
+      "p99_ms": 1860.431,
+      "max_ms": 1874.094,
+      "percentile_method": "nearest_rank",
+      "http_requests": 360,
+      "http_statuses": {
+        "200": 360
+      },
+      "errors": 0,
+      "error_types": {},
+      "latency_scope": "one buyer cart+checkout+seller cancel journey (3 sequential HTTP requests)"
+    }
+  ],
+  "integrity": [
+    {
+      "ok": true,
+      "checked_products": 2,
+      "checked_orders": 1123,
+      "issues": [],
+      "note": "只读业务一致性检查，不自动修复，也不代替数据库完整性和外部支付对账。"
+    },
+    {
+      "ok": true,
+      "checked_products": 2,
+      "checked_orders": 1123,
+      "issues": [],
+      "note": "只读业务一致性检查，不自动修复，也不代替数据库完整性和外部支付对账。"
+    },
+    {
+      "ok": true,
+      "checked_products": 2,
+      "checked_orders": 1123,
+      "issues": [],
+      "note": "只读业务一致性检查，不自动修复，也不代替数据库完整性和外部支付对账。"
+    }
+  ],
+  "inventory_races": [
+    {
+      "concurrency_level": 1,
+      "requests": 12,
+      "available_units": 3,
+      "accepted": 3,
+      "sold_out": 9,
+      "expected_conflicts_excluded_from_latency_errors": true
+    },
+    {
+      "concurrency_level": 4,
+      "requests": 12,
+      "available_units": 3,
+      "accepted": 3,
+      "sold_out": 9,
+      "expected_conflicts_excluded_from_latency_errors": true
+    },
+    {
+      "concurrency_level": 8,
+      "requests": 12,
+      "available_units": 3,
+      "accepted": 3,
+      "sold_out": 9,
+      "expected_conflicts_excluded_from_latency_errors": true
+    }
+  ],
+  "limitations": [
+    "Closed-loop fixed-count samples, not sustained peak capacity or production QPS.",
+    "No TLS, seller auth, buyer password hashing, real payment or external provider latency in this workload.",
+    "Each write journey uses its own seeded buyer/session/address; existing rate limits remain enabled.",
+    "No public-market statistics are derived from these synthetic orders.",
+    "Each concurrency level starts from the same DB snapshot; its write journey runs after its read phase."
+  ],
+  "source_sha256": "db142cd709c484e409b86414a444d8ca99a127ea04c4b7ffcc0b662e78e54682",
+  "harness_sha256": "8417f4f4ce0f39bafac06bd410882a265220708ba17be62f0ea9790e557bb245"
+}

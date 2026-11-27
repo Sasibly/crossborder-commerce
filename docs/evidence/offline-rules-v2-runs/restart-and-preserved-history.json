@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "controlled_restart_preserved_analysis_rows": 7,
+  "authorization_history": [
+    {
+      "id": "qwen35-pet-fountain-first-trial-20261125",
+      "requests_used": 20,
+      "request_limit": 20
+    },
+    {
+      "id": "qwen35-pet-fountain-performance-20261126",
+      "requests_used": 20,
+      "request_limit": 20
+    }
+  ],
+  "preserved_existing_rows": {
+    "commerce_review_analyses": 6,
+    "commerce_review_budgets": 2,
+    "commerce_products": 12,
+    "commerce_orders": 27,
+    "commerce_order_items": 50,
+    "commerce_candidates": 10,
+    "commerce_decisions": 16,
+    "commerce_supplier_cases": 2,
+    "commerce_supplier_events": 7,
+    "commerce_audit": 333
+  },
+  "source_backup": "/app/data/local-verification/20261126T031723Z-bd47eab6/backup.sqlite3",
+  "external_model_requests_added": 0,
+  "working_database_replaced": false
+}

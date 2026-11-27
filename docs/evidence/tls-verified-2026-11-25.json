@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "fixture_data_kind": "simulation",
+  "measurement_kind": "observed_local_verified_https",
+  "certificate_validation": "CA chain and hostname verification enabled; private CA trusted only by this HTTP client",
+  "untrusted_ca_rejected": true,
+  "checks": [
+    "Secure cookie sent over HTTPS",
+    "CSRF missing rejected",
+    "account login/logout and owned order access",
+    "operator payment and refund review rejected",
+    "owner simulated payment and refund complete",
+    "cross-origin login rejected"
+  ],
+  "integrity": {
+    "ok": true,
+    "checked_products": 2,
+    "checked_orders": 1,
+    "issues": [],
+    "note": "只读业务一致性检查，不自动修复，也不代替数据库完整性和外部支付对账。"
+  },
+  "browser_validation": "not_run",
+  "public_release": "not_verified",
+  "scope": "Direct local uvicorn TLS; no system trust changes, public domain or reverse proxy validation."
+}

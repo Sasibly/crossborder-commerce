@@ -1,0 +1,47 @@
+{
+  "profile": "protected",
+  "status": "blocked",
+  "checks": [
+    {
+      "id": "schema_current",
+      "passed": true
+    },
+    {
+      "id": "single_worker",
+      "passed": true
+    },
+    {
+      "id": "simulation_only",
+      "passed": true
+    },
+    {
+      "id": "seller_auth_required",
+      "passed": false
+    },
+    {
+      "id": "secure_buyer_cookie",
+      "passed": false
+    },
+    {
+      "id": "sync_analysis_disabled",
+      "passed": false
+    },
+    {
+      "id": "database_readable",
+      "passed": true
+    },
+    {
+      "id": "database_integrity",
+      "passed": true
+    }
+  ],
+  "public_release": "not_verified",
+  "unverified": [
+    "HTTPS termination and proxy trust",
+    "off-machine backup recovery",
+    "target capacity and service-level objectives",
+    "public account abuse controls"
+  ],
+  "scope": "Local configuration and schema checks only; not approval for public release.",
+  "schema_version": 25
+}

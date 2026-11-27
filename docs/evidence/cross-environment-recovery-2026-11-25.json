@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "fixture_data_kind": "simulation",
+  "measurement_kind": "observed_cross_environment_restore",
+  "source_os": "Windows",
+  "destination_os": "Linux",
+  "schema_version": 25,
+  "content_matches": true,
+  "source_content_sha256": "bae48aa8f0b97421936721d911d2937e2ea697353a20b7567d7d90cfc56c8945",
+  "checks": [
+    "complete table content preserved",
+    "comparison and metric provenance preserved",
+    "buyer login and owned order preserved",
+    "new simulated checkout/payment/refund succeeds"
+  ],
+  "integrity": {
+    "ok": true,
+    "checked_products": 2,
+    "checked_orders": 12,
+    "issues": [],
+    "note": "只读业务一致性检查，不自动修复，也不代替数据库完整性和外部支付对账。"
+  },
+  "scope": "Different OS/container on the same physical host; not independent-host disaster recovery or off-site backup storage."
+}

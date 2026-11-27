@@ -1,0 +1,137 @@
+{
+  "schema_version": "pet-demo-rubric-v1",
+  "reference_kind": "developer_defined_demo_reference_not_human_gold",
+  "category": "pet_fountain",
+  "source_sha256": "fbd9f57c4adfb8f683b566f2da278ecaafc2baf13e797bc57a3fed72aafbe96e",
+  "rules": {
+    "水泵寿命短": {
+      "disposition": "mapped",
+      "label": "pump_life",
+      "reason": "直接描述水泵寿命问题"
+    },
+    "清洁困难": {
+      "disposition": "mapped",
+      "label": "cleaning",
+      "reason": "直接描述清洗困难"
+    },
+    "漏水": {
+      "disposition": "mapped",
+      "label": "leakage",
+      "reason": "明确漏水"
+    },
+    "噪音偏大": {
+      "disposition": "mapped",
+      "label": "noise",
+      "reason": "明确声音偏吵"
+    },
+    "清洁方便": {
+      "disposition": "mapped",
+      "label": "cleaning",
+      "reason": "清洁维度正面评价"
+    },
+    "无漏水": {
+      "disposition": "mapped",
+      "label": "leakage",
+      "reason": "漏水维度正面否定故障对照，不推断长期可靠性"
+    },
+    "水泵安静": {
+      "disposition": "mapped",
+      "label": "noise",
+      "reason": "噪音维度正面对照，不归入寿命问题"
+    },
+    "泵噪音变大": {
+      "disposition": "mapped",
+      "label": "noise",
+      "reason": "声音变大不等于寿命失效"
+    },
+    "清理费劲": {
+      "disposition": "mapped",
+      "label": "cleaning",
+      "reason": "直接描述清理困难"
+    },
+    "安全隐患": {
+      "disposition": "needs_review",
+      "reason": "差点踩入积水不等于已受伤或电气危险，需限定风险含义"
+    },
+    "整体可接受": {
+      "disposition": "needs_review",
+      "reason": "证据只描述白天出水声音，不能扩大为整体产品评价"
+    },
+    "故障归因不确定": {
+      "disposition": "needs_review",
+      "reason": "评论者不确定归因，不是独立确认的故障"
+    },
+    "客服处理敷衍": {
+      "disposition": "taxonomy_gap",
+      "reason": "客服维度未覆盖"
+    },
+    "退换货麻烦": {
+      "disposition": "taxonomy_gap",
+      "reason": "退换流程不等于性价比低"
+    },
+    "宠物接受度高": {
+      "disposition": "taxonomy_gap",
+      "reason": "宠物接受度未覆盖"
+    },
+    "水箱容量大": {
+      "disposition": "taxonomy_gap",
+      "reason": "容量不是外形尺寸"
+    },
+    "滤芯提醒清楚": {
+      "disposition": "taxonomy_gap",
+      "reason": "维护提醒未覆盖"
+    },
+    "电源线短": {
+      "disposition": "taxonomy_gap",
+      "reason": "电源线长度没有独立标签"
+    },
+    "宠物适口性好": {
+      "disposition": "taxonomy_gap",
+      "reason": "饮水偏好未覆盖"
+    },
+    "感应不稳定": {
+      "disposition": "taxonomy_gap",
+      "reason": "传感器响应不等于寿命失效"
+    },
+    "异常持续出水": {
+      "disposition": "taxonomy_gap",
+      "reason": "出水控制异常不等于漏水或速度慢"
+    },
+    "内壁易脏": {
+      "disposition": "taxonomy_gap",
+      "reason": "易脏与清洗困难区分"
+    },
+    "说明书不清": {
+      "disposition": "taxonomy_gap",
+      "reason": "说明书维度未覆盖"
+    },
+    "拆装繁琐": {
+      "disposition": "taxonomy_gap",
+      "reason": "装配复杂与清洗困难区分"
+    },
+    "饮水量增加": {
+      "disposition": "taxonomy_gap",
+      "reason": "饮水行为未覆盖"
+    },
+    "过滤效果可感知": {
+      "disposition": "taxonomy_gap",
+      "reason": "过滤感知未覆盖"
+    },
+    "滤芯成本高": {
+      "disposition": "taxonomy_gap",
+      "reason": "耗材成本与整体性价比区分"
+    },
+    "外观好": {
+      "disposition": "taxonomy_gap",
+      "reason": "外观不等于做工和耐用性"
+    },
+    "水箱容量小": {
+      "disposition": "taxonomy_gap",
+      "reason": "容量不是外形尺寸"
+    },
+    "猫毛易堵塞": {
+      "disposition": "taxonomy_gap",
+      "reason": "毛发堵塞与水泵寿命、清洗困难区分"
+    }
+  }
+}

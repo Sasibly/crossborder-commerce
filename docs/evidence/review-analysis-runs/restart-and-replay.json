@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "analysis_result_preserved_after_rebuild_and_restart": true,
+  "analysis_provenance_preserved": true,
+  "idempotent_submission_extra_model_requests": 0,
+  "requests_used": 10,
+  "request_limit": 20,
+  "published_products": 7,
+  "analysis_candidate_preserved": true
+}

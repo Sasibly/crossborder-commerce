@@ -1,0 +1,141 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-26T09:12:16.261994+00:00",
+  "scope": [
+    "identity-switch stale-response isolation",
+    "buyer pending button state",
+    "seller mutation response privacy"
+  ],
+  "review_items": [
+    1,
+    2,
+    4
+  ],
+  "tests": {
+    "passed": 1076,
+    "known_xfailed": 1,
+    "warnings": 1,
+    "new_regressions": 8,
+    "log": "reports\\review-fixes-20261126\\tests.log"
+  },
+  "deployment": {
+    "state": "running",
+    "health": "healthy",
+    "base_url": "http://127.0.0.1:8031",
+    "image": "sha256:2c301088df4eff674a9a0dc23164f04d2e40c564bc5968b766017ab590f85cb4",
+    "data_volumes": [
+      "crossborder-commerce_commerce-data"
+    ],
+    "workbench": "http://127.0.0.1:8031/workbench",
+    "shop": "http://127.0.0.1:8031/shop",
+    "scope": "local_machine_only",
+    "fixture_data_kind": "simulation",
+    "readiness": {
+      "status": "ready",
+      "schema_version": "26",
+      "auth": "disabled",
+      "embedding": "hash",
+      "cluster_threshold": "0.14",
+      "cluster_threshold_source": "calibrated"
+    }
+  },
+  "deployment_database_content_unchanged": true,
+  "deployment_content_sha256": "bf1f2646db417f4a8eeb278d9a17d92b20f289d36c0ed7cbc9ac9a03c5a0b3cb",
+  "browser": {
+    "status": "passed",
+    "browser": "isolated installed Chrome headless",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "checks": [
+      "Overview, live summary and high-frequency entries rendered",
+      "All eight views and headings, active navigation, no desktop horizontal overflow",
+      "Order summary, snapshot detail, explicit authorised delivery, timeline and credential-change scrubbing",
+      "Buyer catalog matches seller published SKU/title/price/stock; bilingual counted categories and clear-filter shortcuts work",
+      "Product keyword, empty result, status filters, clearing and cross-view retention",
+      "Unsaved values and candidate preserved; subsection heading focused",
+      "Browser back and forward restore view and subsection",
+      "Reload/direct URL preserves category and positions requested subsection",
+      "Unknown routes fall back to overview",
+      "Expanded order detail remains within 390px viewport; item table scrolls within its container",
+      "390px menu, all eight mobile views without overflow, hidden controls excluded from keyboard focus",
+      "Buyer shop still renders",
+      "Real buyer DOM rejects previous identity responses; independent refresh preserves checkout busy state",
+      "Real buyer UI register/address/cart/checkout/pay/reload/mobile, seller sees paid, replay has one payment event; fictional order refunded afterward"
+    ],
+    "console_errors": [],
+    "expected_anonymous_buyer_session_checks": [
+      {
+        "url": "http://127.0.0.1:8031/shop/api/account/me",
+        "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+      }
+    ],
+    "business_mutations": 8,
+    "additional_live_model_calls": 0,
+    "buyer_payment": {
+      "status": "passed",
+      "order_id": "adf88c6920ba44248515f176621e01bc",
+      "final_status": "refunded",
+      "prior_orders_preserved": 34,
+      "inventory_restored": true,
+      "checks": "Real buyer UI register/address/cart/checkout/pay/reload/mobile, seller sees paid, replay has one payment event; fictional order refunded afterward"
+    },
+    "requests": 138,
+    "screenshots": [
+      "desktop-overview.png",
+      "desktop-products.png",
+      "desktop-sourcing.png",
+      "mobile-overview.png",
+      "mobile-navigation.png",
+      "desktop-orders.png",
+      "mobile-orders.png",
+      "buyer-payment-pending.png",
+      "buyer-payment-paid.png",
+      "buyer-payment-mobile.png"
+    ]
+  },
+  "database_after_browser": {
+    "integrity": "ok",
+    "foreign_key_violations": 0,
+    "order_count": 35,
+    "existing_orders_preserved": 34,
+    "test_order_final_status": "refunded"
+  },
+  "served_assets": {
+    "commerce_shop_v2.html": {
+      "content_matches_normalized_newlines": true,
+      "sha256_lf": "5cb68824ccfc2a1e8fa94be0423ebeb1fd9fc84f11b22b95afea216438f3e42d"
+    },
+    "commerce_workbench.html": {
+      "content_matches_normalized_newlines": true,
+      "sha256_lf": "4b33e7b96dbccfb817113afdc8535160745eab7293d0cb6d091b8c6c288ad371"
+    },
+    "commerce_seller.js": {
+      "content_matches_normalized_newlines": true,
+      "sha256_lf": "bb466e97a27711df4a11b7b1d77dbf6d0baa58ce55c2c801583749f91cc6eb95"
+    },
+    "review_analysis.js": {
+      "content_matches_normalized_newlines": true,
+      "sha256_lf": "d02735db2fee9d48f361a2cea0995d8c42b0bc02d146931499eabc873a9a3910"
+    }
+  },
+  "additional_live_model_calls": 0,
+  "deferred_review_items": [
+    3,
+    5,
+    6,
+    7
+  ],
+  "notes": [
+    "Directory is not a Git repository; no Git baseline available.",
+    "Deployment alone preserved DB contents; browser verification added one fictional refunded order and audit trail.",
+    "Old responses are discarded; already-submitted server transactions retain normal semantics."
+  ]
+}

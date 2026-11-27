@@ -1,0 +1,21 @@
+name: crossborder-commerce
+services:
+  app:
+    build: .
+    image: crossborder-commerce:local
+    ports:
+      - '127.0.0.1:8031:8000'
+    environment:
+      RUN_MODE: mock
+      EMBEDDING_PROVIDER: hash
+      AUTH_REQUIRED: 'false'
+      SHOP_TENANT: local
+      DB_PATH: data/commerce.sqlite3
+      COMMERCE_SECURE_COOKIES: 'false'
+      COMMERCE_EXPIRY_INTERVAL: '30'
+    volumes:
+      - commerce-data:/app/data
+      - ./.env.review-analysis:/app/.env.review-analysis:ro
+    restart: unless-stopped
+volumes:
+  commerce-data:

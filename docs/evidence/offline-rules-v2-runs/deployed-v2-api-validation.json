@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "active_rule_version": "offline-v2-adfafd91b1be",
+  "deployed_offline_analysis_id": "16b952af80ab420399f4931d181f9b78",
+  "predictions": {
+    "leakage": "positive",
+    "cleaning": "negative"
+  },
+  "offline_result_request_count": 0,
+  "cached_v2_reused": true,
+  "live_cache_preserved": true,
+  "historical_analysis_rows_preserved": 6,
+  "authorization_history": [
+    {
+      "id": "qwen35-pet-fountain-first-trial-20261125",
+      "requests_used": 20,
+      "request_limit": 20
+    },
+    {
+      "id": "qwen35-pet-fountain-performance-20261126",
+      "requests_used": 20,
+      "request_limit": 20
+    }
+  ],
+  "external_model_requests_added": 0,
+  "other_category_remains_v1": true,
+  "legacy_evidence_bridge_versioned": true,
+  "data_kind": "synthetic_development_checks_not_quality_gold"
+}

@@ -1,0 +1,222 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-26T06:54:34.468174+00:00",
+  "scope": "Seller information architecture, layout, navigation and local product filters; no business API/state machine/schema changes",
+  "workspace_url": "http://127.0.0.1:8031/workbench#overview",
+  "modules": [
+    "经营概览",
+    "商品与库存",
+    "订单与售后",
+    "评论分析",
+    "选品与成本",
+    "经营复盘",
+    "指标来源",
+    "设置与审计"
+  ],
+  "tests": {
+    "status": "passed",
+    "total": 1055,
+    "passed": 1054,
+    "known_xfailed": [
+      "test_polarity::test_known_gap_died_is_not_a_negative_cue"
+    ],
+    "required_groups": {
+      "test_commerce_access": 4,
+      "test_buyers": 11,
+      "test_commerce_consistency": 16,
+      "test_commerce_backup": 2,
+      "test_review_analysis": 9,
+      "test_review_analysis_performance": 4,
+      "test_offline_rule_versioning": 4,
+      "test_review_annotation_prereview": 19
+    },
+    "junit": "reports\\seller-workspace-20261126\\release-tests\\tests.xml",
+    "all_required_groups_present": true
+  },
+  "test_log_summary": "============ 1054 passed, 1 xfailed, 1 warning in 66.21s (0:01:06) ============",
+  "browser": {
+    "status": "passed",
+    "browser": "isolated installed Chrome headless",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "checks": [
+      "Overview, live summary and high-frequency entries rendered",
+      "All eight views and headings, active navigation, no desktop horizontal overflow",
+      "Product keyword, empty result, status filters, clearing and cross-view retention",
+      "Unsaved values and candidate preserved; subsection heading focused",
+      "Browser back and forward restore view and subsection",
+      "Reload/direct URL preserves category and positions requested subsection",
+      "Unknown routes fall back to overview",
+      "390px menu, all eight mobile views without overflow, hidden controls excluded from keyboard focus",
+      "Buyer shop still renders"
+    ],
+    "console_errors": [],
+    "expected_anonymous_buyer_session_checks": [
+      {
+        "url": "http://127.0.0.1:8031/shop/api/account/me",
+        "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+      }
+    ],
+    "business_mutations": 0,
+    "additional_live_model_calls": 0,
+    "requests": 80,
+    "screenshots": [
+      "desktop-overview.png",
+      "desktop-products.png",
+      "desktop-sourcing.png",
+      "mobile-overview.png",
+      "mobile-navigation.png"
+    ]
+  },
+  "deployment": {
+    "status": "passed",
+    "deployment": {
+      "state": "running",
+      "health": "healthy",
+      "base_url": "http://127.0.0.1:8031",
+      "image": "sha256:972fa2b799f3e00b83c680d5986b5c0790b22489dfb03030fd09157585ffca54",
+      "data_volumes": [
+        "crossborder-commerce_commerce-data"
+      ],
+      "workbench": "http://127.0.0.1:8031/workbench",
+      "shop": "http://127.0.0.1:8031/shop",
+      "scope": "local_machine_only",
+      "fixture_data_kind": "simulation"
+    },
+    "readiness": {
+      "status": "ready",
+      "schema_version": "26",
+      "auth": "disabled",
+      "embedding": "hash",
+      "cluster_threshold": "0.14",
+      "cluster_threshold_source": "calibrated"
+    },
+    "before_database_backup": "/app/data/local-verification/20261126T064010Z-dab6e594/backup.sqlite3",
+    "after_database_backup": "/app/data/local-verification/20261126T065309Z-8c4b774d/backup.sqlite3",
+    "database_content_unchanged": true,
+    "content_sha256": "8017a1e944163f3f6be4c097685d992bec04bfe7b2ce50808f906d7a5833bff5",
+    "table_rows": {
+      "api_keys": 0,
+      "commerce_addresses": 29,
+      "commerce_audit": 543,
+      "commerce_auth_attempts": 4,
+      "commerce_buyers": 31,
+      "commerce_candidates": 22,
+      "commerce_cart": 0,
+      "commerce_decisions": 28,
+      "commerce_events": 29,
+      "commerce_key_roles": 0,
+      "commerce_ledger": 247,
+      "commerce_metric_scenarios": 3,
+      "commerce_order_items": 66,
+      "commerce_orders": 31,
+      "commerce_payment_policy": 0,
+      "commerce_products": 24,
+      "commerce_profit_comparisons": 1,
+      "commerce_refund_costs": 27,
+      "commerce_refunds": 27,
+      "commerce_review_analyses": 13,
+      "commerce_review_budgets": 2,
+      "commerce_sessions": 5,
+      "commerce_supplier_cases": 2,
+      "commerce_supplier_events": 7,
+      "compliance_rules": 4,
+      "cost_params": 12,
+      "fba_fee_schedule": 402,
+      "fba_rate_version": 3,
+      "jobs": 0,
+      "product_returns": 2,
+      "rate_limits": 0,
+      "reviews": 0,
+      "runs": 0,
+      "schema_migrations": 26
+    },
+    "business_preservation_checks": "Original sixteen panel inventory reorganized without replacing forms; source controls and actions checked by test_seller_workspace and full business regressions; no database/schema/business API changes. Old overwritten Docker image is not retained for byte-level source comparison.",
+    "frozen_input_check": {
+      "status": "passed",
+      "pinned_files": 16,
+      "profile_sha256": "dbe0d618014f3b9500b4b822df5ecb4ea716f80d463d292f32e6605c34b3a065",
+      "scope": {
+        "deployment": "local_machine_only",
+        "canonical_port": 8031,
+        "schema_version": 26,
+        "trade_mode": "mock",
+        "currency": "USD",
+        "supplier_execution": "simulation",
+        "additional_live_model_calls_allowed": false,
+        "public_release_in_scope": false,
+        "real_world_quality_claims": false
+      },
+      "reference_qualification": {
+        "raw_supplied_reviews": 30,
+        "raw_supplied_annotations": 55,
+        "ai_candidate_aspect_units": 50,
+        "context_items": 2,
+        "human_approved_annotations": 0,
+        "excluded_annotation_ids": [
+          "demo/pf-syn-pet-001/2",
+          "demo/pf-syn-pet-002/1"
+        ],
+        "excluded_from_accuracy_scoring": true,
+        "fixed_regression_is_blind": false
+      }
+    },
+    "documents": {
+      "status": "passed",
+      "documents": [
+        "COMMERCE-README.md",
+        "docs/LOCAL-DEPLOYMENT.md",
+        "docs/USER-GUIDE.zh-CN.md",
+        "docs/REVIEW-ANALYSIS-GUIDE.md",
+        "docs/COMMERCE-DEMO.md",
+        "docs/COMMERCE-PORTFOLIO.md",
+        "docs/SELLER-WORKSPACE-IA.md",
+        "docs/REVIEW-ANALYSIS-GUIDE.md"
+      ],
+      "local_links_checked": 84
+    },
+    "integrity": {
+      "ok": true,
+      "checked_products": 24,
+      "checked_orders": 31,
+      "issues": [],
+      "note": "只读业务一致性检查，不自动修复，也不代替数据库完整性和外部支付对账。"
+    },
+    "real_model_budgets": [
+      {
+        "budget_id": "qwen35-pet-fountain-first-trial-20261125",
+        "requests_used": 20,
+        "request_limit": 20
+      },
+      {
+        "budget_id": "qwen35-pet-fountain-performance-20261126",
+        "requests_used": 20,
+        "request_limit": 20
+      }
+    ],
+    "additional_live_model_calls": 0,
+    "source_matches_served_assets": true
+  },
+  "source_sha256": {
+    "src/xborder_insight/commerce_workbench.html": "9c523e554eb6556497c169d4659c9499971ad92b0d281d68896a88bac1f6bbd3",
+    "src/xborder_insight/commerce_seller.js": "22a5c620d661f4b429bdd1e9faaa2032ae8c69132c68e7cfedc55d9ef30611c0",
+    "src/xborder_insight/review_analysis.js": "b4642f70628a668fc8abc85c540c22c6285c7a6b74f1f7adbf29dddc56e9b3be",
+    "tests/test_seller_workspace.py": "6734d327dda425954b8efc7c2d941207652f87272e84d73d5c5560dbc145ddae",
+    "scripts/seller_workspace_browser_check.mjs": "ec96bcf9be57ef38f8617c4559c33843519d1b78cde34c2bb9d2c897be156fa0"
+  },
+  "report_directory": "reports\\seller-workspace-20261126",
+  "limitations": [
+    "Business data and fulfilment remain simulated.",
+    "Existing V1 expected failure and Starlette/httpx deprecation warning remain explicit.",
+    "Hash navigation shares existing forms and preserves inputs during navigation; full reload does not save unsent drafts.",
+    "Integrated CUA and Node REPL could not initialize (kernel asset path missing); visual/interaction verification used installed isolated headless Chrome instead."
+  ]
+}

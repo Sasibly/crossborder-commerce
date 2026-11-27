@@ -1,0 +1,143 @@
+{
+  "checked_date": "2026-11-26",
+  "scope": "Category reference imagery for simulated products; not exact SKU photographs or specifications.",
+  "photos": [
+    {
+      "file": "robot-vacuum.webp",
+      "source": "https://www.pexels.com/photo/white-round-robot-vacuum-on-gray-tiled-floor-7641488/",
+      "author": "MART PRODUCTION",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/7641488/pexels-photo-7641488.jpeg?auto=compress&cs=tinysrgb&w=1800&q=90",
+      "description": "White round robot vacuum on a tiled floor.",
+      "changes": "Subject-focused crop, resized to 1200 square, WebP conversion.",
+      "sha256": "4de797f444cc61d03e2b56b27cb76c1509d7d64c86d052daf93e39913d1ce34a"
+    },
+    {
+      "file": "espresso-machine.webp",
+      "source": "https://www.pexels.com/photo/an-espresso-machine-on-a-kitchen-counter-13096241/",
+      "author": "Kostiantyn Klymovets",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/13096241/pexels-photo-13096241.jpeg?auto=compress&cs=tinysrgb&w=1800&q=90",
+      "description": "Countertop espresso machine with portafilter and cup.",
+      "changes": "Subject-focused crop, resized to 1200 square, WebP conversion.",
+      "sha256": "9bfa7b7f04d0c8823749798124e8fb9dd9307532d290061af4040b23e967ec3e"
+    },
+    {
+      "file": "electric-kettle.webp",
+      "source": "https://www.pexels.com/photo/electric-glass-kettle-with-water-10965749/",
+      "author": "Engin Akyurt",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/10965749/pexels-photo-10965749.jpeg?auto=compress&cs=tinysrgb&w=1800&q=90",
+      "description": "Glass electric kettle, black handle, spout and power base.",
+      "changes": "Subject-focused crop, resized to 1200 square, WebP conversion.",
+      "sha256": "21f4fd6ba8c95b2af00d8f3037cd050f7cd764041ff6900836c9e78aacfe5577"
+    },
+    {
+      "file": "wireless-charger.webp",
+      "source": "https://www.pexels.com/photo/smartphone-charging-on-wireless-charger-7742584/",
+      "author": "Rann Vijay",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "download_url": "https://images.pexels.com/photos/7742584/pexels-photo-7742584.jpeg?auto=compress&cs=tinysrgb&w=1800&q=90",
+      "description": "Phone lying on a round wireless charging pad.",
+      "changes": "Subject-focused crop, resized to 1200 square, WebP conversion.",
+      "sha256": "97b3c855ac6d70752b867fa52a60f4955cc7a0358d967c35072405839a7d187c"
+    },
+    {
+      "file": "air-purifier.webp",
+      "source": "https://unsplash.com/photos/a-white-cylindrical-object-with-a-black-top-and-bottom-M4OilrUTWyc",
+      "author": "VBreathe / enviroguardprox",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "download_url": "https://images.unsplash.com/photo-1765153155226-f617921051b3?auto=format&fit=max&w=1800&q=90",
+      "description": "White cylindrical air purifier with top outlet and lower intake grille on a pale yellow background.",
+      "changes": "Subject-focused crop, padded to 1200 square, WebP conversion.",
+      "sha256": "c228af07d6de9d5781764c44c9d33ac21f9dc185acba1265277fcb1cf7035ff4"
+    },
+    {
+      "file": "pet-fountain.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cat_fountain.jpg",
+      "author": "April Killingsworth",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Cat_fountain.jpg",
+      "description": "Cat drinking from an electric indoor pet fountain; visible reservoir, spout, flowing water and drinking basin.",
+      "changes": "Cropped to focus on fountain, padded/resized to 720 square, WebP conversion. Original is 720 x 480; no claim of new detail.",
+      "sha256": "238346b4767ab030f155548de97156f177c3bb19a883d06f899883d1833a7fb2"
+    }
+  ],
+  "illustrations": {
+    "author": "Original project artwork",
+    "files": [
+      "pet_fountain-illustration.svg",
+      "air_purifier-illustration.svg",
+      "robot_vacuum-illustration.svg",
+      "coffee_machine-illustration.svg",
+      "electric_kettle-illustration.svg",
+      "wireless_charger-illustration.svg",
+      "other-illustration.svg"
+    ],
+    "purpose": "Category illustration; no model/size/performance claims"
+  },
+  "products": [
+    {
+      "id": "05707c8e013d40cea9fd01eea77486f5",
+      "title": "SIM / Acceptance robot_vacuum b2d7e6de",
+      "category_id": "robot_vacuum",
+      "file": "robot-vacuum.webp",
+      "display_title": "SIM / Robot vacuum"
+    },
+    {
+      "id": "84afb5a680d448bc890b3e5795141b64",
+      "title": "SIM / Acceptance pet_fountain b2d7e6de",
+      "category_id": "pet_fountain",
+      "file": "pet-fountain.webp",
+      "display_title": "SIM / Pet fountain"
+    },
+    {
+      "id": "0db884c5a2684e5ab319df4827ccc607",
+      "title": "DEMO / Robot vacuum",
+      "category_id": "robot_vacuum",
+      "file": "robot-vacuum.webp"
+    },
+    {
+      "id": "1ad21aea2dd5452795c34d6190dd479f",
+      "title": "DEMO / Compact air purifier",
+      "category_id": "air_purifier",
+      "file": "air-purifier.webp"
+    },
+    {
+      "id": "960dd70842b64d1b93411efa54fe6ef5",
+      "title": "DEMO / Semi-automatic coffee machine",
+      "category_id": "coffee_machine",
+      "file": "espresso-machine.webp"
+    },
+    {
+      "id": "fbd84023f7e44da08d04a7007ee937d9",
+      "title": "DEMO / Electric kettle",
+      "category_id": "electric_kettle",
+      "file": "electric-kettle.webp"
+    },
+    {
+      "id": "feef532a7bdf4ea4a582067defd549f4",
+      "title": "DEMO / Wireless charger",
+      "category_id": "wireless_charger",
+      "file": "wireless-charger.webp"
+    },
+    {
+      "id": "2ef75080892146e58b41faba5472f07f",
+      "title": "DEMO / Easy-clean fountain",
+      "category_id": "pet_fountain",
+      "file": "pet-fountain.webp"
+    },
+    {
+      "id": "cd2b1063133740858a0ccc341d52fc3d",
+      "title": "DEMO / Quiet fountain",
+      "category_id": "pet_fountain",
+      "file": "pet-fountain.webp"
+    }
+  ]
+}

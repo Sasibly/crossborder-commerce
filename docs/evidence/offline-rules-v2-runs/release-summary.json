@@ -1,0 +1,349 @@
+{
+  "status": "passed_local_delivery",
+  "active_rule_version": "offline-v2-adfafd91b1be",
+  "deployment_scope": "pet_fountain_only",
+  "freeze": {
+    "frozen_at_utc": "2026-11-26T03:15:45.375141+00:00",
+    "rule_version": "offline-v2-adfafd91b1be",
+    "candidate_sha256": "adfafd91b1be29c60733788ebb87684783ca3c4cb186f5e207d99cbc05fa1587",
+    "development_tests_sha256": "3a2572d133b2aed97bbc17820ff0a0b9845d256da3a5ca24401a9a535e6ae013",
+    "deployment_scope": "pet_fountain_only",
+    "external_model_requests": 0,
+    "source_hashes": {
+      "data\\samples\\air_purifier.jsonl": "147d9aa9d5c99a1464dffc31d2622a2c34672a2d7e3f346dc0dad58f7077940e",
+      "data\\samples\\coffee_machine.jsonl": "2f16d77d23f62dee22a4334b2d339a5b1c186380fd4c549a8b35a3e453d93295",
+      "data\\samples\\electric_kettle.jsonl": "19b77fdd922f9ce18545cbd78f19e4205ba7b897718f1450881dcf3c70565a4d",
+      "data\\samples\\pet_fountain.jsonl": "9bcb40b5da512e1e3594298894ef5736405b4dd3825eee3c8dc67e844a2d39e1",
+      "data\\samples\\robot_vacuum.jsonl": "c6d9863eea6d1004b8c407ba31d8945a81b597ba875632aefc30d9d0bea31c54",
+      "data\\samples\\wireless_charger.jsonl": "c243b3442913c6c0fa220c8783067939c8a5267d3c15737fcc08e5f2d7e53ec2",
+      "data\\demo-evaluation\\pet_fountain_comments.json": "fbd9f57c4adfb8f683b566f2da278ecaafc2baf13e797bc57a3fed72aafbe96e",
+      "data\\demo-evaluation\\pet_fountain_holdout.json": "b00b2df699261bc05b7f28ad742c0168bf4e3b0c5d73f329e4981a7e460619f6",
+      "data\\demo-evaluation\\pet_fountain_holdout_rules.json": "7c789e9f9fe216254692d578bd0f46f211438f9cd354cb75be7238be930d130b",
+      "data\\demo-evaluation\\pet_fountain_rules.json": "bb236ba8c8a83d89157445c370b92a49bd9f2b24024a062244e53797d96f2589",
+      "data\\eval\\gold_labels.jsonl": "284287c81657db41f61f0f19fcb0fd71c10a2fbab1e98636b5ee1eed970fa070"
+    }
+  },
+  "gates": {
+    "candidate_unchanged_after_freeze": true,
+    "sources_and_reference_labels_unchanged": true,
+    "development_examples_not_exact_duplicates_of_uploaded_sets": true,
+    "other_categories_identical": true,
+    "pet_corpus_no_f1_regression": true,
+    "pet_corpus_no_parse_regression": true,
+    "overall_no_f1_regression": true,
+    "demo_no_scoped_regression": true,
+    "fixed_regression_no_scoped_regression": true
+  },
+  "demo": {
+    "v1": {
+      "tp": 3,
+      "fp": 1,
+      "fn": 6,
+      "precision": 0.75,
+      "recall": 0.3333,
+      "f1": 0.4615
+    },
+    "v2": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "fixed_regression": {
+    "v1": {
+      "metrics": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 5,
+        "precision": 0.3333,
+        "recall": 0.1667,
+        "f1": 0.2222
+      },
+      "rating_sensitive_case_ids": [
+        "adv-001",
+        "adv-006",
+        "adv-018"
+      ]
+    },
+    "v2": {
+      "metrics": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "rating_sensitive_case_ids": [
+        "adv-007",
+        "adv-019"
+      ]
+    }
+  },
+  "corpus": {
+    "air_purifier": {
+      "v1": {
+        "parsed": 38,
+        "client": "mock-rules",
+        "metrics": {
+          "reviews": 38,
+          "tp": 14,
+          "fp": 7,
+          "fn": 19,
+          "precision": 0.6667,
+          "recall": 0.4242,
+          "f1": 0.5185
+        }
+      },
+      "released_scope_v2": {
+        "parsed": 38,
+        "client": "mock-rules",
+        "metrics": {
+          "reviews": 38,
+          "tp": 14,
+          "fp": 7,
+          "fn": 19,
+          "precision": 0.6667,
+          "recall": 0.4242,
+          "f1": 0.5185
+        }
+      }
+    },
+    "coffee_machine": {
+      "v1": {
+        "parsed": 40,
+        "client": "mock-rules",
+        "metrics": {
+          "reviews": 40,
+          "tp": 21,
+          "fp": 13,
+          "fn": 15,
+          "precision": 0.6176,
+          "recall": 0.5833,
+          "f1": 0.6
+        }
+      },
+      "released_scope_v2": {
+        "parsed": 40,
+        "client": "mock-rules",
+        "metrics": {
+          "reviews": 40,
+          "tp": 21,
+          "fp": 13,
+          "fn": 15,
+          "precision": 0.6176,
+          "recall": 0.5833,
+          "f1": 0.6
+        }
+      }
+    },
+    "electric_kettle": {
+      "v1": {
+        "parsed": 38,
+        "client": "mock-rules",
+        "metrics": {
+          "reviews": 38,
+          "tp": 16,
+          "fp": 7,
+          "fn": 19,
+          "precision": 0.6957,
+          "recall": 0.4571,
+          "f1": 0.5517
+        }
+      },
+      "released_scope_v2": {
+        "parsed": 38,
+        "client": "mock-rules",
+        "metrics": {
+          "reviews": 38,
+          "tp": 16,
+          "fp": 7,
+          "fn": 19,
+          "precision": 0.6957,
+          "recall": 0.4571,
+          "f1": 0.5517
+        }
+      }
+    },
+    "pet_fountain": {
+      "v1": {
+        "parsed": 20,
+        "client": "mock-rules",
+        "metrics": {
+          "reviews": 20,
+          "tp": 14,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.9333,
+          "recall": 0.7778,
+          "f1": 0.8485
+        }
+      },
+      "released_scope_v2": {
+        "parsed": 20,
+        "client": "offline-rules-v2",
+        "metrics": {
+          "reviews": 20,
+          "tp": 14,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.7778,
+          "f1": 0.875
+        }
+      }
+    },
+    "robot_vacuum": {
+      "v1": {
+        "parsed": 42,
+        "client": "mock-rules",
+        "metrics": {
+          "reviews": 42,
+          "tp": 14,
+          "fp": 5,
+          "fn": 24,
+          "precision": 0.7368,
+          "recall": 0.3684,
+          "f1": 0.4912
+        }
+      },
+      "released_scope_v2": {
+        "parsed": 42,
+        "client": "mock-rules",
+        "metrics": {
+          "reviews": 42,
+          "tp": 14,
+          "fp": 5,
+          "fn": 24,
+          "precision": 0.7368,
+          "recall": 0.3684,
+          "f1": 0.4912
+        }
+      }
+    },
+    "wireless_charger": {
+      "v1": {
+        "parsed": 22,
+        "client": "mock-rules",
+        "metrics": {
+          "reviews": 22,
+          "tp": 16,
+          "fp": 1,
+          "fn": 8,
+          "precision": 0.9412,
+          "recall": 0.6667,
+          "f1": 0.7805
+        }
+      },
+      "released_scope_v2": {
+        "parsed": 22,
+        "client": "mock-rules",
+        "metrics": {
+          "reviews": 22,
+          "tp": 16,
+          "fp": 1,
+          "fn": 8,
+          "precision": 0.9412,
+          "recall": 0.6667,
+          "f1": 0.7805
+        }
+      }
+    }
+  },
+  "overall": {
+    "v1": {
+      "reviews": 200,
+      "tp": 95,
+      "fp": 34,
+      "fn": 89,
+      "precision": 0.7364,
+      "recall": 0.5163,
+      "f1": 0.607
+    },
+    "released_scope_v2": {
+      "reviews": 200,
+      "tp": 95,
+      "fp": 33,
+      "fn": 89,
+      "precision": 0.7422,
+      "recall": 0.5163,
+      "f1": 0.609
+    }
+  },
+  "legacy_client_source_unchanged": true,
+  "new_tests": 34,
+  "additional_v2_network_isolation_cases": 2,
+  "full_tests": {
+    "passed": 991,
+    "xfailed": 1,
+    "warnings": 1,
+    "elapsed_seconds": 67.19
+  },
+  "api_validation": {
+    "status": "passed",
+    "active_rule_version": "offline-v2-adfafd91b1be",
+    "deployed_offline_analysis_id": "16b952af80ab420399f4931d181f9b78",
+    "predictions": {
+      "leakage": "positive",
+      "cleaning": "negative"
+    },
+    "offline_result_request_count": 0,
+    "cached_v2_reused": true,
+    "live_cache_preserved": true,
+    "historical_analysis_rows_preserved": 6,
+    "authorization_history": [
+      {
+        "id": "qwen35-pet-fountain-first-trial-20261125",
+        "requests_used": 20,
+        "request_limit": 20
+      },
+      {
+        "id": "qwen35-pet-fountain-performance-20261126",
+        "requests_used": 20,
+        "request_limit": 20
+      }
+    ],
+    "external_model_requests_added": 0,
+    "other_category_remains_v1": true,
+    "legacy_evidence_bridge_versioned": true,
+    "data_kind": "synthetic_development_checks_not_quality_gold"
+  },
+  "restart_validation": {
+    "status": "passed",
+    "controlled_restart_preserved_analysis_rows": 7,
+    "authorization_history": [
+      {
+        "id": "qwen35-pet-fountain-first-trial-20261125",
+        "requests_used": 20,
+        "request_limit": 20
+      },
+      {
+        "id": "qwen35-pet-fountain-performance-20261126",
+        "requests_used": 20,
+        "request_limit": 20
+      }
+    ],
+    "preserved_existing_rows": {
+      "commerce_review_analyses": 6,
+      "commerce_review_budgets": 2,
+      "commerce_products": 12,
+      "commerce_orders": 27,
+      "commerce_order_items": 50,
+      "commerce_candidates": 10,
+      "commerce_decisions": 16,
+      "commerce_supplier_cases": 2,
+      "commerce_supplier_events": 7,
+      "commerce_audit": 333
+    },
+    "source_backup": "/app/data/local-verification/20261126T031723Z-bd47eab6/backup.sqlite3",
+    "external_model_requests_added": 0,
+    "working_database_replaced": false
+  },
+  "external_model_requests_added": 0,
+  "eligible_for_real_quality_claims": false,
+  "blind_test": false,
+  "comparison_directory": "reports\\offline-rules-comparison\\20261126T031545Z-cc8f4bfe"
+}

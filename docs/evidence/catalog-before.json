@@ -1,0 +1,316 @@
+{
+  "8031": [
+    {
+      "id": "2ef75080892146e58b41faba5472f07f",
+      "tenant": "local",
+      "decision_id": "7fd86b01dfe44c54b68e49b27eda199a",
+      "title": "DEMO / Easy-clean fountain",
+      "price_cents": 3500,
+      "stock": 19,
+      "reserved": 0,
+      "status": "published",
+      "snapshot": {
+        "assumptions": {
+          "acquisition_cents": 300,
+          "aftersales_cents": 100,
+          "channel": "INDEPENDENT_STORE",
+          "cny_per_usd": "7",
+          "logistics_cents": 500,
+          "market": "US",
+          "payment_bps": 300,
+          "payment_fixed_cents": 30,
+          "price_cents": 3500,
+          "purchase_cny_cents": 7000,
+          "risk": "clear",
+          "source_note": "Synthetic demo costs; no commercial verification"
+        },
+        "candidate": {
+          "created_at": 1795524128,
+          "id": "6de76fc325e84e3abff86b50224cedc4",
+          "name": "DEMO / Easy-clean fountain",
+          "source_json": {
+            "analysis_mode": "offline_rule_baseline",
+            "data_kind": "synthetic_samples",
+            "dataset": "pet_fountain",
+            "theme": {
+              "display_name": "核心部件寿命短",
+              "evidence": [
+                "The pump stopped working after three weeks and the cat had no water for a day",
+                "用了两个月泵就不出水了，拆开看里面全是毛絮"
+              ],
+              "label": "pump_life",
+              "mention_count": 4,
+              "negative_ratio": 1.0,
+              "opportunity_score": 0.8306,
+              "polarity": "negative",
+              "scene_count": 2,
+              "severity": 0.7775,
+              "theme_id": "T01"
+            }
+          },
+          "tenant": "local"
+        },
+        "conclusion": "GO",
+        "data_kind": "simulation",
+        "missing": [],
+        "payment_fee_cents": 135,
+        "procurement_usd_cents": 1000,
+        "rule_version": "store-demo-v1",
+        "shipping_policy": "seller-paid shipping included in price",
+        "tax_policy": "not collected in demo; not a tax determination",
+        "unit_profit_cents": 1465
+      },
+      "created_at": 1795524128
+    },
+    {
+      "id": "cd2b1063133740858a0ccc341d52fc3d",
+      "tenant": "local",
+      "decision_id": "ecdfcde6aca04987b7f2ab426e207d74",
+      "title": "DEMO / Quiet fountain",
+      "price_cents": 3000,
+      "stock": 19,
+      "reserved": 0,
+      "status": "published",
+      "snapshot": {
+        "assumptions": {
+          "acquisition_cents": 300,
+          "aftersales_cents": 100,
+          "channel": "INDEPENDENT_STORE",
+          "cny_per_usd": "7",
+          "logistics_cents": 500,
+          "market": "US",
+          "payment_bps": 300,
+          "payment_fixed_cents": 30,
+          "price_cents": 3000,
+          "purchase_cny_cents": 7000,
+          "risk": "clear",
+          "source_note": "Synthetic demo costs; no commercial verification"
+        },
+        "candidate": {
+          "created_at": 1795524128,
+          "id": "ea34e062dbcc43dcadfb3d2039133b79",
+          "name": "DEMO / Quiet fountain",
+          "source_json": {
+            "analysis_mode": "offline_rule_baseline",
+            "data_kind": "synthetic_samples",
+            "dataset": "pet_fountain",
+            "theme": {
+              "display_name": "核心部件寿命短",
+              "evidence": [
+                "The pump stopped working after three weeks and the cat had no water for a day",
+                "用了两个月泵就不出水了，拆开看里面全是毛絮"
+              ],
+              "label": "pump_life",
+              "mention_count": 4,
+              "negative_ratio": 1.0,
+              "opportunity_score": 0.8306,
+              "polarity": "negative",
+              "scene_count": 2,
+              "severity": 0.7775,
+              "theme_id": "T01"
+            }
+          },
+          "tenant": "local"
+        },
+        "conclusion": "GO",
+        "data_kind": "simulation",
+        "missing": [],
+        "payment_fee_cents": 120,
+        "procurement_usd_cents": 1000,
+        "rule_version": "store-demo-v1",
+        "shipping_policy": "seller-paid shipping included in price",
+        "tax_policy": "not collected in demo; not a tax determination",
+        "unit_profit_cents": 980
+      },
+      "created_at": 1795524128
+    }
+  ],
+  "8027": [
+    {
+      "id": "095695ebb2e442b3a426260b4c5ca518",
+      "tenant": "local",
+      "decision_id": "f2ed0541b5df48dcac34c44d37570b11",
+      "title": "DEMO / Quiet fountain",
+      "price_cents": 3000,
+      "stock": 19,
+      "reserved": 0,
+      "status": "published",
+      "snapshot": {
+        "assumptions": {
+          "acquisition_cents": 300,
+          "aftersales_cents": 100,
+          "channel": "INDEPENDENT_STORE",
+          "cny_per_usd": "7",
+          "logistics_cents": 500,
+          "market": "US",
+          "payment_bps": 300,
+          "payment_fixed_cents": 30,
+          "price_cents": 3000,
+          "purchase_cny_cents": 7000,
+          "risk": "clear",
+          "source_note": "Synthetic demo costs; no commercial verification"
+        },
+        "candidate": {
+          "created_at": 1795523637,
+          "id": "60bfb315a1804038afb5271f67d7e5a2",
+          "name": "DEMO / Quiet fountain",
+          "source_json": {
+            "analysis_mode": "offline_rule_baseline",
+            "data_kind": "synthetic_samples",
+            "dataset": "pet_fountain",
+            "theme": {
+              "display_name": "核心部件寿命短",
+              "evidence": [
+                "The pump stopped working after three weeks and the cat had no water for a day",
+                "用了两个月泵就不出水了，拆开看里面全是毛絮"
+              ],
+              "label": "pump_life",
+              "mention_count": 4,
+              "negative_ratio": 1.0,
+              "opportunity_score": 0.8306,
+              "polarity": "negative",
+              "scene_count": 2,
+              "severity": 0.7775,
+              "theme_id": "T01"
+            }
+          },
+          "tenant": "local"
+        },
+        "conclusion": "GO",
+        "data_kind": "simulation",
+        "missing": [],
+        "payment_fee_cents": 120,
+        "procurement_usd_cents": 1000,
+        "rule_version": "store-demo-v1",
+        "shipping_policy": "seller-paid shipping included in price",
+        "tax_policy": "not collected in demo; not a tax determination",
+        "unit_profit_cents": 980
+      },
+      "created_at": 1795523637
+    },
+    {
+      "id": "1beca00b14d44b4681374c17f22cb7fc",
+      "tenant": "local",
+      "decision_id": "96a2da4dfda8420481e1dcba9d55c838",
+      "title": "DEMO / Easy-clean fountain",
+      "price_cents": 3500,
+      "stock": 19,
+      "reserved": 0,
+      "status": "published",
+      "snapshot": {
+        "assumptions": {
+          "acquisition_cents": 300,
+          "aftersales_cents": 100,
+          "channel": "INDEPENDENT_STORE",
+          "cny_per_usd": "7",
+          "logistics_cents": 500,
+          "market": "US",
+          "payment_bps": 300,
+          "payment_fixed_cents": 30,
+          "price_cents": 3500,
+          "purchase_cny_cents": 7000,
+          "risk": "clear",
+          "source_note": "Synthetic demo costs; no commercial verification"
+        },
+        "candidate": {
+          "created_at": 1795523637,
+          "id": "9cc5acfed78d44759e07e3234a2ecb80",
+          "name": "DEMO / Easy-clean fountain",
+          "source_json": {
+            "analysis_mode": "offline_rule_baseline",
+            "data_kind": "synthetic_samples",
+            "dataset": "pet_fountain",
+            "theme": {
+              "display_name": "核心部件寿命短",
+              "evidence": [
+                "The pump stopped working after three weeks and the cat had no water for a day",
+                "用了两个月泵就不出水了，拆开看里面全是毛絮"
+              ],
+              "label": "pump_life",
+              "mention_count": 4,
+              "negative_ratio": 1.0,
+              "opportunity_score": 0.8306,
+              "polarity": "negative",
+              "scene_count": 2,
+              "severity": 0.7775,
+              "theme_id": "T01"
+            }
+          },
+          "tenant": "local"
+        },
+        "conclusion": "GO",
+        "data_kind": "simulation",
+        "missing": [],
+        "payment_fee_cents": 135,
+        "procurement_usd_cents": 1000,
+        "rule_version": "store-demo-v1",
+        "shipping_policy": "seller-paid shipping included in price",
+        "tax_policy": "not collected in demo; not a tax determination",
+        "unit_profit_cents": 1465
+      },
+      "created_at": 1795523637
+    },
+    {
+      "id": "e43cd64e50264578b715e936e65728c5",
+      "tenant": "local",
+      "decision_id": "d74ba14eaa5445f1978beca6d9e007c6",
+      "title": "Quiet fountain · 改进款饮水机",
+      "price_cents": 3000,
+      "stock": 9,
+      "reserved": 0,
+      "status": "published",
+      "snapshot": {
+        "assumptions": {
+          "acquisition_cents": 300,
+          "aftersales_cents": 100,
+          "channel": "INDEPENDENT_STORE",
+          "cny_per_usd": "7.0",
+          "logistics_cents": 500,
+          "market": "US",
+          "payment_bps": 300,
+          "payment_fixed_cents": 30,
+          "price_cents": 3000,
+          "purchase_cny_cents": 7000,
+          "risk": "clear",
+          "source_note": "演示参数，未核验，不用于真实交易。"
+        },
+        "candidate": {
+          "created_at": 1795522121,
+          "id": "21bef5a53fe848fab097f2c6f30b91d8",
+          "name": "Quiet fountain · 改进款饮水机",
+          "source_json": {
+            "analysis_mode": "offline_rule_baseline",
+            "data_kind": "synthetic_samples",
+            "dataset": "pet_fountain",
+            "theme": {
+              "display_name": "核心部件寿命短",
+              "evidence": [
+                "The pump stopped working after three weeks and the cat had no water for a day",
+                "用了两个月泵就不出水了，拆开看里面全是毛絮"
+              ],
+              "label": "pump_life",
+              "mention_count": 4,
+              "negative_ratio": 1.0,
+              "opportunity_score": 0.8306,
+              "polarity": "negative",
+              "scene_count": 2,
+              "severity": 0.7775,
+              "theme_id": "T01"
+            }
+          },
+          "tenant": "local"
+        },
+        "conclusion": "GO",
+        "data_kind": "simulation",
+        "missing": [],
+        "payment_fee_cents": 120,
+        "procurement_usd_cents": 1000,
+        "rule_version": "store-demo-v1",
+        "shipping_policy": "seller-paid shipping included in price",
+        "tax_policy": "not collected in demo; not a tax determination",
+        "unit_profit_cents": 980
+      },
+      "created_at": 1795522135
+    }
+  ]
+}

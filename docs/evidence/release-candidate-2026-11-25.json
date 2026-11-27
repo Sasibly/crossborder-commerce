@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "fixture_data_kind": "simulation",
+  "measurement_kind": "observed_release_candidate_startup",
+  "tls_healthcheck": "certificate_chain_and_server_name_verified",
+  "host_binding": "loopback_only",
+  "workers": 1,
+  "auth_required": true,
+  "secure_cookies": true,
+  "proxy_headers": "disabled",
+  "public_release": "not_verified",
+  "state_after_test": "stopped",
+  "temporary_certificate_directory": "D:\\Codex_Projects\\tmp\\release-certs-89a5f9ce3eef43ecab4414bdf775a075"
+}

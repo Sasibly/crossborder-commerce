@@ -1,0 +1,206 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-26T07:29:42.844100+00:00",
+  "scope": "Historical snapshot, simulated/missing data truth, delivery privacy; seller order list, lazy detail, pending actions and recorded timeline",
+  "workspace_url": "http://127.0.0.1:8031/workbench#orders/order-fulfilment",
+  "tests": {
+    "status": "passed",
+    "total": 1062,
+    "passed": 1061,
+    "known_xfailed": [
+      "test_polarity::test_known_gap_died_is_not_a_negative_cue"
+    ],
+    "required_groups": {
+      "test_commerce_access": 4,
+      "test_buyers": 11,
+      "test_commerce_consistency": 16,
+      "test_commerce_backup": 2,
+      "test_review_analysis": 9,
+      "test_review_analysis_performance": 4,
+      "test_offline_rule_versioning": 4,
+      "test_review_annotation_prereview": 19
+    },
+    "junit": "reports\\seller-orders-20261126\\tests\\tests.xml",
+    "all_required_groups_present": true
+  },
+  "test_log_summary": "============ 1061 passed, 1 xfailed, 1 warning in 66.07s (0:01:06) ============",
+  "browser": {
+    "status": "passed",
+    "browser": "isolated installed Chrome headless",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "checks": [
+      "Overview, live summary and high-frequency entries rendered",
+      "All eight views and headings, active navigation, no desktop horizontal overflow",
+      "Order summary, snapshot detail, explicit authorised delivery, timeline and credential-change scrubbing",
+      "Product keyword, empty result, status filters, clearing and cross-view retention",
+      "Unsaved values and candidate preserved; subsection heading focused",
+      "Browser back and forward restore view and subsection",
+      "Reload/direct URL preserves category and positions requested subsection",
+      "Unknown routes fall back to overview",
+      "Expanded order detail remains within 390px viewport; item table scrolls within its container",
+      "390px menu, all eight mobile views without overflow, hidden controls excluded from keyboard focus",
+      "Buyer shop still renders"
+    ],
+    "console_errors": [],
+    "expected_anonymous_buyer_session_checks": [
+      {
+        "url": "http://127.0.0.1:8031/shop/api/account/me",
+        "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+      }
+    ],
+    "business_mutations": 0,
+    "additional_live_model_calls": 0,
+    "requests": 99,
+    "screenshots": [
+      "desktop-overview.png",
+      "desktop-products.png",
+      "desktop-sourcing.png",
+      "mobile-overview.png",
+      "mobile-navigation.png",
+      "desktop-orders.png",
+      "mobile-orders.png"
+    ]
+  },
+  "deployment": {
+    "status": "passed",
+    "deployment": {
+      "state": "running",
+      "health": "healthy",
+      "base_url": "http://127.0.0.1:8031",
+      "image": "sha256:fd91b99e9fc8e46b7156b8768585b952e388397f867920eed8afee390c7a52dd",
+      "data_volumes": [
+        "crossborder-commerce_commerce-data"
+      ],
+      "workbench": "http://127.0.0.1:8031/workbench",
+      "shop": "http://127.0.0.1:8031/shop",
+      "scope": "local_machine_only",
+      "fixture_data_kind": "simulation"
+    },
+    "readiness": {
+      "status": "ready",
+      "schema_version": "26",
+      "auth": "disabled",
+      "embedding": "hash",
+      "cluster_threshold": "0.14",
+      "cluster_threshold_source": "calibrated"
+    },
+    "database_content_unchanged": true,
+    "before_backup": "/app/data/local-verification/20261126T072501Z-894f6d9e/backup.sqlite3",
+    "after_backup": "/app/data/local-verification/20261126T072727Z-7f6dac8e/backup.sqlite3",
+    "content_sha256": "8017a1e944163f3f6be4c097685d992bec04bfe7b2ce50808f906d7a5833bff5",
+    "table_rows": {
+      "api_keys": 0,
+      "commerce_addresses": 29,
+      "commerce_audit": 543,
+      "commerce_auth_attempts": 4,
+      "commerce_buyers": 31,
+      "commerce_candidates": 22,
+      "commerce_cart": 0,
+      "commerce_decisions": 28,
+      "commerce_events": 29,
+      "commerce_key_roles": 0,
+      "commerce_ledger": 247,
+      "commerce_metric_scenarios": 3,
+      "commerce_order_items": 66,
+      "commerce_orders": 31,
+      "commerce_payment_policy": 0,
+      "commerce_products": 24,
+      "commerce_profit_comparisons": 1,
+      "commerce_refund_costs": 27,
+      "commerce_refunds": 27,
+      "commerce_review_analyses": 13,
+      "commerce_review_budgets": 2,
+      "commerce_sessions": 5,
+      "commerce_supplier_cases": 2,
+      "commerce_supplier_events": 7,
+      "compliance_rules": 4,
+      "cost_params": 12,
+      "fba_fee_schedule": 402,
+      "fba_rate_version": 3,
+      "jobs": 0,
+      "product_returns": 2,
+      "rate_limits": 0,
+      "reviews": 0,
+      "runs": 0,
+      "schema_migrations": 26
+    },
+    "frozen_input_check": {
+      "status": "passed",
+      "pinned_files": 16,
+      "profile_sha256": "dbe0d618014f3b9500b4b822df5ecb4ea716f80d463d292f32e6605c34b3a065",
+      "scope": {
+        "deployment": "local_machine_only",
+        "canonical_port": 8031,
+        "schema_version": 26,
+        "trade_mode": "mock",
+        "currency": "USD",
+        "supplier_execution": "simulation",
+        "additional_live_model_calls_allowed": false,
+        "public_release_in_scope": false,
+        "real_world_quality_claims": false
+      },
+      "reference_qualification": {
+        "raw_supplied_reviews": 30,
+        "raw_supplied_annotations": 55,
+        "ai_candidate_aspect_units": 50,
+        "context_items": 2,
+        "human_approved_annotations": 0,
+        "excluded_annotation_ids": [
+          "demo/pf-syn-pet-001/2",
+          "demo/pf-syn-pet-002/1"
+        ],
+        "excluded_from_accuracy_scoring": true,
+        "fixed_regression_is_blind": false
+      }
+    },
+    "seller_projection_minimises_delivery": true,
+    "delivery_no_store": true,
+    "source_matches_served_assets": true,
+    "integrity": {
+      "ok": true,
+      "checked_products": 24,
+      "checked_orders": 31,
+      "issues": [],
+      "note": "只读业务一致性检查，不自动修复，也不代替数据库完整性和外部支付对账。"
+    },
+    "real_model_budgets": [
+      {
+        "budget_id": null,
+        "requests_used": 20,
+        "request_limit": 20
+      },
+      {
+        "budget_id": null,
+        "requests_used": 20,
+        "request_limit": 20
+      }
+    ],
+    "additional_live_model_calls": 0
+  },
+  "source_sha256": {
+    "src/xborder_insight/commerce_order_views.py": "1c117bba77ec94a25a1fb775ea254ed363f81fb1ce8b3ce9aac0437867346682",
+    "src/xborder_insight/commerce_queries.py": "04529582075cb854101cf141bdf20e2140e761704fd49ba55b86dc088a5bde8d",
+    "src/xborder_insight/commerce_api.py": "ad5bf94260a4ec2f8db04c0a6e76832cffa095e98ded2349f31c8e90a3808706",
+    "src/xborder_insight/commerce.py": "47b2767ab112574a15cf0944ef58a6d670e0699672de7e2e8247ac7131e9a0a5",
+    "src/xborder_insight/commerce_seller.js": "9db58c003ee44af770b48d866152adc05bdd9e2d084dbb85f4957be3f7e6c3f0",
+    "src/xborder_insight/commerce_workbench.html": "98e0aab0a4e09bf6c393ba62dc4b046490d1c7a4256abd68bd31589c07ef567c",
+    "tests/test_seller_order_details.py": "2b7ae72158b01dc6d669f3bd8bb9257c57abe4ada983f9bc2c32e48262cf861a",
+    "tests/test_seller_orders_ui.py": "4ba3bcc21ad3a3f3157063a50099b9112fbd58d59da3a364bbfdedb3622a2358"
+  },
+  "report_directory": "reports\\seller-orders-20261126",
+  "limitations": [
+    "Local auth-disabled demo acts as owner; viewer/operator/tenant boundaries validated with authenticated isolated HTTP tests.",
+    "Legacy gaps are left missing; same-second events use business-stage display order.",
+    "No live supplier, carrier, customs, payment or model integration added.",
+    "Phone, ETA, carrier and recipient signature are not newly collected; no invented historical values."
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "data_kind": "simulation",
+  "preflight": {
+    "profile": "protected",
+    "status": "passed",
+    "checks": [
+      {
+        "id": "schema_current",
+        "passed": true
+      },
+      {
+        "id": "single_worker",
+        "passed": true
+      },
+      {
+        "id": "simulation_only",
+        "passed": true
+      },
+      {
+        "id": "seller_auth_required",
+        "passed": true
+      },
+      {
+        "id": "secure_buyer_cookie",
+        "passed": true
+      },
+      {
+        "id": "sync_analysis_disabled",
+        "passed": true
+      },
+      {
+        "id": "database_readable",
+        "passed": true
+      },
+      {
+        "id": "database_integrity",
+        "passed": true
+      }
+    ],
+    "public_release": "not_verified",
+    "unverified": [
+      "HTTPS termination and proxy trust",
+      "off-machine backup recovery",
+      "target capacity and service-level objectives",
+      "public account abuse controls"
+    ],
+    "scope": "Local configuration and schema checks only; not approval for public release.",
+    "schema_version": 25
+  },
+  "http_probe": {
+    "status": "passed",
+    "data_kind": "simulation",
+    "checks": [
+      "missing seller key rejected",
+      "owner/viewer identity enforced",
+      "viewer write rejected",
+      "Secure/HttpOnly/SameSite cookie flags",
+      "cross-origin login rejected"
+    ],
+    "scope": "HTTP inside the isolated container; TLS transport and public routing are not tested.",
+    "probe_keys_revoked_on_exit": true
+  },
+  "container": {
+    "readonly_rootfs": true,
+    "port_bindings": {},
+    "cap_drop": [
+      "ALL"
+    ],
+    "security_opt": [
+      "no-new-privileges:true"
+    ],
+    "memory_bytes": 536870912,
+    "nano_cpus": 1000000000,
+    "pids_limit": 128,
+    "user": "app"
+  },
+  "internal_network": true,
+  "public_release": "not_verified"
+}

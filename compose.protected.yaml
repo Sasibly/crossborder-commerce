@@ -1,0 +1,35 @@
+# Standalone preflight environment: no host port, no external network, separate data.
+name: crossborder-commerce-protected
+services:
+  app:
+    build: .
+    image: crossborder-commerce:local
+    environment:
+      RUN_MODE: mock
+      EMBEDDING_PROVIDER: hash
+      AUTH_REQUIRED: 'true'
+      SYNC_ANALYZE_ENABLED: 'false'
+      JOB_WORKER_ENABLED: 'false'
+      COMMERCE_SECURE_COOKIES: 'true'
+      SHOP_TENANT: local
+      DB_PATH: data/commerce.sqlite3
+    volumes:
+      - protected-data:/app/data
+    networks:
+      - isolated
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=67108864
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 512m
+    cpus: 1.0
+    pids_limit: 128
+    restart: unless-stopped
+networks:
+  isolated:
+    internal: true
+volumes:
+  protected-data:

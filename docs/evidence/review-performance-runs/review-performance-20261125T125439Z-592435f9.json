@@ -1,0 +1,105 @@
+{
+  "measurement_kind": "observed_local_replay_with_simulated_network_latency",
+  "real_model_requests": 0,
+  "verified_at_utc": "2026-11-25T12:54:39.087265+00:00",
+  "review_count": 10,
+  "fixture": "recorded model extractions from synthetic pet_fountain reviews",
+  "artificial_delay_per_request_ms": 120,
+  "repeats_per_configuration": 3,
+  "cases": [
+    {
+      "concurrency": 1,
+      "wall_ms": 1568.155,
+      "reused_result_ms": 5.702,
+      "mock_http_requests": 10,
+      "peak_in_flight": 1,
+      "parsed_count": 10,
+      "timings": {
+        "aggregation_ms": 1.244,
+        "extraction_ms": 1554.23,
+        "progress_persistence_ms": 120.886,
+        "request_attempt_ms_sum": 1312.491,
+        "request_reservation_ms": 119.037
+      }
+    },
+    {
+      "concurrency": 3,
+      "wall_ms": 627.021,
+      "reused_result_ms": 5.558,
+      "mock_http_requests": 10,
+      "peak_in_flight": 3,
+      "parsed_count": 10,
+      "timings": {
+        "aggregation_ms": 0.936,
+        "extraction_ms": 614.022,
+        "progress_persistence_ms": 115.027,
+        "request_attempt_ms_sum": 1332.23,
+        "request_reservation_ms": 112.099
+      }
+    },
+    {
+      "concurrency": 1,
+      "wall_ms": 1571.117,
+      "reused_result_ms": 5.365,
+      "mock_http_requests": 10,
+      "peak_in_flight": 1,
+      "parsed_count": 10,
+      "timings": {
+        "aggregation_ms": 0.881,
+        "extraction_ms": 1557.052,
+        "progress_persistence_ms": 122.418,
+        "request_attempt_ms_sum": 1317.193,
+        "request_reservation_ms": 115.442
+      }
+    },
+    {
+      "concurrency": 3,
+      "wall_ms": 629.813,
+      "reused_result_ms": 5.259,
+      "mock_http_requests": 10,
+      "peak_in_flight": 3,
+      "parsed_count": 10,
+      "timings": {
+        "aggregation_ms": 0.922,
+        "extraction_ms": 617.941,
+        "progress_persistence_ms": 112.467,
+        "request_attempt_ms_sum": 1341.244,
+        "request_reservation_ms": 113.384
+      }
+    },
+    {
+      "concurrency": 1,
+      "wall_ms": 1574.193,
+      "reused_result_ms": 4.646,
+      "mock_http_requests": 10,
+      "peak_in_flight": 1,
+      "parsed_count": 10,
+      "timings": {
+        "aggregation_ms": 0.965,
+        "extraction_ms": 1561.74,
+        "progress_persistence_ms": 125.218,
+        "request_attempt_ms_sum": 1320.891,
+        "request_reservation_ms": 113.804
+      }
+    },
+    {
+      "concurrency": 3,
+      "wall_ms": 624.446,
+      "reused_result_ms": 4.48,
+      "mock_http_requests": 10,
+      "peak_in_flight": 3,
+      "parsed_count": 10,
+      "timings": {
+        "aggregation_ms": 0.917,
+        "extraction_ms": 610.612,
+        "progress_persistence_ms": 100.354,
+        "request_attempt_ms_sum": 1336.524,
+        "request_reservation_ms": 95.915
+      }
+    }
+  ],
+  "median_serial_ms": 1571.117,
+  "median_concurrency3_ms": 627.021,
+  "wall_time_reduction_percent": 60.09,
+  "scope": "Scheduling comparison with identical recorded outputs and artificial latency, not a new Alibaba service latency or semantic-quality measurement."
+}

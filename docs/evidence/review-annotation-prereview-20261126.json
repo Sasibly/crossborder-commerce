@@ -1,0 +1,74 @@
+{
+  "status": "passed_ai_prereview_delivery",
+  "reviewer_kind": "ai",
+  "counts": {
+    "reviewed_annotations": 55,
+    "decisions": {
+      "retain": 37,
+      "needs_human": 2,
+      "revise": 14,
+      "context_only": 2
+    },
+    "candidate_reference_units": 50,
+    "context_items": 2,
+    "pending_human_items": 2,
+    "human_approved_annotations": 0
+  },
+  "output_document_hash": "ed5a7405e82c28e8ad9ff79ea2900eeacb31d4003ecd28f02663cf8b3223951b",
+  "base_document_hash": "02cb1c2e8db3bd90a71605d7114a8581b7ab28bdd980ea1f2beeeaf603c168c6",
+  "plan_hash": "864bd674bb5a55916b37be84a06ddc7d44c2d3b8534b10d5c6606ce4e70c4928",
+  "independent_runs_identical": true,
+  "all_annotations_accounted_for": true,
+  "source_snapshots_preserved": true,
+  "old_reference_sources_and_classifier_unchanged": true,
+  "validation_statuses": {
+    "draft": 53,
+    "needs_review": 2
+  },
+  "validation_warnings": [
+    {
+      "code": "mixed_polarities_need_context_review",
+      "review_id": "pf-syn-pet-003",
+      "label": "product.noise"
+    }
+  ],
+  "human_approved_annotations": 0,
+  "eligible_for_real_quality_claims": false,
+  "external_model_requests_added": 0,
+  "business_database_writes": 0,
+  "current_rule_version": "offline-v2-adfafd91b1be",
+  "authorization_history": [
+    {
+      "id": "qwen35-pet-fountain-first-trial-20261125",
+      "requests_used": 20,
+      "request_limit": 20
+    },
+    {
+      "id": "qwen35-pet-fountain-performance-20261126",
+      "requests_used": 20,
+      "request_limit": 20
+    }
+  ],
+  "saved_analysis_rows_unchanged": 7,
+  "tests": {
+    "new_cases": 19,
+    "related_passed": 43,
+    "full_passed": 1034,
+    "xfailed": 1,
+    "warning": 1,
+    "elapsed_seconds": 65.93
+  },
+  "implementation_hashes": {
+    "src/xborder_insight/review_annotation.py": "897f374aa67280f9cf0073029113247b217cec7ef7800ba3e5a5bb7758d14344",
+    "src/xborder_insight/review_annotation_prereview.py": "2879492ab3d485aba1656b6788db70196142e490abc8bde5738287e0059e64f1",
+    "scripts/review_annotation_prereview.py": "b53d82e7360f57f0ebabd4e7cc8092d17def20fe27f2667ea33a47de73360c9a",
+    "data/review-annotation/synthetic_ai_prereview_v1.json": "3729f606802bc3be2a51d38cc34c89b68c8f1941c7e5e9826df9cc27e6b813c2",
+    "data/review-annotation/pet_fountain_schema_v1.json": "5020f81d04551eeb51a980aab7a2590264c094bce181459b6c8bff8021265a93"
+  },
+  "output_directory": "reports\\review-annotation-prereview\\20261126T035023Z-f8135ce5",
+  "source_draft_directory": "reports/review-annotation/20261126T033535Z-6da2b24a",
+  "pending_human_annotation_ids": [
+    "demo/pf-syn-pet-001/2",
+    "demo/pf-syn-pet-002/1"
+  ]
+}

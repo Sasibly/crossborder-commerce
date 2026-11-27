@@ -1,0 +1,145 @@
+{
+  "measurement_kind": "offline_fixed_synthetic_counterexample_regression",
+  "reference_kind": "developer_defined_demo_reference_not_human_gold",
+  "versions": {
+    "source_sha256": "b00b2df699261bc05b7f28ad742c0168bf4e3b0c5d73f329e4981a7e460619f6",
+    "rubric_sha256": "26407aa2dfd300c467628c4cc806d2224635c95dccdf2d88f43bb9053d45ec2d",
+    "original_demo_sha256": "fbd9f57c4adfb8f683b566f2da278ecaafc2baf13e797bc57a3fed72aafbe96e",
+    "baseline_source_sha256": "902addd96308344c4dd174d127ca810f850f3e60f96f48518f8b78ae83ce9f07",
+    "taxonomy_version": "tax-1df59a17e23c",
+    "prompt_version": "prompt-c5440992445b",
+    "evaluator_source_sha256": "f03d7890d0fe069a32745611d5ff289cb9919b5bfdc735734bd6045a0a9e741e",
+    "scorer_source_sha256": "fc2686ea5b75835e707995bae32039a9d065016e529983cc91fd0e3408d08574"
+  },
+  "baseline_matches_prior_demo": true,
+  "prior_baseline_versions": {
+    "baseline_source_sha256": "902addd96308344c4dd174d127ca810f850f3e60f96f48518f8b78ae83ce9f07",
+    "taxonomy_version": "tax-1df59a17e23c",
+    "prompt_version": "prompt-c5440992445b"
+  },
+  "overlap_with_original_demo": {
+    "review_ids": [],
+    "normalized_text_case_ids": [],
+    "comparison_scope": "Original 10 uploaded demo comments only; absence of exact duplicates does not prove statistical independence"
+  },
+  "internal_duplicate_normalized_text_groups": [],
+  "source_canonical_units_after_dedup": 24,
+  "source_repeated_canonical_units": [
+    {
+      "review_id": "adv-019",
+      "canonical_issue": "清洁与维护困难",
+      "sentiment": "负面",
+      "annotation_indices": [
+        0,
+        1
+      ]
+    }
+  ],
+  "primary_assumed_rating": 3,
+  "actual_ratings_provided": false,
+  "rating_sensitive_case_ids": [
+    "adv-001",
+    "adv-006",
+    "adv-018"
+  ],
+  "overall_comment_label_scored": false,
+  "external_model_requests": 0,
+  "database_writes": 0,
+  "eligible_for_real_quality_claims": false,
+  "blind_test": false,
+  "execution": {
+    "cases": 20,
+    "local_mock_completions": 60
+  },
+  "reproducibility_digest": "948ce65ccf7f67cf04f7ffcc9ecdfc4dbe1d78b34fad8154896a52e0f2e014c0",
+  "status": "passed_local_fixed_counterexample_delivery",
+  "independent_reports_equal": true,
+  "raw_source_preserved": true,
+  "reference_dispositions": {
+    "taxonomy_gap": 17,
+    "needs_review": 2,
+    "mapped": 6
+  },
+  "raw_annotations": 25,
+  "scored_reference_units": 6,
+  "main_scoped_metrics": {
+    "tp": 1,
+    "fp": 2,
+    "fn": 5,
+    "precision": 0.3333,
+    "recall": 0.1667,
+    "f1": 0.2222
+  },
+  "rating_sensitivity": [
+    {
+      "assumed_rating": 1,
+      "parsed": 20,
+      "metrics": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 4,
+        "precision": 0.6667,
+        "recall": 0.3333,
+        "f1": 0.4444
+      }
+    },
+    {
+      "assumed_rating": 3,
+      "parsed": 20,
+      "metrics": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 5,
+        "precision": 0.3333,
+        "recall": 0.1667,
+        "f1": 0.2222
+      }
+    },
+    {
+      "assumed_rating": 5,
+      "parsed": 20,
+      "metrics": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 5,
+        "precision": 0.3333,
+        "recall": 0.1667,
+        "f1": 0.2222
+      }
+    }
+  ],
+  "diagnostics": {
+    "raw_predictions": 10,
+    "tp": 1,
+    "fp": 2,
+    "fn": 5,
+    "unscored_predictions": 7,
+    "invalid_prediction_points": 0,
+    "unparsed_reviews": 0
+  },
+  "saved_analysis_rows": 6,
+  "authorization_history": [
+    {
+      "id": "qwen35-pet-fountain-first-trial-20261125",
+      "requests_used": 20,
+      "request_limit": 20
+    },
+    {
+      "id": "qwen35-pet-fountain-performance-20261126",
+      "requests_used": 20,
+      "request_limit": 20
+    }
+  ],
+  "tests": {
+    "related_passed": 26,
+    "new_cases": 11,
+    "full_passed": 955,
+    "xfailed": 1,
+    "warning": 1,
+    "elapsed_seconds": 62.72
+  },
+  "report_paths": [
+    "reports\\review-holdout-eval\\20261126T024323Z-111c9103\\report.json",
+    "reports\\review-holdout-eval\\20261126T024349Z-0837677b\\report.json"
+  ]
+}

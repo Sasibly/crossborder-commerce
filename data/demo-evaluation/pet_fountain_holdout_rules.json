@@ -1,0 +1,150 @@
+{
+  "schema_version": "pet-holdout-rubric-v1",
+  "reference_kind": "developer_defined_demo_reference_not_human_gold",
+  "category": "pet_fountain",
+  "source_sha256": "b00b2df699261bc05b7f28ad742c0168bf4e3b0c5d73f329e4981a7e460619f6",
+  "rating_assumptions": [
+    1,
+    3,
+    5
+  ],
+  "primary_assumed_rating": 3,
+  "rules": {
+    "adv-001:0": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "水泵/出水异常"
+    },
+    "adv-002:0": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "整体体验"
+    },
+    "adv-003:0": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "清洁与维护困难"
+    },
+    "adv-004:0": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "宠物适口性"
+    },
+    "adv-005:0": {
+      "disposition": "needs_review",
+      "reason": "未说明未坏的具体部件，不能直接认为水泵寿命结论",
+      "expected_canonical_issue": "核心部件"
+    },
+    "adv-005:1": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "滤芯/耗材"
+    },
+    "adv-006:0": {
+      "disposition": "mapped",
+      "label": "noise",
+      "reason": "明确不能称为安静，保留噪音负面",
+      "expected_canonical_issue": "噪音"
+    },
+    "adv-007:0": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "水泵/出水异常"
+    },
+    "adv-008:0": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "客服售后"
+    },
+    "adv-009:0": {
+      "disposition": "mapped",
+      "label": "cleaning",
+      "reason": "清洗方便为清洁维度正面",
+      "expected_canonical_issue": "清洁与维护困难"
+    },
+    "adv-010:0": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "滤芯/耗材"
+    },
+    "adv-011:0": {
+      "disposition": "mapped",
+      "label": "leakage",
+      "reason": "原文纠正漏水归因，保留中性，不当成产品漏水故障",
+      "expected_canonical_issue": "漏水与安全"
+    },
+    "adv-012:0": {
+      "disposition": "mapped",
+      "label": "pump_life",
+      "reason": "明确水泵短期损坏",
+      "expected_canonical_issue": "水泵/出水异常"
+    },
+    "adv-013:0": {
+      "disposition": "mapped",
+      "label": "cleaning",
+      "reason": "拆开清洗被描述为麻烦",
+      "expected_canonical_issue": "清洁与维护困难"
+    },
+    "adv-014:0": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "智能感应/出水控制"
+    },
+    "adv-015:0": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "水箱容量"
+    },
+    "adv-016:0": {
+      "disposition": "needs_review",
+      "reason": "贵的对象未指明，不能断言滤芯或耗材成本高",
+      "expected_canonical_issue": "滤芯/耗材"
+    },
+    "adv-016:1": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "整体体验"
+    },
+    "adv-017:0": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "整体体验"
+    },
+    "adv-018:0": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "水泵/出水异常"
+    },
+    "adv-018:1": {
+      "disposition": "mapped",
+      "label": "leakage",
+      "reason": "明确底座渗水",
+      "expected_canonical_issue": "漏水与安全"
+    },
+    "adv-019:0": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "清洁与维护困难"
+    },
+    "adv-019:1": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "清洁与维护困难"
+    },
+    "adv-020:0": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "宠物适口性"
+    },
+    "adv-020:1": {
+      "disposition": "taxonomy_gap",
+      "reason": "该粗粒度维度/证据未被现有闭集等价覆盖；不把出水异常自动当成寿命短，安装复杂或易脏也不强行当清洗困难。",
+      "expected_canonical_issue": "滤芯/耗材"
+    }
+  },
+  "prior_baseline_versions": {
+    "baseline_source_sha256": "902addd96308344c4dd174d127ca810f850f3e60f96f48518f8b78ae83ce9f07",
+    "taxonomy_version": "tax-1df59a17e23c",
+    "prompt_version": "prompt-c5440992445b"
+  }
+}

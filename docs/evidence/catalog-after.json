@@ -1,0 +1,138 @@
+{
+  "8031": {
+    "status": "passed",
+    "published_skus": 7,
+    "old_products_preserved": 2,
+    "category_counts": [
+      {
+        "id": "air_purifier",
+        "name": "Air purifiers",
+        "name_zh": "空气净化器",
+        "candidates": 1,
+        "drafts": 0,
+        "published": 1,
+        "in_stock": 1
+      },
+      {
+        "id": "coffee_machine",
+        "name": "Coffee machines",
+        "name_zh": "半自动咖啡机",
+        "candidates": 1,
+        "drafts": 0,
+        "published": 1,
+        "in_stock": 1
+      },
+      {
+        "id": "electric_kettle",
+        "name": "Electric kettles",
+        "name_zh": "电热水壶",
+        "candidates": 1,
+        "drafts": 0,
+        "published": 1,
+        "in_stock": 1
+      },
+      {
+        "id": "pet_fountain",
+        "name": "Pet fountains",
+        "name_zh": "宠物饮水机",
+        "candidates": 2,
+        "drafts": 0,
+        "published": 2,
+        "in_stock": 2
+      },
+      {
+        "id": "robot_vacuum",
+        "name": "Robot vacuums",
+        "name_zh": "扫地机器人",
+        "candidates": 1,
+        "drafts": 0,
+        "published": 1,
+        "in_stock": 1
+      },
+      {
+        "id": "wireless_charger",
+        "name": "Wireless chargers",
+        "name_zh": "无线充电器",
+        "candidates": 1,
+        "drafts": 0,
+        "published": 1,
+        "in_stock": 1
+      }
+    ],
+    "integrity": {
+      "ok": true,
+      "checked_products": 7,
+      "checked_orders": 13,
+      "issues": [],
+      "note": "只读业务一致性检查，不自动修复，也不代替数据库完整性和外部支付对账。"
+    }
+  },
+  "8027": {
+    "status": "passed",
+    "published_skus": 8,
+    "old_products_preserved": 3,
+    "category_counts": [
+      {
+        "id": "air_purifier",
+        "name": "Air purifiers",
+        "name_zh": "空气净化器",
+        "candidates": 1,
+        "drafts": 0,
+        "published": 1,
+        "in_stock": 1
+      },
+      {
+        "id": "coffee_machine",
+        "name": "Coffee machines",
+        "name_zh": "半自动咖啡机",
+        "candidates": 1,
+        "drafts": 0,
+        "published": 1,
+        "in_stock": 1
+      },
+      {
+        "id": "electric_kettle",
+        "name": "Electric kettles",
+        "name_zh": "电热水壶",
+        "candidates": 1,
+        "drafts": 0,
+        "published": 1,
+        "in_stock": 1
+      },
+      {
+        "id": "pet_fountain",
+        "name": "Pet fountains",
+        "name_zh": "宠物饮水机",
+        "candidates": 3,
+        "drafts": 0,
+        "published": 3,
+        "in_stock": 3
+      },
+      {
+        "id": "robot_vacuum",
+        "name": "Robot vacuums",
+        "name_zh": "扫地机器人",
+        "candidates": 1,
+        "drafts": 0,
+        "published": 1,
+        "in_stock": 1
+      },
+      {
+        "id": "wireless_charger",
+        "name": "Wireless chargers",
+        "name_zh": "无线充电器",
+        "candidates": 1,
+        "drafts": 0,
+        "published": 1,
+        "in_stock": 1
+      }
+    ],
+    "integrity": {
+      "ok": true,
+      "checked_products": 8,
+      "checked_orders": 4,
+      "issues": [],
+      "note": "只读业务一致性检查，不自动修复，也不代替数据库完整性和外部支付对账。"
+    }
+  }
+}

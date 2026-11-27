@@ -1,0 +1,41 @@
+{
+  "measurement_kind": "observed_local_query_profile",
+  "fixture_data_kind": "simulation",
+  "view": "summary",
+  "orders": 1000,
+  "page_size": 30,
+  "samples": 20,
+  "connection": {
+    "samples": 20,
+    "elapsed_seconds": 0.045,
+    "operations_per_second": 439.99,
+    "p50_ms": 2.207,
+    "p95_ms": 2.418,
+    "p99_ms": 2.873,
+    "max_ms": 2.873,
+    "percentile_method": "nearest_rank"
+  },
+  "query_and_projection": {
+    "samples": 20,
+    "elapsed_seconds": 0.04,
+    "operations_per_second": 494.47,
+    "p50_ms": 1.993,
+    "p95_ms": 2.177,
+    "p99_ms": 2.194,
+    "max_ms": 2.194,
+    "percentile_method": "nearest_rank"
+  },
+  "json_encoding": {
+    "samples": 20,
+    "elapsed_seconds": 0.002,
+    "operations_per_second": 9723.37,
+    "p50_ms": 0.101,
+    "p95_ms": 0.111,
+    "p99_ms": 0.114,
+    "max_ms": 0.114,
+    "percentile_method": "nearest_rank"
+  },
+  "payload_bytes": 13436,
+  "sql_statements_per_page": 4,
+  "scope": "Domain query and standard-library JSON encoding, not end-to-end HTTP latency."
+}

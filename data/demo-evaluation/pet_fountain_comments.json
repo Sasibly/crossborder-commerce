@@ -1,0 +1,250 @@
+{
+  "dataset_name": "synthetic_pet_fountain_comments_demo",
+  "synthetic": true,
+  "annotator_type": "simulated",
+  "category": "宠物饮水机",
+  "language": "zh-CN",
+  "usage_note": "本数据为人工编写的模拟评论和模拟人工标注，不是真实采集评论，也不是真实人工标注，仅用于 demo 流程、字段结构和标注规范测试，不能用于真实分析质量结论。",
+  "comments": [
+    {
+      "comment_id": "pf-syn-pet-001",
+      "rating": 2,
+      "text": "用了两个月，水泵就不出水了，而且很难拆开清洗，客服让我自己拆开看看。",
+      "synthetic": true,
+      "annotator_type": "simulated",
+      "annotations": [
+        {
+          "issue": "水泵寿命短",
+          "sentiment": "负面",
+          "evidence": "水泵就不出水了"
+        },
+        {
+          "issue": "清洁困难",
+          "sentiment": "负面",
+          "evidence": "很难拆开清洗"
+        },
+        {
+          "issue": "客服处理敷衍",
+          "sentiment": "负面",
+          "evidence": "客服让我自己拆开看看"
+        }
+      ]
+    },
+    {
+      "comment_id": "pf-syn-pet-002",
+      "rating": 1,
+      "text": "收到第二天就漏水，地板湿了一大片，猫差点踩进去，申请换货还要自己寄回。",
+      "synthetic": true,
+      "annotator_type": "simulated",
+      "annotations": [
+        {
+          "issue": "漏水",
+          "sentiment": "负面",
+          "evidence": "第二天就漏水"
+        },
+        {
+          "issue": "安全隐患",
+          "sentiment": "负面",
+          "evidence": "猫差点踩进去"
+        },
+        {
+          "issue": "退换货麻烦",
+          "sentiment": "负面",
+          "evidence": "还要自己寄回"
+        }
+      ]
+    },
+    {
+      "comment_id": "pf-syn-pet-003",
+      "rating": 3,
+      "text": "出水声音白天还能接受，晚上放卧室旁边有点吵，不过猫咪倒是愿意喝。",
+      "synthetic": true,
+      "annotator_type": "simulated",
+      "annotations": [
+        {
+          "issue": "噪音偏大",
+          "sentiment": "负面",
+          "evidence": "晚上放卧室旁边有点吵"
+        },
+        {
+          "issue": "宠物接受度高",
+          "sentiment": "正面",
+          "evidence": "猫咪倒是愿意喝"
+        },
+        {
+          "issue": "整体可接受",
+          "sentiment": "中性",
+          "evidence": "白天还能接受"
+        }
+      ]
+    },
+    {
+      "comment_id": "pf-syn-pet-004",
+      "rating": 4,
+      "text": "水箱容量挺大，不用天天加水，滤芯提醒也清楚，就是电源线有点短。",
+      "synthetic": true,
+      "annotator_type": "simulated",
+      "annotations": [
+        {
+          "issue": "水箱容量大",
+          "sentiment": "正面",
+          "evidence": "不用天天加水"
+        },
+        {
+          "issue": "滤芯提醒清楚",
+          "sentiment": "正面",
+          "evidence": "滤芯提醒也清楚"
+        },
+        {
+          "issue": "电源线短",
+          "sentiment": "负面",
+          "evidence": "电源线有点短"
+        }
+      ]
+    },
+    {
+      "comment_id": "pf-syn-pet-005",
+      "rating": 5,
+      "text": "家里两只猫都很爱喝，流动水确实比碗里喝得多，拆洗也方便，目前没发现漏水。",
+      "synthetic": true,
+      "annotator_type": "simulated",
+      "annotations": [
+        {
+          "issue": "宠物适口性好",
+          "sentiment": "正面",
+          "evidence": "两只猫都很爱喝"
+        },
+        {
+          "issue": "清洁方便",
+          "sentiment": "正面",
+          "evidence": "拆洗也方便"
+        },
+        {
+          "issue": "无漏水",
+          "sentiment": "正面",
+          "evidence": "目前没发现漏水"
+        }
+      ]
+    },
+    {
+      "comment_id": "pf-syn-pet-006",
+      "rating": 2,
+      "text": "感应出水不太灵，猫走过去半天没反应，偶尔又一直出水，不知道是不是坏了我这台。",
+      "synthetic": true,
+      "annotator_type": "simulated",
+      "annotations": [
+        {
+          "issue": "感应不稳定",
+          "sentiment": "负面",
+          "evidence": "猫走过去半天没反应"
+        },
+        {
+          "issue": "异常持续出水",
+          "sentiment": "负面",
+          "evidence": "偶尔又一直出水"
+        },
+        {
+          "issue": "故障归因不确定",
+          "sentiment": "中性",
+          "evidence": "不知道是不是坏了我这台"
+        }
+      ]
+    },
+    {
+      "comment_id": "pf-syn-pet-007",
+      "rating": 1,
+      "text": "水箱内壁很快就有滑滑的一层，说明书写得也不清楚，拆开洗一次要装很久。",
+      "synthetic": true,
+      "annotator_type": "simulated",
+      "annotations": [
+        {
+          "issue": "内壁易脏",
+          "sentiment": "负面",
+          "evidence": "很快就有滑滑的一层"
+        },
+        {
+          "issue": "说明书不清",
+          "sentiment": "负面",
+          "evidence": "说明书写得也不清楚"
+        },
+        {
+          "issue": "拆装繁琐",
+          "sentiment": "负面",
+          "evidence": "拆开洗一次要装很久"
+        }
+      ]
+    },
+    {
+      "comment_id": "pf-syn-pet-008",
+      "rating": 4,
+      "text": "狗狗喝水比以前多，过滤后的水看着干净，就是换滤芯的成本有点高。",
+      "synthetic": true,
+      "annotator_type": "simulated",
+      "annotations": [
+        {
+          "issue": "饮水量增加",
+          "sentiment": "正面",
+          "evidence": "狗狗喝水比以前多"
+        },
+        {
+          "issue": "过滤效果可感知",
+          "sentiment": "正面",
+          "evidence": "过滤后的水看着干净"
+        },
+        {
+          "issue": "滤芯成本高",
+          "sentiment": "负面",
+          "evidence": "换滤芯的成本有点高"
+        }
+      ]
+    },
+    {
+      "comment_id": "pf-syn-pet-009",
+      "rating": 3,
+      "text": "外观不错，水泵也安静，但水箱容量偏小，家里两只狗一天要加两次水。",
+      "synthetic": true,
+      "annotator_type": "simulated",
+      "annotations": [
+        {
+          "issue": "外观好",
+          "sentiment": "正面",
+          "evidence": "外观不错"
+        },
+        {
+          "issue": "水泵安静",
+          "sentiment": "正面",
+          "evidence": "水泵也安静"
+        },
+        {
+          "issue": "水箱容量小",
+          "sentiment": "负面",
+          "evidence": "一天要加两次水"
+        }
+      ]
+    },
+    {
+      "comment_id": "pf-syn-pet-010",
+      "rating": 2,
+      "text": "用了一个多月泵声越来越大，拆开发现里面卡了不少猫毛，清理起来很费劲。",
+      "synthetic": true,
+      "annotator_type": "simulated",
+      "annotations": [
+        {
+          "issue": "泵噪音变大",
+          "sentiment": "负面",
+          "evidence": "泵声越来越大"
+        },
+        {
+          "issue": "猫毛易堵塞",
+          "sentiment": "负面",
+          "evidence": "里面卡了不少猫毛"
+        },
+        {
+          "issue": "清理费劲",
+          "sentiment": "负面",
+          "evidence": "清理起来很费劲"
+        }
+      ]
+    }
+  ]
+}

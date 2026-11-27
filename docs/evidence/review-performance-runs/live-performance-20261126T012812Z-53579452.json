@@ -1,0 +1,1125 @@
+{
+  "measurement_kind": "observed_live_qwen_on_original_synthetic_reviews",
+  "verified_at_utc": "2026-11-26T01:28:12.947944+00:00",
+  "budget_id": "qwen35-pet-fountain-performance-20261126",
+  "authorization_limit": 20,
+  "requests_used_before": 0,
+  "requests_used_after": 20,
+  "real_http_attempts_added": 20,
+  "old_authorization_preserved": true,
+  "old_results_preserved": true,
+  "historical_serial_pipeline_ms": [
+    13318,
+    12772
+  ],
+  "new_concurrency3_pipeline_ms": [
+    6071,
+    6215
+  ],
+  "historical_serial_median_ms": 13045.0,
+  "new_pipeline_median_ms": 6143.0,
+  "reduction_vs_historical_median_percent": 52.91,
+  "trials": [
+    {
+      "analysis_id": "7367b99ce28447f6b60ef89ffbd55c2b",
+      "observed_http_to_terminal_ms": 6622.72,
+      "id": "7367b99ce28447f6b60ef89ffbd55c2b",
+      "tenant": "local",
+      "dataset": "pet_fountain",
+      "mode": "live",
+      "status": "succeeded",
+      "payload": {
+        "dataset": "pet_fountain",
+        "mode": "live",
+        "reviews": [
+          {
+            "asin": "B0PETF001",
+            "body": "Leaks from the bottom seam, water everywhere on my floor by morning.",
+            "lang": "en",
+            "rating": 1,
+            "review_id": "pf-001",
+            "title": "Leaking"
+          },
+          {
+            "asin": "B0PETF001",
+            "body": "Hard to clean the reservoir, slime builds up in the corners within a week.",
+            "lang": "en",
+            "rating": 2,
+            "review_id": "pf-002",
+            "title": "Filthy corners"
+          },
+          {
+            "asin": "B0PETF001",
+            "body": "The pump stopped working after three weeks and the cat had no water for a day.",
+            "lang": "en",
+            "rating": 1,
+            "review_id": "pf-003",
+            "title": "Pump died"
+          },
+          {
+            "asin": "B0PETF002",
+            "body": "The pump is noisy at night, I can hear it from the bedroom across the hall.",
+            "lang": "en",
+            "rating": 3,
+            "review_id": "pf-004",
+            "title": "Audible at night"
+          },
+          {
+            "asin": "B0PETF002",
+            "body": "My cat loves it and it is whisper quiet, refill once every four days.",
+            "lang": "en",
+            "rating": 5,
+            "review_id": "pf-005",
+            "title": "Cat loves it"
+          },
+          {
+            "asin": "B0PETF002",
+            "body": "水箱很难洗，边角容易发霉，每次拆开都要刷半小时。",
+            "lang": "zh",
+            "rating": 2,
+            "review_id": "pf-006",
+            "title": "难清洗"
+          },
+          {
+            "asin": "B0PETF003",
+            "body": "用了两周底部开始漏水，地板都湿了一大片。",
+            "lang": "zh",
+            "rating": 1,
+            "review_id": "pf-007",
+            "title": "底板渗水"
+          },
+          {
+            "asin": "B0PETF003",
+            "body": "Too small for two cats, I refill it twice a day which is annoying.",
+            "lang": "en",
+            "rating": 2,
+            "review_id": "pf-008",
+            "title": "Too small"
+          },
+          {
+            "asin": "B0PETF003",
+            "body": "The plastic feels cheap and the lid does not click shut properly.",
+            "lang": "en",
+            "rating": 3,
+            "review_id": "pf-009",
+            "title": "Flimsy lid"
+          },
+          {
+            "asin": "B0PETF004",
+            "body": "用了两个月泵就不出水了，拆开看里面全是毛絮。",
+            "lang": "zh",
+            "rating": 2,
+            "review_id": "pf-010",
+            "title": "不出水"
+          }
+        ]
+      },
+      "provenance": {
+        "analysis_mode": "live_llm",
+        "budget_id": "qwen35-pet-fountain-performance-20261126",
+        "cluster_threshold": 0.14,
+        "embedding_provider": "hash",
+        "model": "qwen3.5-flash",
+        "prompt_version": "prompt-c5440992445b",
+        "review_data_kind": "synthetic_samples",
+        "supplier": "simulation",
+        "taxonomy_version": "tax-1df59a17e23c",
+        "transaction_execution": "simulation"
+      },
+      "result": {
+        "completion_tokens": 847,
+        "dataset": "pet_fountain",
+        "elapsed_ms": 6071,
+        "execution": {
+          "concurrency": 3,
+          "output_order": "input_order",
+          "scheduling": "bounded_per_review"
+        },
+        "extractions": [
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.98,
+                  "evidence": "Leaks from the bottom seam, water everywhere on my floor by morning.",
+                  "label": "leakage",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-001"
+            },
+            "input": {
+              "asin": "B0PETF001",
+              "body": "Leaks from the bottom seam, water everywhere on my floor by morning.",
+              "lang": "en",
+              "rating": 1,
+              "review_id": "pf-001",
+              "title": "Leaking"
+            },
+            "review_id": "pf-001",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "Hard to clean the reservoir",
+                  "label": "cleaning",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-002"
+            },
+            "input": {
+              "asin": "B0PETF001",
+              "body": "Hard to clean the reservoir, slime builds up in the corners within a week.",
+              "lang": "en",
+              "rating": 2,
+              "review_id": "pf-002",
+              "title": "Filthy corners"
+            },
+            "review_id": "pf-002",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "The pump stopped working after three weeks",
+                  "label": "pump_life",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-003"
+            },
+            "input": {
+              "asin": "B0PETF001",
+              "body": "The pump stopped working after three weeks and the cat had no water for a day.",
+              "lang": "en",
+              "rating": 1,
+              "review_id": "pf-003",
+              "title": "Pump died"
+            },
+            "review_id": "pf-003",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "The pump is noisy at night",
+                  "label": "noise",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-004"
+            },
+            "input": {
+              "asin": "B0PETF002",
+              "body": "The pump is noisy at night, I can hear it from the bedroom across the hall.",
+              "lang": "en",
+              "rating": 3,
+              "review_id": "pf-004",
+              "title": "Audible at night"
+            },
+            "review_id": "pf-004",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 1.0,
+                  "evidence": "whisper quiet",
+                  "label": "noise",
+                  "polarity": "positive"
+                }
+              ],
+              "review_id": "pf-005"
+            },
+            "input": {
+              "asin": "B0PETF002",
+              "body": "My cat loves it and it is whisper quiet, refill once every four days.",
+              "lang": "en",
+              "rating": 5,
+              "review_id": "pf-005",
+              "title": "Cat loves it"
+            },
+            "review_id": "pf-005",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "水箱很难洗，边角容易发霉，每次拆开都要刷半小时",
+                  "label": "cleaning",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-006"
+            },
+            "input": {
+              "asin": "B0PETF002",
+              "body": "水箱很难洗，边角容易发霉，每次拆开都要刷半小时。",
+              "lang": "zh",
+              "rating": 2,
+              "review_id": "pf-006",
+              "title": "难清洗"
+            },
+            "review_id": "pf-006",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "底部开始漏水",
+                  "label": "leakage",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-007"
+            },
+            "input": {
+              "asin": "B0PETF003",
+              "body": "用了两周底部开始漏水，地板都湿了一大片。",
+              "lang": "zh",
+              "rating": 1,
+              "review_id": "pf-007",
+              "title": "底板渗水"
+            },
+            "review_id": "pf-007",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "Too small for two cats",
+                  "label": "size_fit",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-008"
+            },
+            "input": {
+              "asin": "B0PETF003",
+              "body": "Too small for two cats, I refill it twice a day which is annoying.",
+              "lang": "en",
+              "rating": 2,
+              "review_id": "pf-008",
+              "title": "Too small"
+            },
+            "review_id": "pf-008",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "The plastic feels cheap",
+                  "label": "build_quality",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-009"
+            },
+            "input": {
+              "asin": "B0PETF003",
+              "body": "The plastic feels cheap and the lid does not click shut properly.",
+              "lang": "en",
+              "rating": 3,
+              "review_id": "pf-009",
+              "title": "Flimsy lid"
+            },
+            "review_id": "pf-009",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "用了两个月泵就不出水了",
+                  "label": "pump_life",
+                  "polarity": "negative"
+                },
+                {
+                  "confidence": 0.85,
+                  "evidence": "拆开看里面全是毛絮",
+                  "label": "cleaning",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-010"
+            },
+            "input": {
+              "asin": "B0PETF004",
+              "body": "用了两个月泵就不出水了，拆开看里面全是毛絮。",
+              "lang": "zh",
+              "rating": 2,
+              "review_id": "pf-010",
+              "title": "不出水"
+            },
+            "review_id": "pf-010",
+            "status": "parsed"
+          }
+        ],
+        "failure_reason": null,
+        "llm_calls": 10,
+        "parse_success_rate": 1.0,
+        "parsed_count": 10,
+        "progress": {
+          "completed": 10,
+          "parsed": 10,
+          "total": 10
+        },
+        "prompt_tokens": 3024,
+        "repair_attempts": 0,
+        "request_attempts": [
+          {
+            "elapsed_ms": 1242.266,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1255.243,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1661.544,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1414.5,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1524.7,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1135.873,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1065.152,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1954.128,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1861.568,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 2140.125,
+            "http_status": 200
+          }
+        ],
+        "review_count": 10,
+        "themes": [
+          {
+            "display_name": "清洁困难",
+            "evidence": [
+              "Hard to clean the reservoir",
+              "拆开看里面全是毛絮"
+            ],
+            "label": "cleaning",
+            "mention_count": 3,
+            "negative_ratio": 1.0,
+            "opportunity_score": 0.7887,
+            "polarity": "negative",
+            "scene_count": 2,
+            "severity": 0.9167,
+            "theme_id": "T01"
+          },
+          {
+            "display_name": "漏水/渗液",
+            "evidence": [
+              "Leaks from the bottom seam, water everywhere on my floor by morning.",
+              "底部开始漏水"
+            ],
+            "label": "leakage",
+            "mention_count": 2,
+            "negative_ratio": 1.0,
+            "opportunity_score": 0.7215,
+            "polarity": "negative",
+            "scene_count": 2,
+            "severity": 0.965,
+            "theme_id": "T02"
+          },
+          {
+            "display_name": "核心部件寿命短",
+            "evidence": [
+              "The pump stopped working after three weeks",
+              "用了两个月泵就不出水了"
+            ],
+            "label": "pump_life",
+            "mention_count": 2,
+            "negative_ratio": 1.0,
+            "opportunity_score": 0.72,
+            "polarity": "negative",
+            "scene_count": 2,
+            "severity": 0.95,
+            "theme_id": "T03"
+          },
+          {
+            "display_name": "噪音大",
+            "evidence": [
+              "The pump is noisy at night"
+            ],
+            "label": "noise",
+            "mention_count": 1,
+            "negative_ratio": 1.0,
+            "opportunity_score": 0.6185,
+            "polarity": "negative",
+            "scene_count": 1,
+            "severity": 0.95,
+            "theme_id": "T04"
+          },
+          {
+            "display_name": "尺寸/适配不符",
+            "evidence": [
+              "Too small for two cats"
+            ],
+            "label": "size_fit",
+            "mention_count": 1,
+            "negative_ratio": 1.0,
+            "opportunity_score": 0.6185,
+            "polarity": "negative",
+            "scene_count": 1,
+            "severity": 0.95,
+            "theme_id": "T05"
+          },
+          {
+            "display_name": "做工与耐用性差",
+            "evidence": [
+              "The plastic feels cheap"
+            ],
+            "label": "build_quality",
+            "mention_count": 1,
+            "negative_ratio": 1.0,
+            "opportunity_score": 0.6185,
+            "polarity": "negative",
+            "scene_count": 1,
+            "severity": 0.95,
+            "theme_id": "T06"
+          },
+          {
+            "display_name": "噪音大",
+            "evidence": [
+              "whisper quiet"
+            ],
+            "label": "noise",
+            "mention_count": 1,
+            "negative_ratio": 0.0,
+            "opportunity_score": 0.2735,
+            "polarity": "positive",
+            "scene_count": 1,
+            "severity": 1.0,
+            "theme_id": "T07"
+          }
+        ],
+        "timings": {
+          "aggregation_ms": 2.026,
+          "extraction_ms": 6069.956,
+          "progress_persistence_ms": 98.83,
+          "request_attempt_ms_sum": 15255.099,
+          "request_reservation_ms": 110.412
+        },
+        "usage_scope": "Token values are provider-reported for successful responses; failed/unknown requests may also incur charges. Request count includes every HTTP attempt."
+      },
+      "error_code": null,
+      "request_count": 10,
+      "created_at": 1795656479,
+      "finished_at": 1795656485
+    },
+    {
+      "analysis_id": "938b4576750646c7bab5ea9f383730c9",
+      "observed_http_to_terminal_ms": 6650.208,
+      "id": "938b4576750646c7bab5ea9f383730c9",
+      "tenant": "local",
+      "dataset": "pet_fountain",
+      "mode": "live",
+      "status": "succeeded",
+      "payload": {
+        "dataset": "pet_fountain",
+        "mode": "live",
+        "reviews": [
+          {
+            "asin": "B0PETF001",
+            "body": "Leaks from the bottom seam, water everywhere on my floor by morning.",
+            "lang": "en",
+            "rating": 1,
+            "review_id": "pf-001",
+            "title": "Leaking"
+          },
+          {
+            "asin": "B0PETF001",
+            "body": "Hard to clean the reservoir, slime builds up in the corners within a week.",
+            "lang": "en",
+            "rating": 2,
+            "review_id": "pf-002",
+            "title": "Filthy corners"
+          },
+          {
+            "asin": "B0PETF001",
+            "body": "The pump stopped working after three weeks and the cat had no water for a day.",
+            "lang": "en",
+            "rating": 1,
+            "review_id": "pf-003",
+            "title": "Pump died"
+          },
+          {
+            "asin": "B0PETF002",
+            "body": "The pump is noisy at night, I can hear it from the bedroom across the hall.",
+            "lang": "en",
+            "rating": 3,
+            "review_id": "pf-004",
+            "title": "Audible at night"
+          },
+          {
+            "asin": "B0PETF002",
+            "body": "My cat loves it and it is whisper quiet, refill once every four days.",
+            "lang": "en",
+            "rating": 5,
+            "review_id": "pf-005",
+            "title": "Cat loves it"
+          },
+          {
+            "asin": "B0PETF002",
+            "body": "水箱很难洗，边角容易发霉，每次拆开都要刷半小时。",
+            "lang": "zh",
+            "rating": 2,
+            "review_id": "pf-006",
+            "title": "难清洗"
+          },
+          {
+            "asin": "B0PETF003",
+            "body": "用了两周底部开始漏水，地板都湿了一大片。",
+            "lang": "zh",
+            "rating": 1,
+            "review_id": "pf-007",
+            "title": "底板渗水"
+          },
+          {
+            "asin": "B0PETF003",
+            "body": "Too small for two cats, I refill it twice a day which is annoying.",
+            "lang": "en",
+            "rating": 2,
+            "review_id": "pf-008",
+            "title": "Too small"
+          },
+          {
+            "asin": "B0PETF003",
+            "body": "The plastic feels cheap and the lid does not click shut properly.",
+            "lang": "en",
+            "rating": 3,
+            "review_id": "pf-009",
+            "title": "Flimsy lid"
+          },
+          {
+            "asin": "B0PETF004",
+            "body": "用了两个月泵就不出水了，拆开看里面全是毛絮。",
+            "lang": "zh",
+            "rating": 2,
+            "review_id": "pf-010",
+            "title": "不出水"
+          }
+        ]
+      },
+      "provenance": {
+        "analysis_mode": "live_llm",
+        "budget_id": "qwen35-pet-fountain-performance-20261126",
+        "cluster_threshold": 0.14,
+        "embedding_provider": "hash",
+        "model": "qwen3.5-flash",
+        "prompt_version": "prompt-c5440992445b",
+        "review_data_kind": "synthetic_samples",
+        "supplier": "simulation",
+        "taxonomy_version": "tax-1df59a17e23c",
+        "transaction_execution": "simulation"
+      },
+      "result": {
+        "completion_tokens": 898,
+        "dataset": "pet_fountain",
+        "elapsed_ms": 6215,
+        "execution": {
+          "concurrency": 3,
+          "output_order": "input_order",
+          "scheduling": "bounded_per_review"
+        },
+        "extractions": [
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.98,
+                  "evidence": "Leaks from the bottom seam, water everywhere on my floor by morning.",
+                  "label": "leakage",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-001"
+            },
+            "input": {
+              "asin": "B0PETF001",
+              "body": "Leaks from the bottom seam, water everywhere on my floor by morning.",
+              "lang": "en",
+              "rating": 1,
+              "review_id": "pf-001",
+              "title": "Leaking"
+            },
+            "review_id": "pf-001",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "Hard to clean the reservoir",
+                  "label": "cleaning",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-002"
+            },
+            "input": {
+              "asin": "B0PETF001",
+              "body": "Hard to clean the reservoir, slime builds up in the corners within a week.",
+              "lang": "en",
+              "rating": 2,
+              "review_id": "pf-002",
+              "title": "Filthy corners"
+            },
+            "review_id": "pf-002",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "The pump stopped working after three weeks",
+                  "label": "pump_life",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-003"
+            },
+            "input": {
+              "asin": "B0PETF001",
+              "body": "The pump stopped working after three weeks and the cat had no water for a day.",
+              "lang": "en",
+              "rating": 1,
+              "review_id": "pf-003",
+              "title": "Pump died"
+            },
+            "review_id": "pf-003",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "The pump is noisy at night",
+                  "label": "noise",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-004"
+            },
+            "input": {
+              "asin": "B0PETF002",
+              "body": "The pump is noisy at night, I can hear it from the bedroom across the hall.",
+              "lang": "en",
+              "rating": 3,
+              "review_id": "pf-004",
+              "title": "Audible at night"
+            },
+            "review_id": "pf-004",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "whisper quiet",
+                  "label": "noise",
+                  "polarity": "positive"
+                }
+              ],
+              "review_id": "pf-005"
+            },
+            "input": {
+              "asin": "B0PETF002",
+              "body": "My cat loves it and it is whisper quiet, refill once every four days.",
+              "lang": "en",
+              "rating": 5,
+              "review_id": "pf-005",
+              "title": "Cat loves it"
+            },
+            "review_id": "pf-005",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "水箱很难洗，边角容易发霉，每次拆开都要刷半小时",
+                  "label": "cleaning",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-006"
+            },
+            "input": {
+              "asin": "B0PETF002",
+              "body": "水箱很难洗，边角容易发霉，每次拆开都要刷半小时。",
+              "lang": "zh",
+              "rating": 2,
+              "review_id": "pf-006",
+              "title": "难清洗"
+            },
+            "review_id": "pf-006",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "底部开始漏水",
+                  "label": "leakage",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-007"
+            },
+            "input": {
+              "asin": "B0PETF003",
+              "body": "用了两周底部开始漏水，地板都湿了一大片。",
+              "lang": "zh",
+              "rating": 1,
+              "review_id": "pf-007",
+              "title": "底板渗水"
+            },
+            "review_id": "pf-007",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "Too small for two cats",
+                  "label": "size_fit",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-008"
+            },
+            "input": {
+              "asin": "B0PETF003",
+              "body": "Too small for two cats, I refill it twice a day which is annoying.",
+              "lang": "en",
+              "rating": 2,
+              "review_id": "pf-008",
+              "title": "Too small"
+            },
+            "review_id": "pf-008",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "The plastic feels cheap",
+                  "label": "build_quality",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-009"
+            },
+            "input": {
+              "asin": "B0PETF003",
+              "body": "The plastic feels cheap and the lid does not click shut properly.",
+              "lang": "en",
+              "rating": 3,
+              "review_id": "pf-009",
+              "title": "Flimsy lid"
+            },
+            "review_id": "pf-009",
+            "status": "parsed"
+          },
+          {
+            "attempts": 1,
+            "extraction": {
+              "is_relevant": true,
+              "points": [
+                {
+                  "confidence": 0.95,
+                  "evidence": "用了两个月泵就不出水了",
+                  "label": "pump_life",
+                  "polarity": "negative"
+                },
+                {
+                  "confidence": 0.85,
+                  "evidence": "拆开看里面全是毛絮",
+                  "label": "cleaning",
+                  "polarity": "negative"
+                }
+              ],
+              "review_id": "pf-010"
+            },
+            "input": {
+              "asin": "B0PETF004",
+              "body": "用了两个月泵就不出水了，拆开看里面全是毛絮。",
+              "lang": "zh",
+              "rating": 2,
+              "review_id": "pf-010",
+              "title": "不出水"
+            },
+            "review_id": "pf-010",
+            "status": "parsed"
+          }
+        ],
+        "failure_reason": null,
+        "llm_calls": 10,
+        "parse_success_rate": 1.0,
+        "parsed_count": 10,
+        "progress": {
+          "completed": 10,
+          "parsed": 10,
+          "total": 10
+        },
+        "prompt_tokens": 3024,
+        "repair_attempts": 0,
+        "request_attempts": [
+          {
+            "elapsed_ms": 1486.647,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1524.894,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1623.57,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1112.548,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1405.252,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1419.44,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1229.053,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1228.946,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 1958.05,
+            "http_status": 200
+          },
+          {
+            "elapsed_ms": 2025.243,
+            "http_status": 200
+          }
+        ],
+        "review_count": 10,
+        "themes": [
+          {
+            "display_name": "清洁困难",
+            "evidence": [
+              "Hard to clean the reservoir",
+              "拆开看里面全是毛絮"
+            ],
+            "label": "cleaning",
+            "mention_count": 3,
+            "negative_ratio": 1.0,
+            "opportunity_score": 0.7887,
+            "polarity": "negative",
+            "scene_count": 2,
+            "severity": 0.9167,
+            "theme_id": "T01"
+          },
+          {
+            "display_name": "漏水/渗液",
+            "evidence": [
+              "Leaks from the bottom seam, water everywhere on my floor by morning.",
+              "底部开始漏水"
+            ],
+            "label": "leakage",
+            "mention_count": 2,
+            "negative_ratio": 1.0,
+            "opportunity_score": 0.7215,
+            "polarity": "negative",
+            "scene_count": 2,
+            "severity": 0.965,
+            "theme_id": "T02"
+          },
+          {
+            "display_name": "核心部件寿命短",
+            "evidence": [
+              "The pump stopped working after three weeks",
+              "用了两个月泵就不出水了"
+            ],
+            "label": "pump_life",
+            "mention_count": 2,
+            "negative_ratio": 1.0,
+            "opportunity_score": 0.72,
+            "polarity": "negative",
+            "scene_count": 2,
+            "severity": 0.95,
+            "theme_id": "T03"
+          },
+          {
+            "display_name": "噪音大",
+            "evidence": [
+              "The pump is noisy at night"
+            ],
+            "label": "noise",
+            "mention_count": 1,
+            "negative_ratio": 1.0,
+            "opportunity_score": 0.6185,
+            "polarity": "negative",
+            "scene_count": 1,
+            "severity": 0.95,
+            "theme_id": "T04"
+          },
+          {
+            "display_name": "尺寸/适配不符",
+            "evidence": [
+              "Too small for two cats"
+            ],
+            "label": "size_fit",
+            "mention_count": 1,
+            "negative_ratio": 1.0,
+            "opportunity_score": 0.6185,
+            "polarity": "negative",
+            "scene_count": 1,
+            "severity": 0.95,
+            "theme_id": "T05"
+          },
+          {
+            "display_name": "做工与耐用性差",
+            "evidence": [
+              "The plastic feels cheap"
+            ],
+            "label": "build_quality",
+            "mention_count": 1,
+            "negative_ratio": 1.0,
+            "opportunity_score": 0.6185,
+            "polarity": "negative",
+            "scene_count": 1,
+            "severity": 0.95,
+            "theme_id": "T06"
+          },
+          {
+            "display_name": "噪音大",
+            "evidence": [
+              "whisper quiet"
+            ],
+            "label": "noise",
+            "mention_count": 1,
+            "negative_ratio": 0.0,
+            "opportunity_score": 0.2685,
+            "polarity": "positive",
+            "scene_count": 1,
+            "severity": 0.95,
+            "theme_id": "T07"
+          }
+        ],
+        "timings": {
+          "aggregation_ms": 1.223,
+          "extraction_ms": 6214.714,
+          "progress_persistence_ms": 241.903,
+          "request_attempt_ms_sum": 15013.643,
+          "request_reservation_ms": 129.966
+        },
+        "usage_scope": "Token values are provider-reported for successful responses; failed/unknown requests may also incur charges. Request count includes every HTTP attempt."
+      },
+      "error_code": null,
+      "request_count": 10,
+      "created_at": 1795656486,
+      "finished_at": 1795656492
+    }
+  ],
+  "authorization_history": [
+    {
+      "id": "qwen35-pet-fountain-first-trial-20261125",
+      "requests_used": 20,
+      "request_limit": 20
+    },
+    {
+      "id": "qwen35-pet-fountain-performance-20261126",
+      "requests_used": 20,
+      "request_limit": 20
+    }
+  ],
+  "scope": "Same original synthetic input and provider/model. Historical comparison across different times, small samples; not controlled provider latency benchmark or semantic accuracy evaluation."
+}

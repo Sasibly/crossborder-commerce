@@ -1,0 +1,983 @@
+{
+  "schema_version": "local-demo-acceptance-v1",
+  "accepted_by": "User instruction to complete steps 1-5 using supplied demo data, 2026-11-26",
+  "scope": {
+    "deployment": "local_machine_only",
+    "canonical_port": 8031,
+    "schema_version": 26,
+    "trade_mode": "mock",
+    "currency": "USD",
+    "supplier_execution": "simulation",
+    "additional_live_model_calls_allowed": false,
+    "public_release_in_scope": false,
+    "real_world_quality_claims": false
+  },
+  "files": {
+    "data/samples/air_purifier.jsonl": "147d9aa9d5c99a1464dffc31d2622a2c34672a2d7e3f346dc0dad58f7077940e",
+    "data/samples/coffee_machine.jsonl": "2f16d77d23f62dee22a4334b2d339a5b1c186380fd4c549a8b35a3e453d93295",
+    "data/samples/electric_kettle.jsonl": "19b77fdd922f9ce18545cbd78f19e4205ba7b897718f1450881dcf3c70565a4d",
+    "data/samples/pet_fountain.jsonl": "9bcb40b5da512e1e3594298894ef5736405b4dd3825eee3c8dc67e844a2d39e1",
+    "data/samples/robot_vacuum.jsonl": "c6d9863eea6d1004b8c407ba31d8945a81b597ba875632aefc30d9d0bea31c54",
+    "data/samples/wireless_charger.jsonl": "c243b3442913c6c0fa220c8783067939c8a5267d3c15737fcc08e5f2d7e53ec2",
+    "data/demo-evaluation/pet_fountain_comments.json": "fbd9f57c4adfb8f683b566f2da278ecaafc2baf13e797bc57a3fed72aafbe96e",
+    "data/demo-evaluation/pet_fountain_holdout.json": "b00b2df699261bc05b7f28ad742c0168bf4e3b0c5d73f329e4981a7e460619f6",
+    "data/demo-evaluation/pet_fountain_holdout_rules.json": "7c789e9f9fe216254692d578bd0f46f211438f9cd354cb75be7238be930d130b",
+    "data/demo-evaluation/pet_fountain_rules.json": "bb236ba8c8a83d89157445c370b92a49bd9f2b24024a062244e53797d96f2589",
+    "data/eval/gold_labels.jsonl": "284287c81657db41f61f0f19fcb0fd71c10a2fbab1e98636b5ee1eed970fa070",
+    "data/review-annotation/pet_fountain_schema_v1.json": "5020f81d04551eeb51a980aab7a2590264c094bce181459b6c8bff8021265a93",
+    "data/review-annotation/synthetic_ai_prereview_v1.json": "3729f606802bc3be2a51d38cc34c89b68c8f1941c7e5e9826df9cc27e6b813c2",
+    "src/xborder_insight/llm.py": "902addd96308344c4dd174d127ca810f850f3e60f96f48518f8b78ae83ce9f07",
+    "src/xborder_insight/offline_rules.py": "adfafd91b1be29c60733788ebb87684783ca3c4cb186f5e207d99cbc05fa1587",
+    "src/xborder_insight/taxonomy.py": "08247c63c3943b56a3ccf1da3e431a988358cbc143e3f347e2bf5d9786da2515"
+  },
+  "production_label_keys": [
+    "charging_speed",
+    "heat",
+    "compatibility",
+    "build_quality",
+    "noise",
+    "leakage",
+    "cleaning",
+    "pump_life",
+    "size_fit",
+    "value"
+  ],
+  "annotation_catalog_stage": "annotation_draft_not_production_taxonomy",
+  "annotation_catalog_labels": 24,
+  "reference_qualification": {
+    "raw_supplied_reviews": 30,
+    "raw_supplied_annotations": 55,
+    "ai_candidate_aspect_units": 50,
+    "context_items": 2,
+    "human_approved_annotations": 0,
+    "excluded_annotation_ids": [
+      "demo/pf-syn-pet-001/2",
+      "demo/pf-syn-pet-002/1"
+    ],
+    "excluded_from_accuracy_scoring": true,
+    "fixed_regression_is_blind": false
+  },
+  "pet_reference_expected": {
+    "demo": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 0
+    },
+    "fixed_regression": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0
+    }
+  },
+  "categories": {
+    "air_purifier": {
+      "rule": "v1",
+      "scope": "baseline_demo_limited_quality",
+      "workflow_supported": true,
+      "real_quality_claim_supported": false,
+      "reviews": 38,
+      "expected_parsed": 38,
+      "expected_counts": {
+        "tp": 14,
+        "fp": 7,
+        "fn": 19
+      },
+      "observed_reference_metrics": {
+        "precision": 0.6667,
+        "recall": 0.4242,
+        "f1": 0.5185
+      },
+      "expected_error_cases": [
+        {
+          "review_id": "ap-003",
+          "missing": [
+            "compatibility"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ap-005",
+          "missing": [
+            "cleaning"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ap-006",
+          "missing": [
+            "pump_life"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ap-007",
+          "missing": [
+            "compatibility"
+          ],
+          "extra": [
+            "build_quality"
+          ]
+        },
+        {
+          "review_id": "ap-008",
+          "missing": [],
+          "extra": [
+            "heat"
+          ]
+        },
+        {
+          "review_id": "ap-009",
+          "missing": [
+            "noise"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ap-015",
+          "missing": [
+            "compatibility"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ap-016",
+          "missing": [
+            "noise"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ap-017",
+          "missing": [
+            "compatibility"
+          ],
+          "extra": [
+            "leakage"
+          ]
+        },
+        {
+          "review_id": "ap-020",
+          "missing": [
+            "build_quality"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ap-022",
+          "missing": [
+            "cleaning"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ap-023",
+          "missing": [],
+          "extra": [
+            "build_quality"
+          ]
+        },
+        {
+          "review_id": "ap-025",
+          "missing": [
+            "pump_life"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ap-026",
+          "missing": [
+            "noise"
+          ],
+          "extra": [
+            "charging_speed"
+          ]
+        },
+        {
+          "review_id": "ap-027",
+          "missing": [
+            "size_fit"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ap-030",
+          "missing": [
+            "pump_life"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ap-032",
+          "missing": [
+            "cleaning"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ap-033",
+          "missing": [
+            "compatibility"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ap-034",
+          "missing": [],
+          "extra": [
+            "build_quality"
+          ]
+        },
+        {
+          "review_id": "ap-035",
+          "missing": [
+            "pump_life"
+          ],
+          "extra": [
+            "noise"
+          ]
+        },
+        {
+          "review_id": "ap-036",
+          "missing": [
+            "value"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ap-037",
+          "missing": [
+            "compatibility"
+          ],
+          "extra": []
+        }
+      ],
+      "limitation": "Fixed synthetic/project legacy reference regression only; not real-review accuracy or a guarantee on new data."
+    },
+    "coffee_machine": {
+      "rule": "v1",
+      "scope": "baseline_demo_limited_quality",
+      "workflow_supported": true,
+      "real_quality_claim_supported": false,
+      "reviews": 40,
+      "expected_parsed": 40,
+      "expected_counts": {
+        "tp": 21,
+        "fp": 13,
+        "fn": 15
+      },
+      "observed_reference_metrics": {
+        "precision": 0.6176,
+        "recall": 0.5833,
+        "f1": 0.6
+      },
+      "expected_error_cases": [
+        {
+          "review_id": "cm-004",
+          "missing": [
+            "compatibility"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "cm-005",
+          "missing": [
+            "noise"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "cm-006",
+          "missing": [],
+          "extra": [
+            "build_quality"
+          ]
+        },
+        {
+          "review_id": "cm-007",
+          "missing": [
+            "cleaning"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "cm-010",
+          "missing": [],
+          "extra": [
+            "cleaning",
+            "heat"
+          ]
+        },
+        {
+          "review_id": "cm-012",
+          "missing": [
+            "size_fit"
+          ],
+          "extra": [
+            "heat"
+          ]
+        },
+        {
+          "review_id": "cm-013",
+          "missing": [],
+          "extra": [
+            "build_quality"
+          ]
+        },
+        {
+          "review_id": "cm-014",
+          "missing": [],
+          "extra": [
+            "build_quality"
+          ]
+        },
+        {
+          "review_id": "cm-015",
+          "missing": [
+            "pump_life"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "cm-018",
+          "missing": [
+            "cleaning"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "cm-021",
+          "missing": [
+            "charging_speed"
+          ],
+          "extra": [
+            "pump_life"
+          ]
+        },
+        {
+          "review_id": "cm-022",
+          "missing": [
+            "compatibility"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "cm-023",
+          "missing": [
+            "build_quality"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "cm-025",
+          "missing": [],
+          "extra": [
+            "heat"
+          ]
+        },
+        {
+          "review_id": "cm-027",
+          "missing": [],
+          "extra": [
+            "heat",
+            "pump_life"
+          ]
+        },
+        {
+          "review_id": "cm-028",
+          "missing": [
+            "size_fit"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "cm-029",
+          "missing": [
+            "compatibility"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "cm-030",
+          "missing": [
+            "cleaning"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "cm-034",
+          "missing": [],
+          "extra": [
+            "heat"
+          ]
+        },
+        {
+          "review_id": "cm-035",
+          "missing": [
+            "cleaning"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "cm-037",
+          "missing": [
+            "value"
+          ],
+          "extra": [
+            "build_quality"
+          ]
+        },
+        {
+          "review_id": "cm-039",
+          "missing": [],
+          "extra": [
+            "charging_speed"
+          ]
+        },
+        {
+          "review_id": "cm-040",
+          "missing": [
+            "build_quality"
+          ],
+          "extra": []
+        }
+      ],
+      "limitation": "Fixed synthetic/project legacy reference regression only; not real-review accuracy or a guarantee on new data."
+    },
+    "electric_kettle": {
+      "rule": "v1",
+      "scope": "baseline_demo_limited_quality",
+      "workflow_supported": true,
+      "real_quality_claim_supported": false,
+      "reviews": 38,
+      "expected_parsed": 38,
+      "expected_counts": {
+        "tp": 16,
+        "fp": 7,
+        "fn": 19
+      },
+      "observed_reference_metrics": {
+        "precision": 0.6957,
+        "recall": 0.4571,
+        "f1": 0.5517
+      },
+      "expected_error_cases": [
+        {
+          "review_id": "ek-001",
+          "missing": [
+            "build_quality"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ek-005",
+          "missing": [
+            "noise"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ek-006",
+          "missing": [
+            "pump_life"
+          ],
+          "extra": [
+            "build_quality"
+          ]
+        },
+        {
+          "review_id": "ek-007",
+          "missing": [
+            "build_quality"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ek-008",
+          "missing": [
+            "charging_speed"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ek-012",
+          "missing": [
+            "size_fit"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ek-013",
+          "missing": [
+            "build_quality"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ek-017",
+          "missing": [],
+          "extra": [
+            "heat"
+          ]
+        },
+        {
+          "review_id": "ek-018",
+          "missing": [
+            "cleaning"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ek-019",
+          "missing": [
+            "leakage"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ek-020",
+          "missing": [],
+          "extra": [
+            "heat"
+          ]
+        },
+        {
+          "review_id": "ek-022",
+          "missing": [
+            "pump_life"
+          ],
+          "extra": [
+            "build_quality"
+          ]
+        },
+        {
+          "review_id": "ek-025",
+          "missing": [
+            "build_quality"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ek-026",
+          "missing": [],
+          "extra": [
+            "heat"
+          ]
+        },
+        {
+          "review_id": "ek-027",
+          "missing": [
+            "value"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ek-029",
+          "missing": [
+            "build_quality"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ek-030",
+          "missing": [
+            "charging_speed"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ek-031",
+          "missing": [
+            "pump_life"
+          ],
+          "extra": [
+            "heat"
+          ]
+        },
+        {
+          "review_id": "ek-033",
+          "missing": [
+            "leakage"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ek-034",
+          "missing": [
+            "heat"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ek-035",
+          "missing": [
+            "cleaning"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "ek-038",
+          "missing": [
+            "pump_life"
+          ],
+          "extra": [
+            "heat"
+          ]
+        }
+      ],
+      "limitation": "Fixed synthetic/project legacy reference regression only; not real-review accuracy or a guarantee on new data."
+    },
+    "pet_fountain": {
+      "rule": "v2",
+      "scope": "enhanced_synthetic_demo",
+      "workflow_supported": true,
+      "real_quality_claim_supported": false,
+      "reviews": 20,
+      "expected_parsed": 20,
+      "expected_counts": {
+        "tp": 14,
+        "fp": 0,
+        "fn": 4
+      },
+      "observed_reference_metrics": {
+        "precision": 1.0,
+        "recall": 0.7778,
+        "f1": 0.875
+      },
+      "expected_error_cases": [
+        {
+          "review_id": "pf-012",
+          "missing": [
+            "cleaning"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "pf-015",
+          "missing": [
+            "leakage"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "pf-019",
+          "missing": [
+            "build_quality"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "pf-020",
+          "missing": [
+            "leakage"
+          ],
+          "extra": []
+        }
+      ],
+      "limitation": "Fixed synthetic/project legacy reference regression only; not real-review accuracy or a guarantee on new data."
+    },
+    "robot_vacuum": {
+      "rule": "v1",
+      "scope": "baseline_demo_limited_quality",
+      "workflow_supported": true,
+      "real_quality_claim_supported": false,
+      "reviews": 42,
+      "expected_parsed": 42,
+      "expected_counts": {
+        "tp": 14,
+        "fp": 5,
+        "fn": 24
+      },
+      "observed_reference_metrics": {
+        "precision": 0.7368,
+        "recall": 0.3684,
+        "f1": 0.4912
+      },
+      "expected_error_cases": [
+        {
+          "review_id": "rv-001",
+          "missing": [
+            "cleaning"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-004",
+          "missing": [
+            "compatibility"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-005",
+          "missing": [
+            "leakage"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-006",
+          "missing": [
+            "size_fit"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-009",
+          "missing": [],
+          "extra": [
+            "build_quality"
+          ]
+        },
+        {
+          "review_id": "rv-011",
+          "missing": [
+            "noise"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-012",
+          "missing": [
+            "size_fit"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-013",
+          "missing": [
+            "cleaning"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-014",
+          "missing": [
+            "compatibility"
+          ],
+          "extra": [
+            "build_quality"
+          ]
+        },
+        {
+          "review_id": "rv-018",
+          "missing": [
+            "pump_life"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-019",
+          "missing": [
+            "value"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-020",
+          "missing": [
+            "size_fit"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-022",
+          "missing": [
+            "compatibility"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-023",
+          "missing": [
+            "cleaning"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-024",
+          "missing": [
+            "pump_life"
+          ],
+          "extra": [
+            "noise"
+          ]
+        },
+        {
+          "review_id": "rv-025",
+          "missing": [
+            "charging_speed"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-029",
+          "missing": [
+            "build_quality"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-030",
+          "missing": [
+            "cleaning"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-031",
+          "missing": [],
+          "extra": [
+            "cleaning"
+          ]
+        },
+        {
+          "review_id": "rv-032",
+          "missing": [
+            "leakage"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-034",
+          "missing": [
+            "compatibility"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-035",
+          "missing": [
+            "pump_life"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-036",
+          "missing": [
+            "size_fit"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-040",
+          "missing": [
+            "charging_speed"
+          ],
+          "extra": [
+            "cleaning"
+          ]
+        },
+        {
+          "review_id": "rv-041",
+          "missing": [
+            "value"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "rv-042",
+          "missing": [
+            "compatibility"
+          ],
+          "extra": []
+        }
+      ],
+      "limitation": "Fixed synthetic/project legacy reference regression only; not real-review accuracy or a guarantee on new data."
+    },
+    "wireless_charger": {
+      "rule": "v1",
+      "scope": "baseline_demo_limited_quality",
+      "workflow_supported": true,
+      "real_quality_claim_supported": false,
+      "reviews": 22,
+      "expected_parsed": 22,
+      "expected_counts": {
+        "tp": 16,
+        "fp": 1,
+        "fn": 8
+      },
+      "observed_reference_metrics": {
+        "precision": 0.9412,
+        "recall": 0.6667,
+        "f1": 0.7805
+      },
+      "expected_error_cases": [
+        {
+          "review_id": "wc-008",
+          "missing": [
+            "size_fit"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "wc-011",
+          "missing": [
+            "value"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "wc-012",
+          "missing": [
+            "build_quality"
+          ],
+          "extra": [
+            "pump_life"
+          ]
+        },
+        {
+          "review_id": "wc-016",
+          "missing": [
+            "charging_speed"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "wc-017",
+          "missing": [
+            "build_quality"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "wc-018",
+          "missing": [
+            "charging_speed",
+            "value"
+          ],
+          "extra": []
+        },
+        {
+          "review_id": "wc-021",
+          "missing": [
+            "charging_speed"
+          ],
+          "extra": []
+        }
+      ],
+      "limitation": "Fixed synthetic/project legacy reference regression only; not real-review accuracy or a guarantee on new data."
+    }
+  },
+  "required_unit_groups": [
+    "test_commerce_access",
+    "test_buyers",
+    "test_commerce_consistency",
+    "test_commerce_backup",
+    "test_review_analysis",
+    "test_review_analysis_performance",
+    "test_offline_rule_versioning",
+    "test_review_annotation_prereview"
+  ],
+  "allowed_xfail": {
+    "module": "test_polarity",
+    "name": "test_known_gap_died_is_not_a_negative_cue"
+  },
+  "delivery_documents": [
+    "COMMERCE-README.md",
+    "docs/LOCAL-DEPLOYMENT.md",
+    "docs/USER-GUIDE.zh-CN.md",
+    "docs/REVIEW-ANALYSIS-GUIDE.md",
+    "docs/COMMERCE-DEMO.md",
+    "docs/COMMERCE-PORTFOLIO.md"
+  ]
+}

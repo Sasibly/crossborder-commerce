@@ -1,0 +1,148 @@
+{
+  "status": "passed",
+  "scope": "local_machine_only",
+  "fixture_data_kind": "simulation",
+  "verified_at_utc": "2026-11-25T03:54:55.085378+00:00",
+  "deployment": {
+    "state": "running",
+    "health": "healthy",
+    "base_url": "http://127.0.0.1:8031",
+    "image": "sha256:9fcab6f6b0b449297f6dc1886cb4840e68fb307c922fa4bf78453d05607be6be",
+    "data_volumes": [
+      "crossborder-commerce_commerce-data"
+    ],
+    "workbench": "http://127.0.0.1:8031/workbench",
+    "shop": "http://127.0.0.1:8031/shop",
+    "scope": "local_machine_only",
+    "fixture_data_kind": "simulation"
+  },
+  "checks": [
+    {
+      "name": "local_configuration",
+      "result": {
+        "profile": "local",
+        "status": "passed",
+        "checks": [
+          {
+            "id": "schema_current",
+            "passed": true
+          },
+          {
+            "id": "single_worker",
+            "passed": true
+          },
+          {
+            "id": "simulation_only",
+            "passed": true
+          },
+          {
+            "id": "database_readable",
+            "passed": true
+          },
+          {
+            "id": "database_integrity",
+            "passed": true
+          }
+        ],
+        "public_release": "not_verified",
+        "unverified": [
+          "HTTPS termination and proxy trust",
+          "off-machine backup recovery",
+          "target capacity and service-level objectives",
+          "public account abuse controls"
+        ],
+        "scope": "Local configuration and schema checks only; not approval for public release.",
+        "schema_version": 25
+      }
+    },
+    {
+      "name": "deployed_http_transaction",
+      "result": {
+        "status": "passed",
+        "data_kind": "simulation",
+        "order_id": "8fc4f565d5b542debf62a5223b2cd52d",
+        "line_count": 2,
+        "refund": "approved",
+        "inventory_restored": true
+      }
+    },
+    {
+      "name": "current_deployment_backup_restore",
+      "result": {
+        "status": "passed",
+        "measurement_kind": "observed_live_deployment_backup_restore",
+        "fixture_data_kind": "simulation",
+        "source": "/app/data/commerce.sqlite3",
+        "backup": "/app/data/local-verification/20261125T035448Z-58f78a1e/backup.sqlite3",
+        "restored": "/app/data/local-verification/20261125T035448Z-58f78a1e/restored.sqlite3",
+        "restore_target": "new_file",
+        "deployment_database_replaced": false,
+        "content_matches": true,
+        "schema_version": 25,
+        "table_rows": {
+          "api_keys": 0,
+          "commerce_addresses": 11,
+          "commerce_audit": 102,
+          "commerce_auth_attempts": 2,
+          "commerce_buyers": 11,
+          "commerce_candidates": 2,
+          "commerce_cart": 0,
+          "commerce_decisions": 6,
+          "commerce_events": 11,
+          "commerce_key_roles": 0,
+          "commerce_ledger": 70,
+          "commerce_metric_scenarios": 2,
+          "commerce_order_items": 22,
+          "commerce_orders": 11,
+          "commerce_payment_policy": 0,
+          "commerce_products": 2,
+          "commerce_profit_comparisons": 1,
+          "commerce_refund_costs": 10,
+          "commerce_refunds": 10,
+          "commerce_sessions": 2,
+          "commerce_supplier_cases": 2,
+          "commerce_supplier_events": 6,
+          "compliance_rules": 4,
+          "cost_params": 12,
+          "fba_fee_schedule": 402,
+          "fba_rate_version": 3,
+          "jobs": 0,
+          "product_returns": 2,
+          "rate_limits": 0,
+          "reviews": 0,
+          "runs": 0,
+          "schema_migrations": 25
+        },
+        "content_sha256": "8a3ae4852f70b571ee5be77c5cea70801743599d33751857a2900c8be5028d8d",
+        "integrity": "ok",
+        "foreign_key_violations": 0,
+        "scope": "Same-machine local deployment backup; restore comparison uses the captured snapshot, not a changing live DB."
+      }
+    },
+    {
+      "name": "controlled_restart_persistence",
+      "result": {
+        "status": "passed",
+        "order_id": "8fc4f565d5b542debf62a5223b2cd52d",
+        "order_status": "refunded",
+        "line_count": 2,
+        "full_order_preserved": true
+      }
+    },
+    {
+      "name": "business_integrity",
+      "result": {
+        "ok": true,
+        "checked_products": 2,
+        "checked_orders": 11,
+        "issues": [],
+        "note": "只读业务一致性检查，不自动修复，也不代替数据库完整性和外部支付对账。"
+      }
+    }
+  ],
+  "notes": [
+    "Verification creates a fictional buyer/order and performs a controlled container restart.",
+    "Backup and restored DB remain in the existing local data volume; no working DB overwrite.",
+    "Public hosting, cloud/domain configuration and off-site disaster recovery are outside this acceptance scope."
+  ]
+}

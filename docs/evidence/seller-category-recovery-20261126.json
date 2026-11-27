@@ -1,0 +1,102 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-26T12:41:29.622456+00:00",
+  "scope": "seller product-category select empty-state and recovery",
+  "observed_category_count": 6,
+  "observed_product_count": 24,
+  "cause": "Key input handler erased options even when the key value did not change; unloaded catalog had no explicit UI state or local retry",
+  "tests": {
+    "passed": 1081,
+    "known_xfailed": 1,
+    "warnings": 1,
+    "new_recovery_tests": 2
+  },
+  "browser": {
+    "status": "passed",
+    "browser": "isolated installed Chrome headless",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "checks": [
+      "Overview, live summary and high-frequency entries rendered",
+      "Brand canvas, four truthful KPIs, collapsible navigation, local quick search, native inventory dialog focus and Escape return",
+      "All eight views and headings, active navigation, no desktop horizontal overflow",
+      "Seller permissions use operation metadata; changing labels does not change access and operator financial controls remain disabled",
+      "Order summary, snapshot detail, explicit authorised delivery, timeline and credential-change scrubbing",
+      "Category select survives unchanged Key events, clearly shows identity/error states, recovers through retry and filters using native keyboard selection",
+      "Buyer catalog matches seller published SKU/title/price/stock; bilingual counted categories and clear-filter shortcuts work",
+      "Product keyword, empty result, status filters, clearing and cross-view retention",
+      "Unsaved values and candidate preserved; subsection heading focused",
+      "Browser back and forward restore view and subsection",
+      "Reload/direct URL preserves category and positions requested subsection",
+      "Unknown routes fall back to overview",
+      "Expanded order detail remains within 390px viewport; item table scrolls within its container",
+      "390px menu, all eight mobile views without overflow, hidden controls excluded from keyboard focus",
+      "Mobile inventory drawer fits viewport and retains unsent stock input across closing and reopening",
+      "Buyer shop still renders",
+      "Real buyer DOM rejects previous identity responses; independent refresh preserves checkout busy state",
+      "Buyer payment messages distinguish refunded replay and successful payment with a failed display refresh"
+    ],
+    "console_errors": [],
+    "expected_anonymous_buyer_session_checks": [
+      {
+        "url": "http://127.0.0.1:8031/shop/api/account/me",
+        "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+      }
+    ],
+    "business_mutations": 0,
+    "additional_live_model_calls": 0,
+    "requests": 122,
+    "screenshots": [
+      "desktop-collapsed.png",
+      "desktop-inventory-drawer.png",
+      "mobile-inventory-drawer.png",
+      "desktop-overview.png",
+      "desktop-products.png",
+      "desktop-sourcing.png",
+      "mobile-overview.png",
+      "mobile-navigation.png",
+      "desktop-orders.png",
+      "mobile-orders.png",
+      "desktop-category-recovered.png"
+    ]
+  },
+  "deployment": {
+    "state": "running",
+    "health": "healthy",
+    "base_url": "http://127.0.0.1:8031",
+    "image": "sha256:5fb7a174ff3109a0a883bfbe42f446da4415a4ed7202e5d1016ead974396e037",
+    "data_volumes": [
+      "crossborder-commerce_commerce-data"
+    ],
+    "workbench": "http://127.0.0.1:8031/workbench",
+    "shop": "http://127.0.0.1:8031/shop",
+    "scope": "local_machine_only",
+    "fixture_data_kind": "simulation",
+    "readiness": {
+      "status": "ready",
+      "schema_version": "26",
+      "auth": "disabled",
+      "embedding": "hash",
+      "cluster_threshold": "0.14",
+      "cluster_threshold_source": "calibrated"
+    }
+  },
+  "database_content_unchanged": true,
+  "content_sha256": "54cb3db2c2c85baeb596334a916193936ac767a6f723fe581a60adb9361b4ecf",
+  "preserved_orders": 35,
+  "served_assets_match_source": true,
+  "served_asset_sha256_lf": {
+    "commerce_workbench.html": "3fe19ad45384e9597933fd5b50b90038b05b24c729a1e951a06d400d44eb3210",
+    "commerce_seller.js": "18eab4d791808545f0f78a31374cb3d72a8eef3ef0664d5a4d55c58133d2a807"
+  },
+  "additional_live_model_calls": 0,
+  "per_view_loading_refactor": "not implemented; outside this fix"
+}

@@ -1,0 +1,60 @@
+# Reviewable single-instance release candidate. Loopback binding is intentional.
+# Supply real target certificates before running; never commit private keys.
+name: crossborder-commerce-release
+services:
+  app:
+    image: crossborder-commerce:local
+    entrypoint:
+      - /bin/sh
+      - -ec
+      - |
+        python scripts/db.py up
+        exec uvicorn xborder_insight.api:app --app-dir src --host 0.0.0.0 --port 8000 --workers 1 --no-access-log --no-proxy-headers --ssl-certfile /run/secrets/tls_certificate --ssl-keyfile /run/secrets/tls_private_key
+    ports:
+      - '127.0.0.1:${COMMERCE_TLS_HOST_PORT:-8443}:8000'
+    environment:
+      RUN_MODE: mock
+      EMBEDDING_PROVIDER: hash
+      AUTH_REQUIRED: 'true'
+      SYNC_ANALYZE_ENABLED: 'false'
+      JOB_WORKER_ENABLED: 'false'
+      COMMERCE_SECURE_COOKIES: 'true'
+      SHOP_TENANT: local
+      DB_PATH: data/commerce.sqlite3
+      COMMERCE_TLS_SERVER_NAME: ${COMMERCE_TLS_SERVER_NAME:?Provide certificate DNS name}
+    volumes:
+      - release-data:/app/data
+    secrets:
+      - tls_certificate
+      - tls_private_key
+      - tls_trust_ca
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=67108864
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 512m
+    cpus: 1.0
+    pids_limit: 128
+    # Built-in plain HTTP probe is not applicable when the listener is HTTPS.
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - scripts/commerce_tls_ready.py
+      interval: 15s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+    restart: unless-stopped
+secrets:
+  tls_certificate:
+    file: ${COMMERCE_TLS_CERTIFICATE:?Provide certificate PEM path}
+  tls_private_key:
+    file: ${COMMERCE_TLS_PRIVATE_KEY:?Provide private key PEM path}
+  tls_trust_ca:
+    file: ${COMMERCE_TLS_TRUST_CA:?Provide CA PEM path for the verified localhost health probe}
+volumes:
+  release-data:

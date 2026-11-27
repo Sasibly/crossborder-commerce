@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "final_restart_preserved_full_analysis": true,
+  "same_submission_extra_model_requests": 0,
+  "requests_used": 10,
+  "request_limit": 20,
+  "remaining": 10,
+  "published_products": 7,
+  "private_config_ready": true,
+  "report_artifacts_secret_free": true
+}

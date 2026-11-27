@@ -1,0 +1,78 @@
+{
+  "status": "passed_local_annotation_preparation",
+  "stage": "annotation_draft_not_production_taxonomy",
+  "catalog_version": "pet-annotation-2ecd8768ed73b0a7",
+  "proposed_labels": 24,
+  "review_count": 30,
+  "raw_annotations": 55,
+  "statuses": {
+    "draft": 49,
+    "needs_review": 6
+  },
+  "domains": {
+    "product": 41,
+    "service": 4,
+    "consumable": 5,
+    "experience": 4
+  },
+  "assertions": {
+    "observed": 51,
+    "potential_risk": 1,
+    "uncertain": 1,
+    "corrected": 1,
+    "reported": 1
+  },
+  "unique_proposed_aspect_units": 53,
+  "duplicate_units": [
+    {
+      "annotation_ids": [
+        "demo/pf-syn-pet-006/0",
+        "demo/pf-syn-pet-006/1"
+      ],
+      "unit": [
+        "pf-syn-pet-006",
+        "product.control_connectivity",
+        "negative",
+        "observed"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "code": "mixed_polarities_need_context_review",
+      "review_id": "pf-syn-pet-003",
+      "label": "product.noise"
+    }
+  ],
+  "missing_ratings_preserved": 20,
+  "independent_lint_matches_preparation": true,
+  "all_old_reference_sources_and_active_v2_unchanged": true,
+  "external_model_requests_added": 0,
+  "production_database_writes": 0,
+  "runtime_rule_version": "offline-v2-adfafd91b1be",
+  "saved_model_analyses_unchanged": 7,
+  "authorization_history": [
+    {
+      "id": "qwen35-pet-fountain-first-trial-20261125",
+      "requests_used": 20,
+      "request_limit": 20
+    },
+    {
+      "id": "qwen35-pet-fountain-performance-20261126",
+      "requests_used": 20,
+      "request_limit": 20
+    }
+  ],
+  "eligible_for_real_quality_claims": false,
+  "tests": {
+    "new_targeted_passed": 24,
+    "full_passed": 1015,
+    "xfailed": 1,
+    "warning": 1,
+    "elapsed_seconds": 66.1
+  },
+  "cli_prepare_reviews_and_lint": "passed with a constructed unverified input; no stars or annotations invented",
+  "report_directory": "reports\\review-annotation\\20261126T033535Z-6da2b24a",
+  "schema_file": "data/review-annotation/pet_fountain_schema_v1.json",
+  "permission_review": "Initial report command approval timed out before execution; one permitted retry succeeded."
+}

@@ -1,0 +1,116 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-26T08:27:39.569890+00:00",
+  "scope": "buyer-owned simulated payment; seller awaits payment and fulfils",
+  "tests": {
+    "passed": 1068,
+    "known_xfailed": 1,
+    "warnings": 1,
+    "log": "reports\\buyer-payment-20261126\\tests.log"
+  },
+  "deployment": {
+    "state": "running",
+    "health": "healthy",
+    "base_url": "http://127.0.0.1:8031",
+    "image": "sha256:f5d72b1740c3d1bd142927495fe48470c04f206b414d659afd642618b2f072d1",
+    "data_volumes": [
+      "crossborder-commerce_commerce-data"
+    ],
+    "workbench": "http://127.0.0.1:8031/workbench",
+    "shop": "http://127.0.0.1:8031/shop",
+    "scope": "local_machine_only",
+    "fixture_data_kind": "simulation",
+    "readiness": {
+      "status": "ready",
+      "schema_version": "26",
+      "auth": "disabled",
+      "embedding": "hash",
+      "cluster_threshold": "0.14",
+      "cluster_threshold_source": "calibrated"
+    }
+  },
+  "deployment_content_unchanged": true,
+  "before_content_sha256": "401b47b2495eadc6a76a52f930fbecdd2bde1a2f20f0287c9fcdff60e5bee62d",
+  "after_deployment_content_sha256": "401b47b2495eadc6a76a52f930fbecdd2bde1a2f20f0287c9fcdff60e5bee62d",
+  "browser": {
+    "status": "passed",
+    "browser": "isolated installed Chrome headless",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "checks": [
+      "Overview, live summary and high-frequency entries rendered",
+      "All eight views and headings, active navigation, no desktop horizontal overflow",
+      "Order summary, snapshot detail, explicit authorised delivery, timeline and credential-change scrubbing",
+      "Buyer catalog matches seller published SKU/title/price/stock; bilingual counted categories and clear-filter shortcuts work",
+      "Product keyword, empty result, status filters, clearing and cross-view retention",
+      "Unsaved values and candidate preserved; subsection heading focused",
+      "Browser back and forward restore view and subsection",
+      "Reload/direct URL preserves category and positions requested subsection",
+      "Unknown routes fall back to overview",
+      "Expanded order detail remains within 390px viewport; item table scrolls within its container",
+      "390px menu, all eight mobile views without overflow, hidden controls excluded from keyboard focus",
+      "Buyer shop still renders",
+      "Real buyer UI register/address/cart/checkout/pay/reload/mobile, seller sees paid, replay has one payment event; fictional order refunded afterward"
+    ],
+    "console_errors": [],
+    "expected_anonymous_buyer_session_checks": [
+      {
+        "url": "http://127.0.0.1:8031/shop/api/account/me",
+        "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+      }
+    ],
+    "business_mutations": 8,
+    "additional_live_model_calls": 0,
+    "buyer_payment": {
+      "status": "passed",
+      "order_id": "b4cee90bcd80462d8447966c4ee28a6c",
+      "final_status": "refunded",
+      "prior_orders_preserved": 32,
+      "inventory_restored": true,
+      "checks": "Real buyer UI register/address/cart/checkout/pay/reload/mobile, seller sees paid, replay has one payment event; fictional order refunded afterward"
+    },
+    "requests": 138,
+    "screenshots": [
+      "desktop-overview.png",
+      "desktop-products.png",
+      "desktop-sourcing.png",
+      "mobile-overview.png",
+      "mobile-navigation.png",
+      "desktop-orders.png",
+      "mobile-orders.png",
+      "buyer-payment-pending.png",
+      "buyer-payment-paid.png",
+      "buyer-payment-mobile.png"
+    ]
+  },
+  "final_integrity": {
+    "integrity": "ok",
+    "foreign_key_violations": 0,
+    "order_count": 33
+  },
+  "assets": {
+    "commerce_shop_v2.html": {
+      "served_content_matches_source": true,
+      "sha256_lf": "f80e46fb0a334444c4feaab5ebce4b74b6a2c5543a5d8ba1a09df901b2d2fe6c"
+    },
+    "commerce_seller.js": {
+      "served_content_matches_source": true,
+      "sha256_lf": "b8a4e8d4e4463dd6d79de816c86153216c7190863169aec11c69bd2f21ae23e1"
+    }
+  },
+  "additional_live_model_calls": 0,
+  "limitations": [
+    "Payment is simulation; no funds or provider requests.",
+    "Historical guest orders remain unassigned.",
+    "Legacy owner payment event endpoint retained for tooling compatibility.",
+    "Explicit browser checkout adds a fictional refunded order and audit trail; database is not unchanged after this test."
+  ]
+}

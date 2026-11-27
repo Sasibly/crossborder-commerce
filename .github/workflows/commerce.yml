@@ -1,0 +1,22 @@
+name: Commerce checks
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  verify:
+    runs-on: windows-latest
+    env:
+      PYTHONUTF8: '1'
+      RUN_MODE: mock
+      EMBEDDING_PROVIDER: hash
+      AUTH_REQUIRED: 'false'
+      SHOP_TENANT: local
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.lock pytest
+      - run: python -m pytest -o addopts='' -ra
+      - run: python scripts/commerce_demo.py
+      - run: python scripts/commerce_comparison_demo.py
+      - run: python scripts/commerce_restore_drill.py --output reports/recovery-ci.json
+      - run: python scripts/check.py --db-only

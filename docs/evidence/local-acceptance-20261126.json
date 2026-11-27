@@ -1,0 +1,387 @@
+{
+  "status": "passed_local_demo_delivery",
+  "scope": {
+    "deployment": "local_machine_only",
+    "canonical_port": 8031,
+    "schema_version": 26,
+    "trade_mode": "mock",
+    "currency": "USD",
+    "supplier_execution": "simulation",
+    "additional_live_model_calls_allowed": false,
+    "public_release_in_scope": false,
+    "real_world_quality_claims": false
+  },
+  "headings": [
+    {
+      "heading": "1. 固定数据与验收范围",
+      "status": "passed"
+    },
+    {
+      "heading": "2. 自动测试、权限与缓存",
+      "status": "passed"
+    },
+    {
+      "heading": "3. 六品类分类回归",
+      "status": "passed"
+    },
+    {
+      "heading": "4. 买卖家闭环、备份与重启",
+      "status": "passed"
+    },
+    {
+      "heading": "5. 交付材料与完整性",
+      "status": "passed"
+    }
+  ],
+  "fixed_profile": "data/acceptance/local_demo_v1.json",
+  "profile_sha256": "475194409c60bba0b691c02f9fec805d0bbe1fd0a4bcffd2425a7025bee68c24",
+  "profile_files": 16,
+  "reference_qualification": {
+    "raw_supplied_reviews": 30,
+    "raw_supplied_annotations": 55,
+    "ai_candidate_aspect_units": 50,
+    "context_items": 2,
+    "human_approved_annotations": 0,
+    "excluded_annotation_ids": [
+      "demo/pf-syn-pet-001/2",
+      "demo/pf-syn-pet-002/1"
+    ],
+    "excluded_from_accuracy_scoring": true,
+    "fixed_regression_is_blind": false
+  },
+  "full_tests": {
+    "status": "passed",
+    "total": 1052,
+    "passed": 1051,
+    "known_xfailed": [
+      "test_polarity::test_known_gap_died_is_not_a_negative_cue"
+    ],
+    "required_groups": {
+      "test_commerce_access": 4,
+      "test_buyers": 11,
+      "test_commerce_consistency": 16,
+      "test_commerce_backup": 2,
+      "test_review_analysis": 9,
+      "test_review_analysis_performance": 4,
+      "test_offline_rule_versioning": 4,
+      "test_review_annotation_prereview": 19
+    },
+    "junit": "D:\\Codex_Projects\\crossborder-commerce\\reports\\local-acceptance\\20261126T061455Z-b2d7e6de\\tests.xml",
+    "all_required_groups_present": true
+  },
+  "pytest_log_summary": "1051 passed, 1 xfailed, 1 warning in 71.85s; known V1 gap and deprecation retained",
+  "categories": {
+    "air_purifier": {
+      "rule": "v1",
+      "support": "baseline_demo_limited_quality",
+      "parsed": 38,
+      "metrics": {
+        "reviews": 38,
+        "tp": 14,
+        "fp": 7,
+        "fn": 19,
+        "precision": 0.6667,
+        "recall": 0.4242,
+        "f1": 0.5185
+      }
+    },
+    "coffee_machine": {
+      "rule": "v1",
+      "support": "baseline_demo_limited_quality",
+      "parsed": 40,
+      "metrics": {
+        "reviews": 40,
+        "tp": 21,
+        "fp": 13,
+        "fn": 15,
+        "precision": 0.6176,
+        "recall": 0.5833,
+        "f1": 0.6
+      }
+    },
+    "electric_kettle": {
+      "rule": "v1",
+      "support": "baseline_demo_limited_quality",
+      "parsed": 38,
+      "metrics": {
+        "reviews": 38,
+        "tp": 16,
+        "fp": 7,
+        "fn": 19,
+        "precision": 0.6957,
+        "recall": 0.4571,
+        "f1": 0.5517
+      }
+    },
+    "pet_fountain": {
+      "rule": "v2",
+      "support": "enhanced_synthetic_demo",
+      "parsed": 20,
+      "metrics": {
+        "reviews": 20,
+        "tp": 14,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.7778,
+        "f1": 0.875
+      }
+    },
+    "robot_vacuum": {
+      "rule": "v1",
+      "support": "baseline_demo_limited_quality",
+      "parsed": 42,
+      "metrics": {
+        "reviews": 42,
+        "tp": 14,
+        "fp": 5,
+        "fn": 24,
+        "precision": 0.7368,
+        "recall": 0.3684,
+        "f1": 0.4912
+      }
+    },
+    "wireless_charger": {
+      "rule": "v1",
+      "support": "baseline_demo_limited_quality",
+      "parsed": 22,
+      "metrics": {
+        "reviews": 22,
+        "tp": 16,
+        "fp": 1,
+        "fn": 8,
+        "precision": 0.9412,
+        "recall": 0.6667,
+        "f1": 0.7805
+      }
+    }
+  },
+  "http_flow": {
+    "status": "passed",
+    "data_kind": "simulation",
+    "run_id": "20261126T061455Z-b2d7e6de",
+    "created_product_ids": [
+      "0f222bdb18fb47c1a2e422cf1d3773ec",
+      "bc310be1b3df4986a894a4770a0468f5",
+      "d224fa6c527743b28d2e9aa1ed646367",
+      "84afb5a680d448bc890b3e5795141b64",
+      "05707c8e013d40cea9fd01eea77486f5",
+      "f6ec6d4bbea54ba199651c436d568cdb"
+    ],
+    "cleanup_failures": [],
+    "phase": "complete",
+    "order_id": "90cfcd2579ac46d68059fb6c27618d76",
+    "analysis_ids": {
+      "air_purifier": "1177919b6b694d1aabb9fa462a68f5cc",
+      "coffee_machine": "80d4f813c2a04ba0b30ee16ad3b6d452",
+      "electric_kettle": "aa61322d478646799c884cffe9fdec9a",
+      "pet_fountain": "8db0d008bc0f4afe8ceb1bd7ebbb0be2",
+      "robot_vacuum": "0c12799ff29e4ffda7e30bc0bc628b72",
+      "wireless_charger": "cc10af200fca46088247599bff568f91"
+    },
+    "categories": [
+      "air_purifier",
+      "coffee_machine",
+      "electric_kettle",
+      "pet_fountain",
+      "robot_vacuum",
+      "wireless_charger"
+    ],
+    "order_lines": 6,
+    "amount_cents": 55100,
+    "statuses_checked": [
+      "pending",
+      "paid",
+      "shipped",
+      "completed",
+      "refunded"
+    ],
+    "checkout_and_payment_idempotency": true,
+    "source_and_money_snapshots_preserved": true,
+    "seller_buyer_catalog_consistent": true,
+    "csrf_and_buyer_ownership_checked": true,
+    "shipped_refund_no_inventory_restock": true,
+    "explicit_simulated_refund_loss_cents": 1700,
+    "external_model_requests_added": 0,
+    "original_catalog_preserved": true,
+    "fixture_products_unpublished": 6
+  },
+  "deployment": {
+    "state": "running",
+    "health": "healthy",
+    "base_url": "http://127.0.0.1:8031",
+    "image": "sha256:26caf3ce4e5bd2afb82d6d5150c968dfd9e023824f6a8f243dc335564ee36018",
+    "data_volumes": [
+      "crossborder-commerce_commerce-data"
+    ],
+    "workbench": "http://127.0.0.1:8031/workbench",
+    "shop": "http://127.0.0.1:8031/shop",
+    "scope": "local_machine_only",
+    "fixture_data_kind": "simulation"
+  },
+  "operations": [
+    {
+      "name": "local_configuration",
+      "result": {
+        "profile": "local",
+        "status": "passed",
+        "checks": [
+          {
+            "id": "schema_current",
+            "passed": true
+          },
+          {
+            "id": "single_worker",
+            "passed": true
+          },
+          {
+            "id": "simulation_only",
+            "passed": true
+          },
+          {
+            "id": "database_readable",
+            "passed": true
+          },
+          {
+            "id": "database_integrity",
+            "passed": true
+          }
+        ],
+        "public_release": "not_verified",
+        "unverified": [
+          "HTTPS termination and proxy trust",
+          "off-machine backup recovery",
+          "target capacity and service-level objectives",
+          "public account abuse controls"
+        ],
+        "scope": "Local configuration and schema checks only; not approval for public release.",
+        "schema_version": 26
+      }
+    },
+    {
+      "name": "deployed_http_transaction",
+      "result": {
+        "status": "passed",
+        "data_kind": "simulation",
+        "order_id": "fcf4013da49f4c35a6ce0a3160a7357b",
+        "line_count": 2,
+        "refund": "approved",
+        "inventory_restored": true
+      }
+    },
+    {
+      "name": "current_deployment_backup_restore",
+      "result": {
+        "status": "passed",
+        "measurement_kind": "observed_live_deployment_backup_restore",
+        "fixture_data_kind": "simulation",
+        "source": "/app/data/commerce.sqlite3",
+        "backup": "/app/data/local-verification/20261126T061615Z-4c64a4a8/backup.sqlite3",
+        "restored": "/app/data/local-verification/20261126T061615Z-4c64a4a8/restored.sqlite3",
+        "restore_target": "new_file",
+        "deployment_database_replaced": false,
+        "content_matches": true,
+        "schema_version": 26,
+        "table_rows": {
+          "api_keys": 0,
+          "commerce_addresses": 29,
+          "commerce_audit": 543,
+          "commerce_auth_attempts": 4,
+          "commerce_buyers": 31,
+          "commerce_candidates": 22,
+          "commerce_cart": 0,
+          "commerce_decisions": 28,
+          "commerce_events": 29,
+          "commerce_key_roles": 0,
+          "commerce_ledger": 247,
+          "commerce_metric_scenarios": 3,
+          "commerce_order_items": 66,
+          "commerce_orders": 31,
+          "commerce_payment_policy": 0,
+          "commerce_products": 24,
+          "commerce_profit_comparisons": 1,
+          "commerce_refund_costs": 27,
+          "commerce_refunds": 27,
+          "commerce_review_analyses": 13,
+          "commerce_review_budgets": 2,
+          "commerce_sessions": 5,
+          "commerce_supplier_cases": 2,
+          "commerce_supplier_events": 7,
+          "compliance_rules": 4,
+          "cost_params": 12,
+          "fba_fee_schedule": 402,
+          "fba_rate_version": 3,
+          "jobs": 0,
+          "product_returns": 2,
+          "rate_limits": 0,
+          "reviews": 0,
+          "runs": 0,
+          "schema_migrations": 26
+        },
+        "content_sha256": "8017a1e944163f3f6be4c097685d992bec04bfe7b2ce50808f906d7a5833bff5",
+        "integrity": "ok",
+        "foreign_key_violations": 0,
+        "scope": "Same-machine local deployment backup; restore comparison uses the captured snapshot, not a changing live DB."
+      }
+    },
+    {
+      "name": "controlled_restart_persistence",
+      "result": {
+        "status": "passed",
+        "order_id": "fcf4013da49f4c35a6ce0a3160a7357b",
+        "order_status": "refunded",
+        "line_count": 2,
+        "full_order_preserved": true
+      }
+    },
+    {
+      "name": "business_integrity",
+      "result": {
+        "ok": true,
+        "checked_products": 24,
+        "checked_orders": 31,
+        "issues": [],
+        "note": "只读业务一致性检查，不自动修复，也不代替数据库完整性和外部支付对账。"
+      }
+    }
+  ],
+  "historical_preservation": {
+    "status": "passed",
+    "source_backup": "/app/data/local-verification/20261126T031723Z-bd47eab6/backup.sqlite3",
+    "preserved_existing_rows": {
+      "commerce_review_analyses": 6,
+      "commerce_review_budgets": 2,
+      "commerce_products": 12,
+      "commerce_orders": 27,
+      "commerce_order_items": 50,
+      "commerce_candidates": 10,
+      "commerce_decisions": 16,
+      "commerce_supplier_cases": 2,
+      "commerce_supplier_events": 7,
+      "commerce_audit": 333
+    },
+    "working_database_replaced": false
+  },
+  "authorization_history": [
+    {
+      "id": "qwen35-pet-fountain-first-trial-20261125",
+      "requests_used": 20,
+      "request_limit": 20
+    },
+    {
+      "id": "qwen35-pet-fountain-performance-20261126",
+      "requests_used": 20,
+      "request_limit": 20
+    }
+  ],
+  "external_model_requests_added": 0,
+  "published_products": 7,
+  "published_categories": 6,
+  "real_quality_claims": false,
+  "production_labels": 10,
+  "proposed_annotation_labels": 24,
+  "human_gold_approvals": 0,
+  "report_directory": "reports\\local-acceptance\\20261126T061455Z-b2d7e6de",
+  "single_command": "accept-local.cmd",
+  "runtime_rebuild_required_for_this_tool": false
+}

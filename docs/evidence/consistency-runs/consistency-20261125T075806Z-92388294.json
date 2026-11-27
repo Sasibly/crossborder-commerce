@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "scope": "local_machine_only",
+  "fixture_data_kind": "simulation",
+  "verified_at_utc": "2026-11-25T07:58:06.255967+00:00",
+  "instance": "http://127.0.0.1:8031",
+  "checks": [
+    "evidence dataset binding",
+    "guest write disabled",
+    "checkout intent replay and changed-cart conflict",
+    "refund review blocks shipment",
+    "rejected review plus refunded execution",
+    "atomic version replacement and replay",
+    "original order snapshot preserved",
+    "stale cart after unpublish rejected",
+    "new order uses new price",
+    "zero stock catalog response",
+    "buyer cancellation restores stock",
+    "original published catalog preserved",
+    "business integrity"
+  ],
+  "order_ids": [
+    "ab0914193cec42f39acd1846ef5a7de4",
+    "d533d8bdebd14b14aa04a90e55feae85"
+  ],
+  "verification_product_ids": [
+    "f50c4f3986274f599cc2b1cdfa093da0",
+    "01aa9c7fc25448c8806ba42cf99f18f1"
+  ],
+  "verification_products_final_state": "unpublished drafts; audit and inventory history retained",
+  "original_published_products_preserved": 7,
+  "integrity": {
+    "ok": true,
+    "checked_products": 11,
+    "checked_orders": 19,
+    "issues": [],
+    "note": "只读业务一致性检查，不自动修复，也不代替数据库完整性和外部支付对账。"
+  }
+}
